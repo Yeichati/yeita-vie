@@ -1,0 +1,331 @@
+{
+  "id": "build-tech-relationship",
+  "title": "Je dois construire une relation efficace avec une équipe tech",
+  "subtitle": "Une bonne relation produit-tech ne repose pas sur le fait d'être toujours d'accord. Elle repose sur la confiance, la compréhension mutuelle et la capacité à résoudre ensemble les bons problèmes.",
+  "accent": "yellow",
+  "startHere": [
+    "understand-team",
+    "roles",
+    "context",
+    "listen",
+    "work-together"
+  ],
+  "cards": [
+    {
+      "id": "understand-team",
+      "number": "01",
+      "title": "Comprends comment l'équipe fonctionne",
+      "short": "Avant de changer la collaboration, comprends les habitudes, contraintes et dynamiques déjà présentes.",
+      "why": "Pour éviter d'arriver avec ton propre modèle de fonctionnement alors que l'équipe possède déjà son histoire, ses forces et ses irritants.",
+      "actions": [
+        "Observe les rituels et la manière dont l'équipe organise son travail.",
+        "Demande comment les sujets arrivent aujourd'hui jusqu'aux développeurs.",
+        "Repère comment les décisions produit et techniques sont prises.",
+        "Identifie les moments où la collaboration semble fluide et ceux où elle se tend.",
+        "Demande ce qui fonctionne bien aujourd'hui et qu'il faudrait préserver."
+      ],
+      "questions": [
+        "Comment l'équipe préfère-t-elle travailler ?",
+        "Qu'est-ce qui fonctionne déjà bien entre produit et tech ?",
+        "Où apparaissent les principales frustrations ?",
+        "Comment les développeurs sont-ils impliqués aujourd'hui dans les décisions ?"
+      ],
+      "watchouts": [
+        "Commencer par corriger les process.",
+        "Supposer que les habitudes actuelles viennent d'un manque de maturité."
+      ],
+      "next": [
+        "roles",
+        "listen"
+      ]
+    },
+    {
+      "id": "roles",
+      "number": "02",
+      "title": "Clarifie les rôles sans créer de frontières",
+      "short": "Savoir qui porte quoi aide à collaborer, tant que les responsabilités ne deviennent pas des silos.",
+      "why": "Pour éviter les malentendus du type « le produit décide quoi faire, la tech exécute » ou, à l'inverse, des décisions où personne ne sait réellement qui tranche.",
+      "actions": [
+        "Clarifie qui porte les décisions produit, techniques et organisationnelles.",
+        "Identifie les zones de décision réellement partagées.",
+        "Discute des attentes mutuelles entre PM, engineering manager, tech lead et développeurs.",
+        "Rends explicite la manière dont les désaccords ou arbitrages sont traités.",
+        "Réévalue ces rôles si la réalité ne correspond pas au modèle théorique."
+      ],
+      "questions": [
+        "Quelles décisions dois-je porter ?",
+        "Quelles décisions appartiennent à la tech ?",
+        "Quelles décisions gagnent à être prises ensemble ?",
+        "Que se passe-t-il quand nous ne sommes pas d'accord ?"
+      ],
+      "watchouts": [
+        "Utiliser les rôles pour défendre un territoire.",
+        "Confondre responsabilité finale et décision prise seul."
+      ],
+      "next": [
+        "context",
+        "work-together"
+      ]
+    },
+    {
+      "id": "context",
+      "number": "03",
+      "title": "Donne le contexte, pas seulement la demande",
+      "short": "Une équipe tech prend de meilleures décisions quand elle comprend le problème, les utilisateurs et les contraintes.",
+      "why": "Pour permettre aux développeurs de contribuer à la solution plutôt que de simplement recevoir des éléments à exécuter.",
+      "actions": [
+        "Explique le problème avant de présenter une solution.",
+        "Partage les éléments utilisateurs, business ou opérationnels utiles.",
+        "Explique pourquoi le sujet est important maintenant.",
+        "Rends visibles les contraintes et les incertitudes.",
+        "Invite l'équipe à challenger la solution envisagée."
+      ],
+      "questions": [
+        "Est-ce que l'équipe comprend le problème que nous essayons de résoudre ?",
+        "Quelles informations lui manquent pour prendre de bonnes décisions ?",
+        "Ai-je déjà figé la solution alors que le problème pourrait être résolu autrement ?",
+        "Est-ce que j'explique suffisamment le pourquoi ?"
+      ],
+      "watchouts": [
+        "Transformer le contexte en présentation interminable.",
+        "Utiliser le contexte uniquement pour convaincre l'équipe d'une solution déjà décidée."
+      ],
+      "next": [
+        "work-together",
+        "constraints"
+      ]
+    },
+    {
+      "id": "listen",
+      "number": "04",
+      "title": "Écoute ce que la tech essaie de te dire",
+      "short": "Une objection technique contient souvent une information sur le risque, le coût ou le fonctionnement réel du produit.",
+      "why": "Pour éviter de réduire les discussions techniques à des résistances ou à des problèmes de faisabilité.",
+      "actions": [
+        "Demande ce qui rend un sujet difficile ou risqué.",
+        "Cherche à comprendre les conséquences techniques plutôt que seulement l'estimation.",
+        "Demande aux développeurs quelles alternatives ils voient.",
+        "Fais préciser les termes techniques que tu ne comprends pas.",
+        "Distingue une contrainte réelle d'une préférence d'implémentation."
+      ],
+      "questions": [
+        "Qu'est-ce qui t'inquiète dans cette approche ?",
+        "Quel risque est-ce que je ne vois pas ?",
+        "Quelles alternatives avons-nous ?",
+        "Est-ce un problème de faisabilité, de coût, de risque ou de maintenabilité ?"
+      ],
+      "watchouts": [
+        "Entendre « c'est compliqué » comme « la tech ne veut pas ».",
+        "Faire semblant de comprendre un sujet technique pour protéger ta crédibilité."
+      ],
+      "next": [
+        "constraints",
+        "disagreement"
+      ]
+    },
+    {
+      "id": "work-together",
+      "number": "05",
+      "title": "Implique la tech suffisamment tôt",
+      "short": "La collaboration est plus utile avant que toutes les décisions soient déjà prises.",
+      "why": "Pour profiter de la connaissance technique pendant la réflexion et éviter de découvrir trop tard qu'une solution est coûteuse, risquée ou inutilement complexe.",
+      "actions": [
+        "Implique des développeurs pendant l'exploration des problèmes pertinents.",
+        "Partage les pistes avant qu'elles deviennent des engagements.",
+        "Cherche ensemble plusieurs manières de répondre au besoin.",
+        "Utilise les échanges techniques pour ajuster le scope ou les hypothèses.",
+        "Adapte le niveau d'implication à l'importance et à l'incertitude du sujet."
+      ],
+      "questions": [
+        "À quel moment la tech peut-elle réellement influencer la décision ?",
+        "Ai-je besoin d'une réponse technique maintenant ou simplement d'un premier éclairage ?",
+        "Qu'est-ce que les développeurs savent qui pourrait modifier notre approche ?",
+        "Est-ce que je consulte l'équipe avant ou après avoir déjà vendu la solution ?"
+      ],
+      "watchouts": [
+        "Inviter toute l'équipe à toutes les phases de discovery.",
+        "Présenter une solution finalisée puis appeler cela de la collaboration."
+      ],
+      "next": [
+        "constraints",
+        "decisions"
+      ]
+    },
+    {
+      "id": "constraints",
+      "number": "06",
+      "title": "Comprends les contraintes sans devoir devenir développeur",
+      "short": "Tu n'as pas besoin de maîtriser l'implémentation, mais tu dois comprendre ce qui structure les choix.",
+      "why": "Pour pouvoir arbitrer intelligemment entre valeur, effort, risque et pérennité sans réduire la technique à une boîte noire.",
+      "actions": [
+        "Demande quelles contraintes influencent fortement le produit.",
+        "Cherche à comprendre les grandes dépendances et zones fragiles.",
+        "Fais expliquer les conséquences d'une option plutôt que tous ses détails d'implémentation.",
+        "Repère les contraintes récurrentes qui devraient être intégrées plus tôt dans les réflexions.",
+        "Construis progressivement ton vocabulaire technique sur le produit."
+      ],
+      "questions": [
+        "Qu'est-ce que j'ai réellement besoin de comprendre pour prendre cette décision ?",
+        "Quelle conséquence aurait cette option à moyen terme ?",
+        "Est-ce une contrainte ponctuelle ou structurelle ?",
+        "Quel compromis technique faisons-nous ?"
+      ],
+      "watchouts": [
+        "Chercher à devenir expert technique pour être légitime.",
+        "Ignorer les contraintes parce qu'elles ne sont pas visibles pour l'utilisateur."
+      ],
+      "next": [
+        "tradeoffs",
+        "decisions"
+      ]
+    },
+    {
+      "id": "tradeoffs",
+      "number": "07",
+      "title": "Parle ouvertement des compromis",
+      "short": "Valeur produit, vitesse, qualité et robustesse entrent parfois en tension. Le bon choix dépend du contexte.",
+      "why": "Pour éviter les discussions où chacun défend son objectif sans rendre visible le compromis réellement effectué.",
+      "actions": [
+        "Demande quelles conséquences chaque option crée côté utilisateur et côté technique.",
+        "Rends visibles les compromis plutôt que de chercher une solution parfaite.",
+        "Clarifie les risques que l'équipe accepte consciemment.",
+        "Distingue ce qui doit être robuste maintenant de ce qui peut évoluer plus tard.",
+        "Documente les compromis structurants quand ils pourront devoir être réexaminés."
+      ],
+      "questions": [
+        "Qu'est-ce que nous gagnons avec cette option ?",
+        "Qu'est-ce que nous acceptons de dégrader ou de repousser ?",
+        "Quel risque sommes-nous prêts à prendre ?",
+        "Ce compromis est-il réversible ?"
+      ],
+      "watchouts": [
+        "Opposer systématiquement valeur produit et qualité technique.",
+        "Faire passer chaque compromis temporaire pour une décision définitive."
+      ],
+      "next": [
+        "decisions",
+        "disagreement"
+      ]
+    },
+    {
+      "id": "decisions",
+      "number": "08",
+      "title": "Décide ensemble quand le sujet l'exige",
+      "short": "Toutes les décisions ne sont pas collectives, mais les bonnes personnes doivent pouvoir influencer celles qui les concernent.",
+      "why": "Pour prendre de meilleures décisions sans créer une collaboration où chaque détail nécessite un consensus.",
+      "actions": [
+        "Identifie qui possède les informations nécessaires à la décision.",
+        "Clarifie qui doit être consulté et qui doit trancher.",
+        "Rends les critères de décision explicites.",
+        "Décide même lorsqu'il reste de l'incertitude si elle est acceptable.",
+        "Explique la décision et les raisons lorsqu'elle impacte fortement l'équipe."
+      ],
+      "questions": [
+        "Qui doit réellement participer à cette décision ?",
+        "De quelles informations avons-nous besoin avant de trancher ?",
+        "Qui porte la décision finale ?",
+        "Est-ce que nous cherchons un consensus alors qu'un arbitrage suffit ?"
+      ],
+      "watchouts": [
+        "Chercher le consensus sur toutes les décisions.",
+        "Décider seul simplement parce que le sujet est considéré comme produit."
+      ],
+      "next": [
+        "disagreement",
+        "trust"
+      ]
+    },
+    {
+      "id": "disagreement",
+      "number": "09",
+      "title": "Traite les désaccords comme du travail",
+      "short": "Un désaccord produit-tech n'est pas nécessairement un problème de relation.",
+      "why": "Pour permettre à chacun de challenger une décision sans que la discussion devienne personnelle ou politique.",
+      "actions": [
+        "Reviens au problème et aux objectifs communs.",
+        "Fais expliciter les hypothèses derrière chaque position.",
+        "Identifie les informations manquantes qui pourraient départager les options.",
+        "Cherche si un test ou une exploration permet de réduire l'incertitude.",
+        "Quand il faut trancher, rends la décision claire puis avance."
+      ],
+      "questions": [
+        "Sur quoi sommes-nous réellement en désaccord ?",
+        "Quelles hypothèses différentes expliquent nos positions ?",
+        "Quelle information pourrait nous aider à décider ?",
+        "Le désaccord porte-t-il sur le problème, la solution, le risque ou le timing ?"
+      ],
+      "watchouts": [
+        "Interpréter un challenge comme un manque de confiance.",
+        "Laisser un désaccord non résolu revenir dans toutes les discussions suivantes."
+      ],
+      "next": [
+        "trust",
+        "reset"
+      ]
+    },
+    {
+      "id": "trust",
+      "number": "10",
+      "title": "Construis la confiance par tes comportements",
+      "short": "La relation se construit moins avec des grands principes qu'avec ce que tu fais au quotidien.",
+      "why": "Pour créer un environnement où l'équipe peut partager les mauvaises nouvelles, les risques et les désaccords sans les cacher.",
+      "actions": [
+        "Tiens les engagements que tu prends envers l'équipe.",
+        "Ne présente pas comme certain ce qui ne l'est pas.",
+        "Donne du crédit aux contributions techniques dans les décisions produit.",
+        "Évite de chercher des responsables quand une hypothèse se révèle fausse.",
+        "Partage rapidement les changements de contexte qui affectent l'équipe.",
+        "Demande régulièrement ce que tu pourrais améliorer dans ta collaboration."
+      ],
+      "questions": [
+        "L'équipe peut-elle me dire facilement qu'une idée est mauvaise ?",
+        "Est-ce que je partage les informations importantes assez tôt ?",
+        "Est-ce que mes engagements sont fiables ?",
+        "Est-ce que je traite l'équipe comme un partenaire ou comme une capacité de delivery ?"
+      ],
+      "watchouts": [
+        "Chercher artificiellement à devenir ami avec tout le monde.",
+        "Confondre confiance et absence de confrontation."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "La relation avec la tech devient difficile",
+      "short": "Ne cherche pas immédiatement qui a raison. Cherche d'abord où la collaboration s'est dégradée.",
+      "why": "Parce qu'une tension visible peut venir d'un manque de contexte, de décisions trop tardives, d'attentes implicites ou de plusieurs frustrations accumulées.",
+      "actions": [
+        "Arrête de traiter la situation uniquement à travers le sujet qui vient de déclencher la tension.",
+        "Clarifie séparément ce que chacun essaie de protéger ou d'obtenir.",
+        "Identifie les incompréhensions de rôle, de contexte ou de décision.",
+        "Discute directement avec les personnes concernées plutôt que de contourner la tension.",
+        "Choisis un changement concret à tester dans votre manière de travailler.",
+        "Reviens dessus après quelques jours pour voir si la situation s'améliore."
+      ],
+      "questions": [
+        "Qu'est-ce qui crée réellement de la frustration aujourd'hui ?",
+        "Depuis quand cette tension existe-t-elle ?",
+        "Est-ce un problème de personnes ou de fonctionnement ?",
+        "Qu'est-ce que l'équipe attend de moi que je ne lui apporte pas aujourd'hui ?",
+        "Qu'est-ce que j'attends d'elle sans l'avoir clairement formulé ?"
+      ],
+      "watchouts": [
+        "Traiter la tension comme un problème de personnalité trop rapidement.",
+        "Ajouter un nouveau process pour éviter une conversation difficile."
+      ],
+      "next": [
+        "understand-team",
+        "roles",
+        "trust"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu veux bien travailler avec ton équipe tech ?",
+    "text": "Commence par comprendre son fonctionnement et ses contraintes, puis construis une manière de travailler où produit et tech peuvent réellement influencer les décisions. L'objectif n'est pas d'éviter les désaccords : c'est de pouvoir les traiter ensemble."
+  }
+}

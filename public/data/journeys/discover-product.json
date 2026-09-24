@@ -1,0 +1,331 @@
+{
+  "id": "discover-product",
+  "title": "Je dois prendre en main un produit que je ne connais pas",
+  "subtitle": "Tu arrives sur un produit existant avec son histoire, ses utilisateurs, ses contraintes et probablement beaucoup de choses implicites. Ton objectif n'est pas de tout apprendre : construis progressivement une compréhension qui te permet d'agir.",
+  "accent": "green",
+  "startHere": [
+    "purpose",
+    "users",
+    "explore",
+    "people",
+    "history"
+  ],
+  "cards": [
+    {
+      "id": "purpose",
+      "number": "01",
+      "title": "Comprends à quoi sert le produit",
+      "short": "Avant les features et le backlog, comprends pourquoi ce produit existe.",
+      "why": "Pour construire ta compréhension autour de sa raison d'être plutôt qu'autour de la manière dont il est actuellement découpé.",
+      "actions": [
+        "Fais expliquer le produit simplement, comme si tu étais un nouvel utilisateur.",
+        "Identifie les problèmes qu'il est censé résoudre.",
+        "Repère les résultats qu'il cherche à produire pour ses utilisateurs et pour l'organisation.",
+        "Compare la manière dont différentes personnes décrivent sa raison d'être."
+      ],
+      "questions": [
+        "Pourquoi ce produit existe-t-il ?",
+        "Quel problème essaie-t-il de résoudre ?",
+        "Qu'est-ce qui disparaîtrait ou deviendrait difficile s'il n'existait plus ?",
+        "Comment sait-on aujourd'hui qu'il apporte de la valeur ?"
+      ],
+      "watchouts": [
+        "Décrire le produit uniquement par ses fonctionnalités.",
+        "Supposer que tout le monde partage la même vision de sa raison d'être."
+      ],
+      "next": [
+        "users",
+        "context"
+      ]
+    },
+    {
+      "id": "users",
+      "number": "02",
+      "title": "Identifie pour qui tu construis",
+      "short": "Comprends qui utilise le produit, qui en bénéficie et dans quel contexte.",
+      "why": "Parce qu'un produit ne se comprend réellement qu'en comprenant les personnes qui l'utilisent et ce qu'elles cherchent à accomplir.",
+      "actions": [
+        "Liste les principaux types d'utilisateurs connus.",
+        "Identifie leurs objectifs, contraintes et usages principaux.",
+        "Observe directement des utilisateurs quand c'est possible.",
+        "Cherche les retours, recherches ou verbatims déjà disponibles.",
+        "Repère les utilisateurs importants que l'équipe connaît mal."
+      ],
+      "questions": [
+        "Qui utilise réellement le produit ?",
+        "Dans quel contexte l'utilise-t-il ?",
+        "Qu'essaie-t-il d'accomplir ?",
+        "Qui bénéficie du produit sans forcément l'utiliser directement ?",
+        "Sur quels utilisateurs avons-nous beaucoup d'hypothèses mais peu de connaissances ?"
+      ],
+      "watchouts": [
+        "Confondre client, acheteur et utilisateur.",
+        "Créer immédiatement de nouveaux personas alors que de la connaissance existe peut-être déjà."
+      ],
+      "next": [
+        "explore",
+        "data"
+      ]
+    },
+    {
+      "id": "explore",
+      "number": "03",
+      "title": "Utilise le produit",
+      "short": "Fais toi-même l'expérience du produit avant de vouloir l'expliquer.",
+      "why": "Pour construire une compréhension concrète des parcours, du vocabulaire et des choix déjà présents dans le produit.",
+      "actions": [
+        "Parcours les principaux usages de bout en bout.",
+        "Teste plusieurs profils ou situations si le produit le permet.",
+        "Note ce que tu comprends facilement et ce qui te surprend.",
+        "Compare ton expérience avec celle d'utilisateurs plus expérimentés.",
+        "Demande à quelqu'un de te montrer comment il utilise réellement le produit."
+      ],
+      "questions": [
+        "Quels sont les parcours essentiels ?",
+        "Quelles connaissances le produit suppose-t-il chez son utilisateur ?",
+        "Où ai-je besoin d'explications pour comprendre ce qui se passe ?",
+        "Qu'est-ce qui semble central dans le produit et qu'est-ce qui semble secondaire ?"
+      ],
+      "watchouts": [
+        "Transformer toutes tes incompréhensions en problèmes UX.",
+        "Prendre ton expérience de nouvel utilisateur comme représentative de tous les utilisateurs."
+      ],
+      "next": [
+        "users",
+        "data",
+        "questions"
+      ]
+    },
+    {
+      "id": "people",
+      "number": "04",
+      "title": "Trouve les personnes qui connaissent le produit",
+      "short": "Une grande partie de la connaissance produit est souvent dans la tête des gens.",
+      "why": "Pour récupérer plus rapidement le contexte, les nuances et les décisions qui ne sont pas forcément documentées.",
+      "actions": [
+        "Repère les personnes présentes depuis longtemps autour du produit.",
+        "Identifie qui connaît particulièrement bien les utilisateurs, la technique, le métier ou l'historique.",
+        "Demande à chacun quelles parties du produit il connaît le mieux.",
+        "Fais préciser les sujets sur lesquels personne ne semble vraiment avoir la réponse."
+      ],
+      "questions": [
+        "Qui connaît vraiment ce produit aujourd'hui ?",
+        "Qui possède une connaissance différente de celle de l'équipe produit ?",
+        "Qui vais-je probablement devoir reconsulter régulièrement ?",
+        "Où existe-t-il un risque de dépendre d'une seule personne pour comprendre un sujet ?"
+      ],
+      "watchouts": [
+        "Chercher une seule personne qui saurait tout.",
+        "Considérer l'ancienneté comme une garantie que l'information est toujours actuelle."
+      ],
+      "next": [
+        "history",
+        "tech",
+        "context"
+      ]
+    },
+    {
+      "id": "history",
+      "number": "05",
+      "title": "Comprends comment le produit en est arrivé là",
+      "short": "Les choix actuels deviennent souvent plus compréhensibles quand tu connais leur histoire.",
+      "why": "Pour éviter de juger des décisions passées avec les informations et les contraintes d'aujourd'hui.",
+      "actions": [
+        "Identifie les grandes étapes de l'évolution du produit.",
+        "Cherche les décisions structurantes et ce qui les a motivées.",
+        "Repère les pivots, migrations, acquisitions ou changements d'organisation importants.",
+        "Demande quels sujets ont déjà été tentés, abandonnés ou repoussés.",
+        "Note les contraintes historiques qui semblent encore influencer le produit."
+      ],
+      "questions": [
+        "Quelles décisions ont le plus façonné le produit actuel ?",
+        "Pourquoi ont-elles été prises ?",
+        "Qu'est-ce qui était vrai à l'époque mais ne l'est peut-être plus aujourd'hui ?",
+        "Quels sujets reviennent régulièrement sans être réellement résolus ?"
+      ],
+      "watchouts": [
+        "Chercher des responsables pour les décisions passées.",
+        "Supposer qu'une décision ancienne est forcément devenue mauvaise."
+      ],
+      "next": [
+        "context",
+        "tech",
+        "questions"
+      ]
+    },
+    {
+      "id": "context",
+      "number": "06",
+      "title": "Replace le produit dans son contexte",
+      "short": "Un produit n'existe jamais seul : comprends ce qui l'entoure et ce qui le contraint.",
+      "why": "Pour comprendre les décisions produit dans leur contexte business, organisationnel et stratégique.",
+      "actions": [
+        "Identifie le rôle du produit dans l'organisation.",
+        "Comprends comment il contribue au modèle économique ou aux objectifs de l'entreprise.",
+        "Repère les dépendances avec d'autres produits, équipes ou partenaires.",
+        "Identifie les contraintes réglementaires, commerciales ou opérationnelles importantes.",
+        "Cherche les orientations stratégiques déjà connues qui pourraient influencer le produit."
+      ],
+      "questions": [
+        "Quelle place ce produit occupe-t-il dans l'entreprise ?",
+        "De quoi dépend-il ?",
+        "Qui dépend de lui ?",
+        "Quelles contraintes ne sont pas visibles directement dans l'interface ?",
+        "Quels changements autour du produit pourraient fortement l'impacter ?"
+      ],
+      "watchouts": [
+        "Analyser le produit uniquement depuis l'équipe qui le construit.",
+        "Confondre stratégie affichée et décisions réellement prises."
+      ],
+      "next": [
+        "data",
+        "tech",
+        "questions"
+      ]
+    },
+    {
+      "id": "data",
+      "number": "07",
+      "title": "Regarde ce que les usages racontent",
+      "short": "Complète les discours et impressions avec les données réellement disponibles.",
+      "why": "Pour vérifier comment le produit est utilisé et identifier les zones où tes perceptions ont besoin d'être confrontées aux faits.",
+      "actions": [
+        "Identifie les métriques suivies aujourd'hui.",
+        "Regarde quels usages sont fréquents, rares ou inexistants.",
+        "Repère les étapes où les utilisateurs semblent abandonner ou rencontrer des difficultés.",
+        "Cherche les données de satisfaction, support ou incidents disponibles.",
+        "Note aussi ce que l'organisation aimerait savoir mais ne sait pas mesurer."
+      ],
+      "questions": [
+        "Qu'est-ce que nous savons réellement de l'usage ?",
+        "Quelles métriques influencent aujourd'hui les décisions ?",
+        "Qu'est-ce qui est mesuré simplement parce que c'est facile à mesurer ?",
+        "Où manque-t-il de la donnée pour répondre à une question importante ?"
+      ],
+      "watchouts": [
+        "Croire qu'une métrique explique à elle seule un comportement.",
+        "Créer immédiatement de nouveaux KPIs avant de comprendre les décisions qu'ils devraient éclairer."
+      ],
+      "next": [
+        "questions",
+        "model"
+      ]
+    },
+    {
+      "id": "tech",
+      "number": "08",
+      "title": "Comprends les grandes contraintes techniques",
+      "short": "Tu n'as pas besoin de connaître toute l'architecture, mais tu dois comprendre ce qui structure réellement le produit.",
+      "why": "Pour éviter de réfléchir au produit comme si toutes les évolutions étaient équivalentes en coût, risque ou faisabilité.",
+      "actions": [
+        "Demande une présentation simple de l'architecture et des principales briques.",
+        "Identifie les dépendances techniques importantes.",
+        "Repère les zones connues comme fragiles, coûteuses ou difficiles à faire évoluer.",
+        "Comprends les grandes contraintes de sécurité, performance ou exploitation.",
+        "Demande aux développeurs ce qu'un PM devrait absolument savoir pour travailler correctement sur ce produit."
+      ],
+      "questions": [
+        "Quelles contraintes techniques influencent fortement les décisions produit ?",
+        "Quelles parties du produit sont faciles ou difficiles à faire évoluer ?",
+        "Où existent les principales dépendances ?",
+        "Quels risques techniques l'équipe garde en tête au quotidien ?"
+      ],
+      "watchouts": [
+        "Essayer de devenir expert de toute l'architecture.",
+        "Réduire les contraintes techniques à de la dette technique à supprimer."
+      ],
+      "next": [
+        "questions",
+        "model"
+      ]
+    },
+    {
+      "id": "questions",
+      "number": "09",
+      "title": "Transforme tes zones floues en questions",
+      "short": "Ce que tu ne comprends pas encore devient ta feuille de route d'apprentissage.",
+      "why": "Pour éviter de continuer à accumuler des informations sans savoir ce que tu cherches réellement à comprendre.",
+      "actions": [
+        "Liste les questions qui restent ouvertes après tes premières explorations.",
+        "Regroupe celles qui parlent du même sujet.",
+        "Identifie celles dont la réponse pourrait modifier fortement ta compréhension.",
+        "Choisis quelques questions à explorer en priorité.",
+        "Laisse volontairement certaines questions sans réponse si elles ne sont pas utiles maintenant."
+      ],
+      "questions": [
+        "Qu'est-ce que je ne comprends pas encore et qui m'empêche d'avancer ?",
+        "Quelle réponse pourrait changer ma lecture du produit ?",
+        "Quelles questions sont intéressantes mais pas nécessaires aujourd'hui ?",
+        "Qui ou quoi peut m'aider à répondre à chacune d'elles ?"
+      ],
+      "watchouts": [
+        "Vouloir fermer toutes les zones d'incertitude.",
+        "Continuer à collecter sans prioriser ce que tu cherches à apprendre."
+      ],
+      "next": [
+        "model",
+        "reset"
+      ]
+    },
+    {
+      "id": "model",
+      "number": "10",
+      "title": "Construis ta représentation du produit",
+      "short": "Rassemble ce que tu as appris dans une vision suffisamment simple pour guider tes prochaines décisions.",
+      "why": "Pour passer d'une accumulation d'informations à une compréhension utilisable du produit.",
+      "actions": [
+        "Résume en quelques phrases à quoi sert le produit, pour qui et pourquoi.",
+        "Liste ses usages les plus importants.",
+        "Note les contraintes et dépendances qui structurent fortement son évolution.",
+        "Fais ressortir les principales zones que tu comprends bien et celles encore incertaines.",
+        "Confronte ta synthèse à quelques personnes de l'équipe."
+      ],
+      "questions": [
+        "Suis-je capable d'expliquer simplement le produit à quelqu'un qui ne le connaît pas ?",
+        "Est-ce que je comprends les principaux utilisateurs et leurs besoins ?",
+        "Est-ce que je comprends ce qui structure réellement les décisions autour du produit ?",
+        "Quelles parties de ma représentation sont encore des hypothèses ?"
+      ],
+      "watchouts": [
+        "Chercher à produire une cartographie parfaite.",
+        "Transformer ta représentation actuelle en vérité définitive."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "J'ai l'impression qu'il y a trop de choses à apprendre",
+      "short": "Tu n'as pas besoin de connaître tout le produit pour commencer à travailler dessus.",
+      "why": "Parce qu'un produit existant peut contenir des années de décisions, d'usages et de contraintes. Chercher à tout absorber avant d'agir est impossible.",
+      "actions": [
+        "Reviens au problème ou au sujet sur lequel tu dois travailler.",
+        "Liste uniquement les connaissances nécessaires pour avancer dessus.",
+        "Identifie ce que tu comprends déjà suffisamment.",
+        "Choisis une ou deux zones d'incertitude à réduire.",
+        "Accepte que certaines parties du produit resteront inconnues jusqu'au jour où elles deviendront utiles."
+      ],
+      "questions": [
+        "Qu'ai-je réellement besoin de comprendre maintenant ?",
+        "Quelle connaissance me manque pour prendre ma prochaine décision ?",
+        "Qu'est-ce que je peux apprendre plus tard ?",
+        "Est-ce que je cherche à comprendre le produit ou à me rassurer en accumulant de l'information ?"
+      ],
+      "watchouts": [
+        "Lire toute la documentation avant de commencer.",
+        "Croire qu'il existe un moment où tu connaîtras enfin tout le produit."
+      ],
+      "next": [
+        "questions",
+        "model"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu ne connais presque rien du produit ?",
+    "text": "Commence par comprendre pourquoi il existe, pour qui il existe et comment il est réellement utilisé. Tu n'as pas besoin d'en maîtriser chaque détail avant de pouvoir avancer."
+  }
+}
