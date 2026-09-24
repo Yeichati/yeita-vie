@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 
 const DATA_ROOT = `${import.meta.env.BASE_URL}data`
 
@@ -48,19 +48,34 @@ function StarterBox({ starter }) {
 }
 
 function CardDialog({ card, labels, onClose, nextCard, onOpenNext }) {
+  const dialogRef = useRef(null)
+
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === 'Escape') onClose()
     }
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', onKeyDown)
-    return () => window.removeEventListener('keydown', onKeyDown)
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', onKeyDown)
+    }
   }, [onClose])
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      if (dialogRef.current) dialogRef.current.scrollTop = 0
+    })
+  }, [card?._key, card?.id])
 
   if (!card) return null
 
   return (
     <div className="dialog-backdrop" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
-      <section className="card-dialog" role="dialog" aria-modal="true" aria-labelledby="card-title">
+      <section ref={dialogRef} className="card-dialog" role="dialog" aria-modal="true" aria-labelledby="card-title">
         <button className="dialog-close" aria-label={labels.closeLabel} onClick={onClose}>×</button>
         <div className="dialog-inner">
           <div className="dialog-meta">
@@ -172,6 +187,7 @@ export default function App() {
   const [query, setQuery] = useState('')
   const [openCardKey, setOpenCardKey] = useState(null)
   const [error, setError] = useState(null)
+  const libraryRef = useRef(null)
 
   useEffect(() => {
     loadData()
@@ -185,6 +201,17 @@ export default function App() {
 
   const journey = data?.journeys.find((item) => item.id === journeyId) ?? data?.journeys[0]
   const scenario = data?.scenarios.find((item) => item.id === scenarioId) ?? data?.scenarios[0]
+
+  useEffect(() => {
+    if (view === 'home') {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+      return
+    }
+
+    requestAnimationFrame(() => {
+      libraryRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' })
+    })
+  }, [view, journeyId, scenarioId])
 
   const journeyByFilename = useMemo(() => {
     if (!data) return {}
@@ -290,7 +317,7 @@ export default function App() {
         {view === 'home' ? (
           <Home app={app} journeys={journeys} scenarios={scenarios} onChoose={changeView} />
         ) : (
-          <section className="journey-shell">
+          <section ref={libraryRef} className="journey-shell">
             <LibrarySidebar
               title={view === 'scenarios' ? app.scenario.sidebarTitle : app.sidebar.title}
               note={view === 'scenarios'
