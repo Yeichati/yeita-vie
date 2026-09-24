@@ -8,22 +8,34 @@ async function getJson(path) {
   return response.json()
 }
 
+async function loadCollection(folder, manifestKey) {
+  const manifest = await getJson(`${DATA_ROOT}/${folder}/index.json`)
+  const filenames = manifest[manifestKey] ?? []
+  const items = await Promise.all(
+    filenames.map(async (filename) => ({
+      filename,
+      data: await getJson(`${DATA_ROOT}/${folder}/${filename}`),
+    })),
+  )
+  return items
+}
+
 async function loadData() {
-  const [app, manifest] = await Promise.all([
+  const [app, journeyEntries, scenarioEntries] = await Promise.all([
     getJson(`${DATA_ROOT}/app.json`),
-    getJson(`${DATA_ROOT}/journeys/index.json`),
+    loadCollection('journeys', 'journeys'),
+    loadCollection('scenarios', 'scenarios'),
   ])
 
-  const journeys = await Promise.all(
-    manifest.journeys.map((filename) => getJson(`${DATA_ROOT}/journeys/${filename}`)),
-  )
-
-  return { app, journeys }
+  return {
+    app,
+    journeys: journeyEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
+    scenarios: scenarioEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
+  }
 }
 
 function StarterBox({ starter }) {
   if (!starter) return null
-
   return (
     <div className="starter-box">
       <div className="starter-mark">{starter.mark ?? '→'}</div>
@@ -35,9 +47,7 @@ function StarterBox({ starter }) {
   )
 }
 
-function CardDialog({ card, cards, labels, onClose, onOpenCard }) {
-  const byId = useMemo(() => Object.fromEntries(cards.map((item) => [item.id, item])), [cards])
-
+function CardDialog({ card, labels, onClose, nextCard, onOpenNext }) {
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === 'Escape') onClose()
@@ -53,7 +63,10 @@ function CardDialog({ card, cards, labels, onClose, onOpenCard }) {
       <section className="card-dialog" role="dialog" aria-modal="true" aria-labelledby="card-title">
         <button className="dialog-close" aria-label={labels.closeLabel} onClick={onClose}>×</button>
         <div className="dialog-inner">
-          <span className="dialog-num">{labels.sheetLabel} {card.number}</span>
+          <div className="dialog-meta">
+            <span className="dialog-num">{labels.sheetLabel} {card.number}</span>
+            {card._sourceTitle && <span className="source-pill">{card._sourceTitle}</span>}
+          </div>
           <h2 id="card-title">{card.title}</h2>
           <p className="dialog-lead">{card.short}</p>
 
@@ -80,11 +93,10 @@ function CardDialog({ card, cards, labels, onClose, onOpenCard }) {
             </div>
           )}
 
-          {!!card.next?.length && (
-            <div className="next-links">
-              {card.next.map((id) => byId[id] ? (
-                <button key={id} onClick={() => onOpenCard(id)}>→ {byId[id].title}</button>
-              ) : null)}
+          {nextCard && (
+            <div className="scenario-next">
+              <span>{labels.nextLabel}</span>
+              <button onClick={() => onOpenNext(nextCard._key)}>→ {nextCard.title}</button>
             </div>
           )}
         </div>
@@ -93,11 +105,72 @@ function CardDialog({ card, cards, labels, onClose, onOpenCard }) {
   )
 }
 
+function Home({ app, journeys, scenarios, onChoose }) {
+  return (
+    <section className="home-shell">
+      <div className="home-intro">
+        <span className="section-kicker">{app.home.kicker}</span>
+        <h2>{app.home.title}</h2>
+        <p>{app.home.text}</p>
+      </div>
+
+      <div className="entry-grid">
+        <button className="entry-card journey-entry" onClick={() => onChoose('journeys')}>
+          <span className="entry-tag">{app.home.journeys.tag}</span>
+          <strong>{app.home.journeys.title}</strong>
+          <p>{app.home.journeys.text}</p>
+          <div className="entry-footer">
+            <span>{journeys.length} {app.home.journeys.countLabel}</span>
+            <b>↗</b>
+          </div>
+        </button>
+
+        <button className="entry-card scenario-entry" onClick={() => onChoose('scenarios')}>
+          <span className="entry-tag">{app.home.scenarios.tag}</span>
+          <strong>{app.home.scenarios.title}</strong>
+          <p>{app.home.scenarios.text}</p>
+          <div className="entry-footer">
+            <span>{scenarios.length} {app.home.scenarios.countLabel}</span>
+            <b>↗</b>
+          </div>
+        </button>
+      </div>
+    </section>
+  )
+}
+
+function LibrarySidebar({ title, note, items, activeId, onSelect }) {
+  return (
+    <aside className="journey-sidebar">
+      <div className="sidebar-title">{title}</div>
+      <nav className="journey-list">
+        {items.map((item) => (
+          <button
+            key={item.id}
+            className={`journey-button ${item.id === activeId ? 'active' : ''}`}
+            onClick={() => onSelect(item.id)}
+          >
+            {item.title}
+          </button>
+        ))}
+      </nav>
+      {note && (
+        <div className="sidebar-note">
+          <strong>{note.title}</strong>
+          <span>{note.text}</span>
+        </div>
+      )}
+    </aside>
+  )
+}
+
 export default function App() {
   const [data, setData] = useState(null)
+  const [view, setView] = useState('home')
   const [journeyId, setJourneyId] = useState(null)
+  const [scenarioId, setScenarioId] = useState(null)
   const [query, setQuery] = useState('')
-  const [openCardId, setOpenCardId] = useState(null)
+  const [openCardKey, setOpenCardKey] = useState(null)
   const [error, setError] = useState(null)
 
   useEffect(() => {
@@ -105,55 +178,102 @@ export default function App() {
       .then((loaded) => {
         setData(loaded)
         setJourneyId(loaded.journeys[0]?.id ?? null)
+        setScenarioId(loaded.scenarios[0]?.id ?? null)
       })
       .catch(setError)
   }, [])
 
   const journey = data?.journeys.find((item) => item.id === journeyId) ?? data?.journeys[0]
+  const scenario = data?.scenarios.find((item) => item.id === scenarioId) ?? data?.scenarios[0]
 
-  const cards = useMemo(() => {
-    if (!journey) return []
+  const journeyByFilename = useMemo(() => {
+    if (!data) return {}
+    return Object.fromEntries(data.journeys.map((item) => [item._filename, item]))
+  }, [data])
+
+  const scenarioCards = useMemo(() => {
+    if (!scenario) return []
+    return (scenario.cards ?? []).map((reference, index) => {
+      const sourceJourney = journeyByFilename[reference.journey]
+      const sourceCard = sourceJourney?.cards.find((card) => card.id === reference.cardId)
+      if (!sourceJourney || !sourceCard) return null
+      return {
+        ...sourceCard,
+        _key: `${reference.journey}:${reference.cardId}:${index}`,
+        _sourceTitle: sourceJourney.title,
+        _sourceFilename: reference.journey,
+      }
+    }).filter(Boolean)
+  }, [scenario, journeyByFilename])
+
+  const displayedCards = useMemo(() => {
+    const source = view === 'scenarios'
+      ? scenarioCards
+      : (journey?.cards ?? []).map((card) => ({ ...card, _key: card.id }))
+
     const normalized = query.trim().toLowerCase()
-    if (!normalized) return journey.cards
+    if (!normalized) return source
 
-    return journey.cards.filter((card) => {
+    return source.filter((card) => {
       const searchable = [
         card.title,
         card.short,
         card.why,
+        card._sourceTitle,
         ...(card.actions ?? []),
         ...(card.questions ?? []),
         ...(card.watchouts ?? []),
-      ].join(' ').toLowerCase()
+      ].filter(Boolean).join(' ').toLowerCase()
       return searchable.includes(normalized)
     })
-  }, [journey, query])
+  }, [view, journey, scenarioCards, query])
 
-  const openCard = journey?.cards.find((card) => card.id === openCardId) ?? null
+  const allActiveCards = view === 'scenarios'
+    ? scenarioCards
+    : (journey?.cards ?? []).map((card) => ({ ...card, _key: card.id }))
+
+  const openCard = allActiveCards.find((card) => card._key === openCardKey) ?? null
+  const openIndex = openCard ? allActiveCards.findIndex((card) => card._key === openCard._key) : -1
+  const nextCard = openIndex >= 0 && openIndex < allActiveCards.length - 1 ? allActiveCards[openIndex + 1] : null
 
   if (error) {
     return <main className="status-page"><strong>Impossible de charger Yei'ta vie.</strong><span>{error.message}</span></main>
   }
+  if (!data) return <main className="status-page">Chargement…</main>
 
-  if (!data || !journey) {
-    return <main className="status-page">Chargement…</main>
+  const { app, journeys, scenarios } = data
+  const activeContent = view === 'scenarios' ? scenario : journey
+  const contentLabels = view === 'scenarios' ? app.scenario : app.journey
+
+  const goHome = () => {
+    setView('home')
+    setQuery('')
+    setOpenCardKey(null)
   }
 
-  const { app, journeys } = data
+  const changeView = (nextView) => {
+    setView(nextView)
+    setQuery('')
+    setOpenCardKey(null)
+  }
 
   return (
     <>
       <div className="noise" />
       <header className="topbar">
-        <a className="brand" href="#top" aria-label={app.name}>
+        <button className="brand brand-button" onClick={goHome} aria-label={app.name}>
           <span className="brand-dot" />
           <span>{app.name}</span>
-        </a>
+        </button>
+        <nav className="top-nav" aria-label={app.navigation.label}>
+          <button className={view === 'journeys' ? 'active' : ''} onClick={() => changeView('journeys')}>{app.navigation.journeys}</button>
+          <button className={view === 'scenarios' ? 'active' : ''} onClick={() => changeView('scenarios')}>{app.navigation.scenarios}</button>
+        </nav>
         <div className="topbar-meta">{app.topbarLabel}</div>
       </header>
 
       <main id="top">
-        <section className="hero">
+        <section className={`hero ${view !== 'home' ? 'hero-compact' : ''}`}>
           <div className="hero-copy">
             <span className="eyebrow">{app.eyebrow}</span>
             <h1>{app.hero.title}<br /><span>{app.hero.highlight}</span></h1>
@@ -166,88 +286,87 @@ export default function App() {
           </div>
         </section>
 
-        <section className="journey-shell">
-          <aside className="journey-sidebar">
-            <div className="sidebar-title">{app.sidebar.title}</div>
-            <nav className="journey-list">
-              {journeys.map((item) => (
-                <button
-                  key={item.id}
-                  className={`journey-button ${item.id === journey.id ? 'active' : ''}`}
-                  onClick={() => {
-                    setJourneyId(item.id)
-                    setQuery('')
-                    setOpenCardId(null)
-                  }}
-                >
-                  {item.title}
-                </button>
-              ))}
-            </nav>
-            <div className="sidebar-note">
-              <strong>{app.sidebar.noteTitle}</strong>
-              <span>{app.sidebar.noteText}</span>
-            </div>
-          </aside>
+        {view === 'home' ? (
+          <Home app={app} journeys={journeys} scenarios={scenarios} onChoose={changeView} />
+        ) : (
+          <section className="journey-shell">
+            <LibrarySidebar
+              title={view === 'scenarios' ? app.scenario.sidebarTitle : app.sidebar.title}
+              note={view === 'scenarios'
+                ? { title: app.scenario.noteTitle, text: app.scenario.noteText }
+                : { title: app.sidebar.noteTitle, text: app.sidebar.noteText }}
+              items={view === 'scenarios' ? scenarios : journeys}
+              activeId={activeContent?.id}
+              onSelect={(id) => {
+                if (view === 'scenarios') setScenarioId(id)
+                else setJourneyId(id)
+                setQuery('')
+                setOpenCardKey(null)
+              }}
+            />
 
-          <section className="journey-content">
-            <div className="journey-heading">
-              <div>
-                <span className="section-kicker">{app.journey.kicker}</span>
-                <h2>{journey.title}</h2>
-                <p>{journey.subtitle}</p>
+            <section className="journey-content">
+              <div className="journey-heading">
+                <div>
+                  <span className="section-kicker">{contentLabels.kicker}</span>
+                  <h2>{activeContent?.title}</h2>
+                  <p>{activeContent?.subtitle}</p>
+                </div>
+                <div className="journey-tools">
+                  <label className="search-box">
+                    <span>⌕</span>
+                    <input
+                      value={query}
+                      onChange={(event) => setQuery(event.target.value)}
+                      type="search"
+                      placeholder={contentLabels.searchPlaceholder}
+                    />
+                  </label>
+                </div>
               </div>
-              <div className="journey-tools">
-                <label className="search-box">
-                  <span>⌕</span>
-                  <input
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                    type="search"
-                    placeholder={app.journey.searchPlaceholder}
-                  />
-                </label>
+
+              <StarterBox starter={activeContent?.starter} />
+
+              <div className="cards-grid">
+                {displayedCards.length ? displayedCards.map((card, index) => (
+                  <article
+                    key={card._key}
+                    className="play-card"
+                    tabIndex="0"
+                    role="button"
+                    aria-label={`Ouvrir ${card.title}`}
+                    onClick={() => setOpenCardKey(card._key)}
+                    onKeyDown={(event) => {
+                      if (event.key === 'Enter' || event.key === ' ') {
+                        event.preventDefault()
+                        setOpenCardKey(card._key)
+                      }
+                    }}
+                  >
+                    <div className="card-topline">
+                      <span className="num">{view === 'scenarios' ? String(index + 1).padStart(2, '0') : card.number}</span>
+                      {card._sourceTitle && <span className="card-source">{card._sourceTitle}</span>}
+                    </div>
+                    <h3>{card.title}</h3>
+                    <p>{card.short}</p>
+                    <span className="open">↗</span>
+                  </article>
+                )) : (
+                  <div className="empty">{contentLabels.emptySearch}</div>
+                )}
               </div>
-            </div>
-
-            <StarterBox starter={journey.starter} />
-
-            <div className="cards-grid">
-              {cards.length ? cards.map((card) => (
-                <article
-                  key={card.id}
-                  className="play-card"
-                  tabIndex="0"
-                  role="button"
-                  aria-label={`Ouvrir ${card.title}`}
-                  onClick={() => setOpenCardId(card.id)}
-                  onKeyDown={(event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault()
-                      setOpenCardId(card.id)
-                    }
-                  }}
-                >
-                  <span className="num">{card.number}</span>
-                  <h3>{card.title}</h3>
-                  <p>{card.short}</p>
-                  <span className="open">↗</span>
-                </article>
-              )) : (
-                <div className="empty">{app.journey.emptySearch}</div>
-              )}
-            </div>
+            </section>
           </section>
-        </section>
+        )}
       </main>
 
       {openCard && (
         <CardDialog
           card={openCard}
-          cards={journey.cards}
           labels={app.card}
-          onClose={() => setOpenCardId(null)}
-          onOpenCard={setOpenCardId}
+          onClose={() => setOpenCardKey(null)}
+          nextCard={view === 'scenarios' ? nextCard : null}
+          onOpenNext={setOpenCardKey}
         />
       )}
     </>

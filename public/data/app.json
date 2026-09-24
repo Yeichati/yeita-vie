@@ -8,6 +8,28 @@
     "tagline": "Un coup de main pour prendre tes repères, choisir tes prochains pas et avancer sans te disperser.",
     "chips": ["observer", "comprendre", "choisir", "avancer"]
   },
+  "navigation": {
+    "label": "Navigation principale",
+    "journeys": "Parcours",
+    "scenarios": "Scénarios"
+  },
+  "home": {
+    "kicker": "COMMENT TU VEUX AVANCER ?",
+    "title": "Explore un sujet ou laisse-toi guider.",
+    "text": "Les parcours t'aident à creuser une situation. Les scénarios assemblent des fiches de plusieurs parcours pour t'accompagner dans un moment concret.",
+    "journeys": {
+      "tag": "PARCOURS",
+      "title": "J'ai un sujet à explorer",
+      "text": "Choisis une situation et pioche dans les fiches qui peuvent t'aider à construire ta réflexion.",
+      "countLabel": "parcours disponibles"
+    },
+    "scenarios": {
+      "tag": "SCÉNARIOS",
+      "title": "Je veux être guidé",
+      "text": "Suis une sélection de fiches déjà assemblées pour un contexte précis, dans un ordre qui te donne un fil conducteur.",
+      "countLabel": "scénarios disponibles"
+    }
+  },
   "sidebar": {
     "title": "Choisis ton parcours",
     "noteTitle": "Pas un process.",
@@ -18,12 +40,21 @@
     "searchPlaceholder": "Chercher une fiche…",
     "emptySearch": "Aucune fiche ne correspond à ta recherche."
   },
+  "scenario": {
+    "kicker": "TON SCÉNARIO",
+    "sidebarTitle": "Choisis ton scénario",
+    "noteTitle": "Un fil conducteur.",
+    "noteText": "Les fiches viennent des parcours existants : le scénario ne duplique pas le contenu, il te propose simplement un chemin.",
+    "searchPlaceholder": "Chercher dans ce scénario…",
+    "emptySearch": "Aucune fiche ne correspond à ta recherche."
+  },
   "card": {
     "sheetLabel": "FICHE",
     "whyLabel": "POURQUOI ?",
     "actionsLabel": "Pistes à tester",
     "questionsLabel": "Questions à te poser",
     "watchoutsLabel": "Points d'attention",
+    "nextLabel": "PROCHAINE FICHE DU SCÉNARIO",
     "closeLabel": "Fermer"
   }
 }

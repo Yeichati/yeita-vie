@@ -1,47 +1,58 @@
-# Yei'ta vie — V3
+# Yei'ta vie — V4 complète
 
-Playground consultant PM construit avec React + Vite.
+Application React + Vite avec :
+- 4 parcours ;
+- 1 scénario préfabriqué ;
+- contenus stockés en JSON ;
+- scénarios construits à partir de références `journey + cardId` ;
+- compatibilité GitHub Pages et Vercel.
 
-## Développement local
+## Lancer en local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build de production
+Puis ouvrir l'URL affichée par Vite, généralement `http://localhost:5173`.
+
+## Build
 
 ```bash
 npm run build
-npm run preview
 ```
 
 Le build est généré dans `dist/`.
 
 ## GitHub Pages
 
-La V3 est prête pour un repository GitHub nommé `yeita-vie`.
+Le workflow est déjà présent dans :
 
-1. Pousse le contenu du projet sur la branche `main`.
-2. Dans GitHub : **Settings → Pages → Build and deployment → Source → GitHub Actions**.
-3. À chaque push sur `main`, `.github/workflows/deploy-pages.yml` construit puis publie le dossier `dist`.
+`.github/workflows/deploy-pages.yml`
 
-La configuration Vite utilise des chemins relatifs (`base: './'`), donc les assets et les JSON fonctionnent sous `https://<user>.github.io/yeita-vie/` sans casser un déploiement à la racine sur Vercel.
+Dans GitHub :
+1. `Settings` → `Pages`
+2. Source : `GitHub Actions`
+3. Push sur `main`
 
-## Vercel
+Le workflow build et déploie automatiquement l'application.
 
-Importe simplement le repository. Vercel détectera Vite ; le fichier `vercel.json` reste inclus.
+## Ajouter un parcours
 
-## Organisation des données
+1. Ajouter `public/data/journeys/mon-parcours.json`
+2. Ajouter `mon-parcours.json` dans `public/data/journeys/index.json`
 
-```text
-public/data/
-├── app.json
-└── journeys/
-    ├── index.json
-    └── start-mission.json
+## Ajouter un scénario
+
+1. Ajouter `public/data/scenarios/mon-scenario.json`
+2. Ajouter le fichier dans `public/data/scenarios/index.json`
+3. Référencer les fiches existantes :
+
+```json
+{
+  "journey": "start-mission.json",
+  "cardId": "mandate"
+}
 ```
 
-Chaque journey reste dans son propre JSON. `journeys/index.json` contient uniquement la liste des fichiers à charger.
-
-Le contenu éditorial reste dans les JSON ; React gère seulement l'affichage et les interactions.
+Le contenu de la fiche reste uniquement dans le fichier du parcours source.
