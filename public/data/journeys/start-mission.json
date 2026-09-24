@@ -1,0 +1,280 @@
+{
+  "id": "start-mission",
+  "title": "Comment débuter ma mission ?",
+  "subtitle": "Tu viens d'arriver chez le client. Pas besoin de tout comprendre aujourd'hui : commence par rendre le terrain navigable.",
+  "accent": "violet",
+  "startHere": [
+    "mandate",
+    "people",
+    "observe",
+    "notes",
+    "focus"
+  ],
+  "cards": [
+    {
+      "id": "mandate",
+      "number": "01",
+      "title": "Comprends pourquoi tu es là",
+      "short": "Clarifie le besoin, le timing et ce que l'on attend de ton rôle.",
+      "why": "Pour éviter de démarrer avec une vision différente de celle du client — sans pour autant prendre la première formulation du problème comme une vérité définitive.",
+      "actions": [
+        "Fais reformuler le besoin qui a déclenché la mission.",
+        "Demande pourquoi maintenant et ce qui a déjà été tenté.",
+        "Repère les objectifs, contraintes et échéances déjà connues.",
+        "Note les mots qui reviennent souvent : ils donnent des indices sur les attentes."
+      ],
+      "questions": [
+        "Pourquoi mon intervention a-t-elle été demandée ?",
+        "Qu'est-ce qui ferait dire au client que ma mission démarre bien ?",
+        "Qu'est-ce qui est déjà considéré comme acquis ou décidé ?"
+      ],
+      "watchouts": [
+        "Tout prendre pour acquis.",
+        "Tout remettre en question dès le premier échange."
+      ],
+      "next": [
+        "expectations",
+        "people"
+      ]
+    },
+    {
+      "id": "expectations",
+      "number": "02",
+      "title": "Repère les attentes autour de toi",
+      "short": "Ton sponsor, ton équipe et les métiers n'attendent pas forcément la même chose de toi.",
+      "why": "Parce que les attentes implicites façonnent très vite la manière dont les gens vont travailler avec toi.",
+      "actions": [
+        "Demande à quelques interlocuteurs ce qu'ils attendent concrètement de ton rôle.",
+        "Repère les écarts de perception sans chercher à les résoudre immédiatement.",
+        "Reformule ce que tu comprends pour éviter les malentendus."
+      ],
+      "questions": [
+        "De ton point de vue, qu'est-ce qui rendrait mon intervention utile ?",
+        "Qu'attends-tu de moi — et qu'est-ce que tu n'attends surtout pas ?"
+      ],
+      "watchouts": [
+        "Chercher trop tôt une définition parfaite de ton rôle.",
+        "Confondre une attente individuelle avec le mandat global."
+      ],
+      "next": [
+        "people",
+        "focus"
+      ]
+    },
+    {
+      "id": "people",
+      "number": "03",
+      "title": "Identifie les bonnes personnes",
+      "short": "Ne rencontre pas tout le monde. Rencontre les personnes qui réduisent ton incertitude.",
+      "why": "Pour comprendre ton environnement au-delà du seul point de vue de la personne qui t'a accueilli et commencer à construire de la confiance.",
+      "actions": [
+        "Liste les personnes avec qui tu travailleras au quotidien.",
+        "Repère qui connaît le sujet, qui décide, qui influence et qui subit les décisions.",
+        "Programme quelques échanges courts avec un objectif clair.",
+        "Demande à chaque interlocuteur qui d'autre il serait utile de rencontrer."
+      ],
+      "questions": [
+        "Qui peut m'aider à comprendre ce que je ne comprends pas encore ?",
+        "Qui détient une perspective différente de celle que j'ai déjà entendue ?"
+      ],
+      "watchouts": [
+        "Faire une tournée de stakeholders sans intention précise.",
+        "Rester uniquement avec ton sponsor ou ton manager."
+      ],
+      "next": [
+        "observe",
+        "communicate"
+      ]
+    },
+    {
+      "id": "observe",
+      "number": "04",
+      "title": "Observe avant de vouloir changer",
+      "short": "Regarde comment le travail, les décisions et les échanges se passent réellement.",
+      "why": "Parce que le fonctionnement déclaré et le fonctionnement réel d'une organisation ne sont jamais parfaitement identiques.",
+      "actions": [
+        "Assiste aux rituels déjà en place.",
+        "Suis un sujet en cours plutôt que d'en inventer un nouveau.",
+        "Fais du shadowing quand c'est pertinent.",
+        "Regarde comment une décision naît, circule puis se transforme en action.",
+        "Observe les interactions entre produit, tech, design et métier."
+      ],
+      "questions": [
+        "Comment les décisions sont-elles réellement prises ?",
+        "Où l'information circule-t-elle bien — et où se perd-elle ?",
+        "Qu'est-ce qui semble important pour l'équipe, indépendamment des process affichés ?"
+      ],
+      "watchouts": [
+        "Évaluer trop vite si un fonctionnement est bon ou mauvais.",
+        "Appliquer immédiatement un pattern déjà vu ailleurs."
+      ],
+      "next": [
+        "notes",
+        "needs"
+      ]
+    },
+    {
+      "id": "notes",
+      "number": "05",
+      "title": "Sors les infos de ta tête",
+      "short": "Centralise ce que tu apprends pour ne pas transformer les premiers jours en brouillard.",
+      "why": "Pour réduire ta charge mentale et pouvoir revenir sur ce que tu as réellement appris plutôt que sur ton impression générale.",
+      "actions": [
+        "Garde une liste simple des personnes, questions, irritants, décisions et acronymes.",
+        "Sépare ce qu'on t'a dit, ce que tu as observé, ce que tu supposes et ce que tu veux vérifier.",
+        "Capture les sujets sans les transformer automatiquement en actions."
+      ],
+      "questions": [
+        "Qu'est-ce que je sais vraiment ?",
+        "Qu'est-ce que je suppose ?",
+        "Qu'est-ce qui mérite encore d'être vérifié ?"
+      ],
+      "watchouts": [
+        "Transformer toutes tes notes en backlog personnel.",
+        "Garder toute la complexité mentalement."
+      ],
+      "next": [
+        "focus",
+        "reset"
+      ]
+    },
+    {
+      "id": "focus",
+      "number": "06",
+      "title": "Choisis où mettre ton attention",
+      "short": "Identifier cinq sujets ne veut pas dire en traiter cinq.",
+      "why": "Pour éviter que ta volonté d'aider se transforme en dispersion et choisir consciemment ce qui mérite ton énergie maintenant.",
+      "actions": [
+        "Classe chaque sujet : agir maintenant, continuer à explorer, garder de côté.",
+        "Choisis un petit nombre de sujets actifs.",
+        "Continue d'alimenter les autres sans les traiter tant qu'ils ne deviennent pas prioritaires.",
+        "Réévalue régulièrement au lieu de figer ton choix."
+      ],
+      "questions": [
+        "Est-ce lié à ma mission ?",
+        "Est-ce important maintenant ?",
+        "Ai-je suffisamment compris le sujet ?",
+        "Que se passe-t-il si je n'agis pas cette semaine ?"
+      ],
+      "watchouts": [
+        "Confondre visible et important.",
+        "Vouloir traiter un sujet uniquement parce que tu sais comment le résoudre."
+      ],
+      "next": [
+        "plan",
+        "reset"
+      ]
+    },
+    {
+      "id": "plan",
+      "number": "07",
+      "title": "Construis tes prochains pas",
+      "short": "Ne planifie pas trois mois. Décide des prochaines actions qui réduisent le plus ton incertitude.",
+      "why": "Pour transformer progressivement ta compréhension en mouvement sans faire semblant de maîtriser ce que tu ne connais pas encore.",
+      "actions": [
+        "Choisis 1 à 3 prochaines actions maximum.",
+        "Mélange rencontre, observation et temps de réflexion.",
+        "Garde des espaces libres dans ton agenda.",
+        "À la fin de quelques jours, refais le point et ajuste."
+      ],
+      "questions": [
+        "Quelle action me fera apprendre le plus ?",
+        "Quelle personne ou observation peut débloquer ma compréhension ?",
+        "Est-ce que je remplis mon agenda ou est-ce que je construis réellement ma mission ?"
+      ],
+      "watchouts": [
+        "Confondre activité et progression.",
+        "Remplir chaque trou de ton agenda avec une réunion."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "08",
+      "title": "Commence à construire la confiance",
+      "short": "La confiance se gagne surtout par la qualité de tes interactions et la fiabilité de tes petits engagements.",
+      "why": "Parce qu'un consultant comprend mieux la réalité du terrain quand les personnes se sentent suffisamment en confiance pour la lui montrer.",
+      "actions": [
+        "Écoute avant de conseiller.",
+        "Sois clair sur ce que tu sais et ce que tu ne sais pas encore.",
+        "Reformule plutôt que de supposer.",
+        "Tiens les petits engagements que tu prends.",
+        "Évite de distribuer trop vite des diagnostics."
+      ],
+      "questions": [
+        "Est-ce que ma manière d'arriver donne envie aux gens de me parler franchement ?",
+        "Ai-je compris avant de proposer ?"
+      ],
+      "watchouts": [
+        "Chercher à impressionner.",
+        "Parler comme si ton expérience passée prouvait déjà ce qui se passe ici."
+      ],
+      "next": [
+        "observe",
+        "focus"
+      ]
+    },
+    {
+      "id": "needs",
+      "number": "09",
+      "title": "Fais émerger les besoins, pas les solutions",
+      "short": "Les premiers irritants sont des signaux à explorer, pas des tickets à ouvrir.",
+      "why": "Pour ne pas résoudre trop vite un symptôme alors que le problème réel se trouve ailleurs.",
+      "actions": [
+        "Regroupe les irritants qui semblent parler du même sujet.",
+        "Cherche les conséquences concrètes avant de chercher une solution.",
+        "Croise plusieurs points de vue.",
+        "Garde tes premières intuitions sous forme d'hypothèses."
+      ],
+      "questions": [
+        "Quel problème cette personne essaie-t-elle réellement de résoudre ?",
+        "Est-ce un problème récurrent, important et lié à ma mission ?",
+        "Qu'est-ce qui me ferait changer d'avis ?"
+      ],
+      "watchouts": [
+        "Prendre l'irritant le plus bruyant comme priorité.",
+        "Passer directement de l'observation à la solution."
+      ],
+      "next": [
+        "focus",
+        "plan"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Je commence à me sentir noyé",
+      "short": "Reviens à cinq questions et réduis la taille du problème.",
+      "why": "Parce que le début de mission crée beaucoup de bruit. Ton objectif est de retrouver une prochaine étape raisonnable, pas de tout résoudre.",
+      "actions": [
+        "Arrête de collecter pendant quelques minutes.",
+        "Écris ce que tu sais, ce qui reste flou et ce qui attire ton attention.",
+        "Choisis une seule zone d'incertitude à réduire.",
+        "Décide de la prochaine action la plus simple."
+      ],
+      "questions": [
+        "Qu'est-ce que je sais aujourd'hui ?",
+        "Qu'est-ce que je ne comprends toujours pas ?",
+        "Quel sujet mérite réellement mon attention maintenant ?",
+        "Qui ou quoi peut m'aider à avancer ?",
+        "Quelle est ma prochaine action ?"
+      ],
+      "watchouts": [
+        "Créer un plan complexe pour te rassurer.",
+        "Ajouter de nouvelles actions alors que tu as surtout besoin de remettre de l'ordre."
+      ],
+      "next": [
+        "notes",
+        "focus",
+        "plan"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu ne sais pas par où commencer ?",
+    "text": "Parcours les fiches dans l’ordre, puis arrête-toi dès qu’une piste répond à ton besoin. Tu n’as pas besoin de tout faire."
+  }
+}

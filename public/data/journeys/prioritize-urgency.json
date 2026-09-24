@@ -1,0 +1,336 @@
+{
+  "id": "prioritize-urgency",
+  "title": "Je dois prioriser dans un contexte où tout semble urgent",
+  "subtitle": "Quand tout est présenté comme urgent, le vrai enjeu n'est pas d'aller plus vite partout : c'est de rendre les arbitrages visibles et de choisir consciemment où mettre l'énergie.",
+  "accent": "coral",
+  "startHere": [
+    "inventory",
+    "urgency",
+    "impact",
+    "constraints",
+    "tradeoffs"
+  ],
+  "cards": [
+    {
+      "id": "inventory",
+      "number": "01",
+      "title": "Rends visible tout ce qui réclame ton attention",
+      "short": "Tu ne peux pas prioriser correctement ce qui reste dispersé dans les discussions, tickets et urgences du quotidien.",
+      "why": "Pour sortir du sentiment diffus que tout est urgent et commencer à regarder les sujets comme un ensemble comparable.",
+      "actions": [
+        "Rassemble les sujets qui réclament actuellement du temps ou des décisions.",
+        "Regroupe les doublons et les demandes qui parlent du même problème.",
+        "Note pour chaque sujet qui le porte et pourquoi il est considéré comme urgent.",
+        "Sépare les engagements déjà pris des nouvelles demandes.",
+        "Garde les sujets encore flous visibles sans chercher immédiatement à les classer."
+      ],
+      "questions": [
+        "Qu'est-ce qui réclame réellement notre attention aujourd'hui ?",
+        "Quels sujets sont différents en apparence mais parlent du même problème ?",
+        "Quelles urgences viennent d'un engagement déjà pris ?",
+        "Qu'est-ce qui n'est urgent que pour une seule personne ?"
+      ],
+      "watchouts": [
+        "Commencer à arbitrer alors que tu n'as qu'une partie des demandes.",
+        "Transformer immédiatement chaque demande en élément de backlog."
+      ],
+      "next": [
+        "urgency",
+        "impact"
+      ]
+    },
+    {
+      "id": "urgency",
+      "number": "02",
+      "title": "Décompose ce qui se cache derrière l'urgence",
+      "short": "Le mot urgent peut désigner un risque réel, une échéance, une pression ou simplement une préférence forte.",
+      "why": "Pour éviter que le volume, le statut ou l'insistance d'un interlocuteur deviennent automatiquement des critères de priorité.",
+      "actions": [
+        "Demande ce qui se passe concrètement si le sujet n'est pas traité maintenant.",
+        "Identifie les échéances réelles et leur origine.",
+        "Distingue les risques immédiats des désagréments ou retards acceptables.",
+        "Repère les urgences liées à une dépendance externe.",
+        "Note les sujets dont l'urgence repose principalement sur une perception ou une habitude."
+      ],
+      "questions": [
+        "Pourquoi ce sujet est-il urgent ?",
+        "Que se passe-t-il si nous attendons une semaine ?",
+        "Y a-t-il une date réellement non négociable ?",
+        "Quel risque cherchons-nous à éviter ?",
+        "Cette urgence est-elle nouvelle ou revient-elle régulièrement ?"
+      ],
+      "watchouts": [
+        "Traiter le mot urgent comme une information suffisante.",
+        "Chercher à démontrer à quelqu'un que son urgence n'en est pas une."
+      ],
+      "next": [
+        "impact",
+        "constraints",
+        "noise"
+      ]
+    },
+    {
+      "id": "impact",
+      "number": "03",
+      "title": "Regarde ce que chaque sujet change réellement",
+      "short": "Deux sujets urgents peuvent avoir des conséquences très différentes.",
+      "why": "Pour comparer les demandes sur leurs effets attendus plutôt que sur leur niveau de pression.",
+      "actions": [
+        "Identifie les utilisateurs, équipes ou résultats concernés.",
+        "Estime l'ampleur du problème ou de l'opportunité.",
+        "Regarde si le sujet bloque quelque chose d'autre.",
+        "Distingue impact immédiat et impact durable.",
+        "Note le niveau de confiance que tu as dans l'impact annoncé."
+      ],
+      "questions": [
+        "Qui est réellement affecté ?",
+        "À quelle fréquence le problème se produit-il ?",
+        "Quelle conséquence concrète a-t-il ?",
+        "Qu'est-ce que ce sujet débloque s'il est traité ?",
+        "Sur quoi repose notre estimation de son impact ?"
+      ],
+      "watchouts": [
+        "Confondre un sujet très visible avec un sujet très impactant.",
+        "Présenter une estimation faible en confiance comme un fait."
+      ],
+      "next": [
+        "constraints",
+        "tradeoffs"
+      ]
+    },
+    {
+      "id": "constraints",
+      "number": "04",
+      "title": "Intègre les contraintes avant d'arbitrer",
+      "short": "Une priorité n'existe pas indépendamment de la capacité, des dépendances et des engagements déjà présents.",
+      "why": "Pour éviter de construire une liste idéale impossible à exécuter dans le contexte réel.",
+      "actions": [
+        "Identifie les dépendances entre les sujets.",
+        "Fais apparaître les engagements contractuels, réglementaires ou commerciaux.",
+        "Regarde la capacité réellement disponible, pas la capacité théorique.",
+        "Demande où se trouvent les principales incertitudes techniques ou opérationnelles.",
+        "Repère les décisions qui doivent être prises avant de pouvoir avancer."
+      ],
+      "questions": [
+        "Qu'est-ce qui est réellement contraint ?",
+        "Quelles dépendances imposent un ordre ?",
+        "Quels engagements avons-nous déjà pris ?",
+        "Quelle capacité avons-nous vraiment ?",
+        "Qu'est-ce qui peut être découplé ou traité autrement ?"
+      ],
+      "watchouts": [
+        "Utiliser la complexité technique comme unique raison de repousser un sujet.",
+        "Construire une priorisation sans les personnes qui connaissent les contraintes d'exécution."
+      ],
+      "next": [
+        "tradeoffs",
+        "scope"
+      ]
+    },
+    {
+      "id": "tradeoffs",
+      "number": "05",
+      "title": "Rends les arbitrages explicites",
+      "short": "Prioriser signifie aussi décider ce que tu ne fais pas maintenant.",
+      "why": "Pour transformer une liste de demandes concurrentes en choix compréhensibles plutôt qu'en empilement de promesses.",
+      "actions": [
+        "Compare les sujets selon quelques critères adaptés à ton contexte.",
+        "Pour chaque choix, explicite ce qui passe devant et ce qui passe derrière.",
+        "Formule les conséquences connues de l'arbitrage.",
+        "Identifie les décisions qui nécessitent un alignement avec un sponsor ou d'autres stakeholders.",
+        "Documente suffisamment le raisonnement pour pouvoir le réexaminer plus tard."
+      ],
+      "questions": [
+        "Si nous faisons ceci maintenant, qu'est-ce que nous retardons ?",
+        "Quel compromis sommes-nous en train d'accepter ?",
+        "Qui doit comprendre ou valider cet arbitrage ?",
+        "Qu'est-ce qui nous ferait changer cet ordre ?"
+      ],
+      "watchouts": [
+        "Présenter la priorisation comme un calcul objectif qui supprimerait toute discussion.",
+        "Éviter de nommer ce qui est dépriorisé."
+      ],
+      "next": [
+        "scope",
+        "communicate",
+        "review"
+      ]
+    },
+    {
+      "id": "scope",
+      "number": "06",
+      "title": "Réduis la taille des sujets quand c'est possible",
+      "short": "Un arbitrage n'est pas toujours binaire entre tout faire et ne rien faire.",
+      "why": "Pour retrouver des marges de manœuvre dans un contexte tendu et apprendre plus tôt sans nécessairement engager tout l'effort prévu.",
+      "actions": [
+        "Cherche la plus petite réponse qui traite le risque ou besoin principal.",
+        "Sépare ce qui est indispensable de ce qui améliore simplement la solution.",
+        "Identifie les parties du sujet qui peuvent être différées.",
+        "Teste si une investigation courte peut réduire suffisamment l'incertitude avant de décider.",
+        "Vérifie avec l'équipe que la réduction de scope ne déplace pas simplement le problème ailleurs."
+      ],
+      "questions": [
+        "Quel est le minimum réellement nécessaire ?",
+        "Quelle partie crée l'essentiel de la valeur ou réduit l'essentiel du risque ?",
+        "Qu'est-ce qui peut attendre sans compromettre le résultat recherché ?",
+        "Peut-on apprendre quelque chose avant de s'engager pleinement ?"
+      ],
+      "watchouts": [
+        "Confondre réduction de scope et baisse arbitraire de qualité.",
+        "Découper un sujet au point de ne plus résoudre le problème initial."
+      ],
+      "next": [
+        "communicate",
+        "review"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "07",
+      "title": "Explique les choix sans vendre une fausse certitude",
+      "short": "Une priorité acceptée est plus facile à tenir qu'une priorité simplement annoncée.",
+      "why": "Pour que les parties prenantes comprennent le raisonnement, les contraintes et les conséquences des choix faits.",
+      "actions": [
+        "Explique les critères utilisés plutôt que de simplement annoncer un classement.",
+        "Rappelle les contraintes ou engagements qui influencent la décision.",
+        "Dis clairement ce qui est traité maintenant et ce qui ne l'est pas.",
+        "Expose les principales incertitudes quand elles peuvent faire évoluer le choix.",
+        "Donne un moment ou une condition de réévaluation aux sujets repoussés quand c'est pertinent."
+      ],
+      "questions": [
+        "Est-ce que les personnes comprennent pourquoi ce choix a été fait ?",
+        "Savent-elles ce qui est repoussé et pourquoi ?",
+        "Ai-je présenté une décision ou essayé de faire croire qu'elle était mathématiquement évidente ?",
+        "Quelles objections révèlent une information que nous n'avions pas intégrée ?"
+      ],
+      "watchouts": [
+        "Utiliser une matrice ou un score comme argument d'autorité.",
+        "Surjustifier la décision au point de rouvrir en permanence l'arbitrage."
+      ],
+      "next": [
+        "review",
+        "pressure"
+      ]
+    },
+    {
+      "id": "noise",
+      "number": "08",
+      "title": "Distingue signal, bruit et interruption",
+      "short": "Tous les nouveaux sujets ne méritent pas de modifier immédiatement les priorités.",
+      "why": "Pour protéger la capacité de l'équipe à avancer tout en restant capable de réagir quand une nouvelle information change réellement la situation.",
+      "actions": [
+        "Définis comment une nouvelle demande entre dans la discussion de priorité.",
+        "Évalue si elle apporte une nouvelle information ou répète un sujet déjà connu.",
+        "Compare-la avec les sujets actifs avant de déplacer l'attention.",
+        "Traite séparément les incidents ou vraies urgences opérationnelles quand nécessaire.",
+        "Garde une trace des interruptions fréquentes pour identifier d'éventuels problèmes systémiques."
+      ],
+      "questions": [
+        "Cette information change-t-elle réellement notre arbitrage ?",
+        "Est-ce un incident, une nouvelle priorité ou simplement une nouvelle demande ?",
+        "Que devons-nous arrêter si nous prenons ce sujet maintenant ?",
+        "Pourquoi ces interruptions apparaissent-elles aussi souvent ?"
+      ],
+      "watchouts": [
+        "Refuser toute nouvelle demande au nom du focus.",
+        "Changer de priorité à chaque nouvelle sollicitation."
+      ],
+      "next": [
+        "tradeoffs",
+        "review"
+      ]
+    },
+    {
+      "id": "pressure",
+      "number": "09",
+      "title": "Gère la pression sans la transmettre telle quelle à l'équipe",
+      "short": "Ton rôle n'est pas seulement de recevoir les urgences : tu dois aussi les rendre compréhensibles et actionnables.",
+      "why": "Pour éviter qu'une pression organisationnelle se transforme directement en dispersion, stress et changements permanents pour l'équipe.",
+      "actions": [
+        "Demande le besoin ou le risque derrière les demandes pressantes.",
+        "Évite de relayer chaque urgence avant de l'avoir qualifiée.",
+        "Explique les arbitrages possibles aux personnes qui portent la pression.",
+        "Protège autant que possible les sujets déjà engagés des changements non nécessaires.",
+        "Fais remonter quand la quantité d'engagements dépasse durablement la capacité."
+      ],
+      "questions": [
+        "Suis-je en train de transmettre de l'information ou simplement du stress ?",
+        "Cette demande nécessite-t-elle réellement une interruption immédiate ?",
+        "Quel arbitrage puis-je proposer plutôt que d'ajouter un sujet ?",
+        "Le problème est-il notre priorisation ou un niveau d'engagement irréaliste ?"
+      ],
+      "watchouts": [
+        "Se positionner comme un bouclier qui cache toute réalité à l'équipe.",
+        "Accepter toutes les demandes puis demander à l'équipe de trouver comment les absorber."
+      ],
+      "next": [
+        "communicate",
+        "review",
+        "reset"
+      ]
+    },
+    {
+      "id": "review",
+      "number": "10",
+      "title": "Réévalue sans repartir de zéro",
+      "short": "Les priorités doivent pouvoir évoluer quand le contexte change, sans devenir instables.",
+      "why": "Pour conserver des choix adaptés à la réalité sans transformer chaque nouvelle information en nouveau classement complet.",
+      "actions": [
+        "Définis des moments réguliers de réévaluation.",
+        "Vérifie si les hypothèses ayant conduit aux choix sont toujours vraies.",
+        "Regarde si de nouvelles contraintes, données ou engagements sont apparus.",
+        "Ajuste uniquement ce que les nouvelles informations justifient.",
+        "Explique clairement quand et pourquoi une priorité change."
+      ],
+      "questions": [
+        "Qu'est-ce qui a réellement changé depuis notre dernier arbitrage ?",
+        "Nos hypothèses principales sont-elles toujours valides ?",
+        "Un sujet est-il devenu plus important ou simplement plus bruyant ?",
+        "Le coût du changement de priorité est-il justifié ?"
+      ],
+      "watchouts": [
+        "Figer une priorité alors que les conditions ont changé.",
+        "Reprioriser constamment pour montrer que tu prends en compte chaque nouvelle demande."
+      ],
+      "next": [
+        "inventory",
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Tout le monde me dit que son sujet est prioritaire",
+      "short": "Ne cherche pas à satisfaire tout le monde. Reviens aux conséquences, aux contraintes et aux choix.",
+      "why": "Parce qu'un contexte où tout est prioritaire signifie souvent que les arbitrages ne sont pas suffisamment explicites ou assumés.",
+      "actions": [
+        "Arrête d'ajouter de nouveaux sujets à la liste active.",
+        "Rassemble les demandes concurrentes au même endroit.",
+        "Pour chacune, note l'urgence réelle, l'impact, les contraintes et les engagements associés.",
+        "Identifie les sujets qui nécessitent réellement une décision aujourd'hui.",
+        "Prépare un arbitrage clair en montrant ce qui est gagné et ce qui est repoussé."
+      ],
+      "questions": [
+        "Qu'est-ce qui se passe réellement si nous ne faisons pas ce sujet maintenant ?",
+        "Quel choix sommes-nous en train d'éviter ?",
+        "Quels engagements ne peuvent pas tous être tenus simultanément ?",
+        "Qui doit assumer ou participer à cet arbitrage ?",
+        "Quel est le plus petit nombre de sujets sur lesquels nous pouvons réellement nous engager ?"
+      ],
+      "watchouts": [
+        "Créer une matrice de priorisation plus complexe pour éviter la discussion.",
+        "Promettre que tous les sujets seront traités rapidement pour éviter le conflit."
+      ],
+      "next": [
+        "urgency",
+        "tradeoffs",
+        "communicate"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tout semble urgent ?",
+    "text": "Commence par rendre les demandes comparables. Cherche ce qui crée réellement l'urgence, ce que chaque sujet change et quels arbitrages tu dois rendre explicites. Prioriser, c'est aussi décider ce qui ne sera pas fait maintenant."
+  }
+}

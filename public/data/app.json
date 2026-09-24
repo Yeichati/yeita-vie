@@ -1,0 +1,29 @@
+{
+  "name": "Yei'ta vie",
+  "topbarLabel": "PLAYGROUND CONSULTANT PM",
+  "eyebrow": "PLAYGROUND CONSULTANT PM",
+  "hero": {
+    "title": "Ton début de mission,",
+    "highlight": "sans la montagne.",
+    "tagline": "Un coup de main pour prendre tes repères, choisir tes prochains pas et avancer sans te disperser.",
+    "chips": ["observer", "comprendre", "choisir", "avancer"]
+  },
+  "sidebar": {
+    "title": "Choisis ton parcours",
+    "noteTitle": "Pas un process.",
+    "noteText": "Un terrain de jeu pour reprendre pied, faire ton marché et construire ta propre réflexion."
+  },
+  "journey": {
+    "kicker": "TON PARCOURS",
+    "searchPlaceholder": "Chercher une fiche…",
+    "emptySearch": "Aucune fiche ne correspond à ta recherche."
+  },
+  "card": {
+    "sheetLabel": "FICHE",
+    "whyLabel": "POURQUOI ?",
+    "actionsLabel": "Pistes à tester",
+    "questionsLabel": "Questions à te poser",
+    "watchoutsLabel": "Points d'attention",
+    "closeLabel": "Fermer"
+  }
+}
