@@ -1,12 +1,16 @@
 {
   "name": "Yei'ta vie",
-  "topbarLabel": "PLAYGROUND CONSULTANT PM",
   "eyebrow": "PLAYGROUND CONSULTANT PM",
   "hero": {
     "title": "Ton début de mission,",
     "highlight": "sans la montagne.",
     "tagline": "Un coup de main pour prendre tes repères, choisir tes prochains pas et avancer sans te disperser.",
-    "chips": ["observer", "comprendre", "choisir", "avancer"]
+    "chips": [
+      "observer",
+      "comprendre",
+      "choisir",
+      "avancer"
+    ]
   },
   "navigation": {
     "label": "Navigation principale",
@@ -56,5 +60,11 @@
     "watchoutsLabel": "Points d'attention",
     "nextLabel": "PROCHAINE FICHE DU SCÉNARIO",
     "closeLabel": "Fermer"
+  },
+  "footer": {
+    "prefix": "Réalisé avec amour par",
+    "label": "Yeita",
+    "url": "https://www.yeita.fr/",
+    "suffix": "❤️"
   }
 }

@@ -269,22 +269,23 @@ export default function App() {
           <button className={view === 'journeys' ? 'active' : ''} onClick={() => changeView('journeys')}>{app.navigation.journeys}</button>
           <button className={view === 'scenarios' ? 'active' : ''} onClick={() => changeView('scenarios')}>{app.navigation.scenarios}</button>
         </nav>
-        <div className="topbar-meta">{app.topbarLabel}</div>
       </header>
 
       <main id="top">
-        <section className={`hero ${view !== 'home' ? 'hero-compact' : ''}`}>
-          <div className="hero-copy">
-            <span className="eyebrow">{app.eyebrow}</span>
-            <h1>{app.hero.title}<br /><span>{app.hero.highlight}</span></h1>
-            <p>{app.hero.tagline}</p>
-          </div>
-          <div className="hero-orbit" aria-hidden="true">
-            {app.hero.chips.map((chip, index) => (
-              <span key={chip} className={`chip chip-${index}`}>{chip}</span>
-            ))}
-          </div>
-        </section>
+        {view === 'home' && (
+          <section className="hero">
+            <div className="hero-copy">
+              <span className="eyebrow">{app.eyebrow}</span>
+              <h1>{app.hero.title}<br /><span>{app.hero.highlight}</span></h1>
+              <p>{app.hero.tagline}</p>
+            </div>
+            <div className="hero-orbit" aria-hidden="true">
+              {app.hero.chips.map((chip, index) => (
+                <span key={chip} className={`chip chip-${index}`}>{chip}</span>
+              ))}
+            </div>
+          </section>
+        )}
 
         {view === 'home' ? (
           <Home app={app} journeys={journeys} scenarios={scenarios} onChoose={changeView} />
@@ -359,6 +360,12 @@ export default function App() {
           </section>
         )}
       </main>
+
+      <footer className="site-footer">
+        <span>{app.footer?.prefix}</span>{' '}
+        <a href={app.footer?.url} target="_blank" rel="noreferrer">{app.footer?.label}</a>{' '}
+        <span>{app.footer?.suffix}</span>
+      </footer>
 
       {openCard && (
         <CardDialog
