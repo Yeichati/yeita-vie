@@ -1,4 +1,4 @@
-# Yei'ta vie
+# Yei'ta vie — V3
 
 Playground consultant PM construit avec React + Vite.
 
@@ -9,8 +9,6 @@ npm install
 npm run dev
 ```
 
-Vite affichera l'URL locale, généralement `http://localhost:5173`.
-
 ## Build de production
 
 ```bash
@@ -18,16 +16,21 @@ npm run build
 npm run preview
 ```
 
-Le build statique est généré dans `dist/`.
+Le build est généré dans `dist/`.
 
-## Déployer sur Vercel
+## GitHub Pages
 
-1. Pousse le dossier dans un repo GitHub/GitLab/Bitbucket.
-2. Importe le repo dans Vercel.
-3. Vercel détecte Vite automatiquement.
-4. Déploie.
+La V3 est prête pour un repository GitHub nommé `yeita-vie`.
 
-Le fichier `vercel.json` décrit aussi explicitement le build et le dossier de sortie.
+1. Pousse le contenu du projet sur la branche `main`.
+2. Dans GitHub : **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+3. À chaque push sur `main`, `.github/workflows/deploy-pages.yml` construit puis publie le dossier `dist`.
+
+La configuration Vite utilise des chemins relatifs (`base: './'`), donc les assets et les JSON fonctionnent sous `https://<user>.github.io/yeita-vie/` sans casser un déploiement à la racine sur Vercel.
+
+## Vercel
+
+Importe simplement le repository. Vercel détectera Vite ; le fichier `vercel.json` reste inclus.
 
 ## Organisation des données
 
@@ -39,50 +42,6 @@ public/data/
     └── start-mission.json
 ```
 
-### `app.json`
+Chaque journey reste dans son propre JSON. `journeys/index.json` contient uniquement la liste des fichiers à charger.
 
-Contient les textes globaux de l'interface : nom, hero, labels, recherche, sidebar, etc.
-
-### `journeys/index.json`
-
-Manifeste minimal des journeys à charger :
-
-```json
-{
-  "journeys": [
-    "start-mission.json",
-    "un-autre-journey.json"
-  ]
-}
-```
-
-### Un fichier par journey
-
-Chaque journey possède son propre JSON avec :
-
-- son titre et sous-titre ;
-- son bloc d'introduction `starter` ;
-- ses fiches ;
-- les liens entre fiches via `next`.
-
-Exemple :
-
-```json
-{
-  "id": "mon-journey",
-  "title": "Mon parcours",
-  "subtitle": "Description",
-  "starter": {
-    "mark": "→",
-    "title": "Je commence où ?",
-    "text": "Texte éditorial entièrement modifiable depuis la donnée."
-  },
-  "cards": []
-}
-```
-
-Pour ajouter un journey : crée son fichier JSON puis ajoute simplement son nom dans `journeys/index.json`.
-
-## Philosophie
-
-Le code gère le rendu et les interactions. Le contenu éditorial reste dans les fichiers JSON afin de pouvoir faire évoluer le playground sans modifier les composants React.
+Le contenu éditorial reste dans les JSON ; React gère seulement l'affichage et les interactions.

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-const DATA_ROOT = '/data'
+const DATA_ROOT = `${import.meta.env.BASE_URL}data`
 
 async function getJson(path) {
   const response = await fetch(path)
