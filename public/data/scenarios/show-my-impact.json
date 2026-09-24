@@ -1,0 +1,48 @@
+{
+  "id": "show-my-impact",
+  "title": "Je dois montrer ce que mon travail a changé",
+  "subtitle": "Construire un bilan crédible qui relie le travail réalisé à des changements observables sans survendre ta contribution.",
+  "accent": "violet",
+  "cards": [
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "intent"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "baseline"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "signals"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "attribution"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "qualitative"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "team"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "decisions"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "audience"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "message"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "communicate"
+    }
+  ]
+}

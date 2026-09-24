@@ -1,0 +1,280 @@
+{
+  "id": "take-over-moving-team-product",
+  "title": "Je dois reprendre une équipe ou un produit déjà en mouvement",
+  "subtitle": "Tu arrives dans une dynamique qui existe déjà. Ton premier enjeu n'est pas de remettre les compteurs à zéro, mais de comprendre ce qui fonctionne, ce qui est engagé et où tu peux apporter de la valeur sans casser l'élan.",
+  "accent": "green",
+  "startHere": [
+    "motion",
+    "commitments",
+    "people",
+    "history",
+    "preserve"
+  ],
+  "cards": [
+    {
+      "id": "motion",
+      "number": "01",
+      "title": "Comprends ce qui est déjà en mouvement",
+      "short": "Commence par voir les sujets actifs, les décisions récentes et le rythme actuel.",
+      "why": "Pour éviter d'interrompre une dynamique utile simplement parce que tu ne la connais pas encore.",
+      "actions": [
+        "Liste les principaux sujets actuellement en cours.",
+        "Repère les décisions récemment prises.",
+        "Identifie les prochains jalons connus.",
+        "Demande ce qui occupe réellement l'équipe aujourd'hui."
+      ],
+      "questions": [
+        "Qu'est-ce qui avance déjà ?",
+        "Quelles décisions viennent d'être prises ?",
+        "Quels sujets sont sensibles à une interruption ?"
+      ],
+      "watchouts": [
+        "Faire comme si ton arrivée créait un nouveau départ.",
+        "Confondre visibilité faible et absence de direction."
+      ],
+      "next": [
+        "commitments",
+        "people"
+      ]
+    },
+    {
+      "id": "commitments",
+      "number": "02",
+      "title": "Identifie les engagements existants",
+      "short": "Certains choix ont déjà créé des attentes, des dépendances ou des promesses.",
+      "why": "Pour savoir ce qui peut être changé facilement et ce qui nécessite un véritable arbitrage.",
+      "actions": [
+        "Repère les engagements clients, business, techniques ou organisationnels.",
+        "Identifie les dates et dépendances déjà annoncées.",
+        "Vérifie qui considère ces engagements comme non négociables.",
+        "Distingue engagement réel et habitude ou préférence."
+      ],
+      "questions": [
+        "Qu'avons-nous déjà promis ?",
+        "À qui ?",
+        "Que se passe-t-il si nous changeons de direction ?"
+      ],
+      "watchouts": [
+        "Considérer tout engagement comme immuable.",
+        "Changer une promesse sans comprendre son contexte."
+      ],
+      "next": [
+        "history",
+        "preserve"
+      ]
+    },
+    {
+      "id": "people",
+      "number": "03",
+      "title": "Comprends les rôles et dynamiques existantes",
+      "short": "Une équipe en mouvement a déjà ses habitudes, ses leaders informels et ses zones de friction.",
+      "why": "Pour t'insérer dans le système sans créer involontairement de nouvelles tensions.",
+      "actions": [
+        "Identifie qui porte quels sujets aujourd'hui.",
+        "Observe qui est sollicité quand une décision doit être prise.",
+        "Demande comment les responsabilités ont évolué récemment.",
+        "Repère les attentes vis-à-vis de ton arrivée."
+      ],
+      "questions": [
+        "Qui porte réellement quoi ?",
+        "Qui influence les décisions ?",
+        "Qu'est-ce que mon arrivée change pour les autres ?"
+      ],
+      "watchouts": [
+        "Redéfinir les rôles avant de comprendre leur histoire.",
+        "Créer une compétition implicite avec les personnes déjà en place."
+      ],
+      "next": [
+        "history",
+        "preserve"
+      ]
+    },
+    {
+      "id": "history",
+      "number": "04",
+      "title": "Récupère l'histoire récente",
+      "short": "Comprends les décisions qui ont produit la situation actuelle.",
+      "why": "Pour éviter de relancer des débats déjà tranchés ou de proposer des idées déjà testées sans comprendre pourquoi elles ont échoué.",
+      "actions": [
+        "Demande quelles grandes décisions ont été prises récemment.",
+        "Cherche les sujets déjà testés, abandonnés ou reportés.",
+        "Repère les changements d'organisation ou de stratégie.",
+        "Demande ce qui a été difficile à obtenir ou à faire évoluer."
+      ],
+      "questions": [
+        "Comment en est-on arrivé là ?",
+        "Qu'est-ce qui a déjà été tenté ?",
+        "Quels débats ont déjà eu lieu ?"
+      ],
+      "watchouts": [
+        "Rejouer les mêmes discussions sans nouvelle information.",
+        "Considérer les décisions passées comme des erreurs parce que le contexte a changé."
+      ],
+      "next": [
+        "preserve",
+        "observe"
+      ]
+    },
+    {
+      "id": "preserve",
+      "number": "05",
+      "title": "Identifie ce qu'il faut préserver",
+      "short": "Une reprise réussie ne consiste pas seulement à trouver ce qu'il faut améliorer.",
+      "why": "Pour ne pas casser des pratiques, relations ou dynamiques qui fonctionnent déjà bien.",
+      "actions": [
+        "Demande explicitement ce qui fonctionne bien aujourd'hui.",
+        "Repère les pratiques appréciées par l'équipe.",
+        "Observe les éléments qui donnent de la stabilité ou de la confiance.",
+        "Note ce que tu ne veux pas perturber sans raison."
+      ],
+      "questions": [
+        "Qu'est-ce qui fonctionne et mérite d'être protégé ?",
+        "Qu'est-ce que l'équipe ne voudrait surtout pas perdre ?",
+        "Quels acquis sont fragiles ?"
+      ],
+      "watchouts": [
+        "Ne chercher que les défauts.",
+        "Changer une pratique simplement parce qu'elle ne correspond pas à tes habitudes."
+      ],
+      "next": [
+        "observe",
+        "priorities"
+      ]
+    },
+    {
+      "id": "observe",
+      "number": "06",
+      "title": "Observe avant de réorienter",
+      "short": "Prends le temps de voir le fonctionnement réel avant de proposer une nouvelle manière de travailler.",
+      "why": "Pour distinguer les irritants structurels des maladresses ponctuelles ou des contraintes temporaires.",
+      "actions": [
+        "Assiste aux rituels existants.",
+        "Suis quelques sujets de bout en bout.",
+        "Observe comment l'équipe gère les imprévus.",
+        "Note les tensions ou lenteurs sans immédiatement les transformer en chantiers."
+      ],
+      "questions": [
+        "Où l'équipe perd-elle réellement du temps ?",
+        "Qu'est-ce qui dépend d'une contrainte externe ?",
+        "Qu'est-ce qui semble fragile mais fonctionne malgré tout ?"
+      ],
+      "watchouts": [
+        "Confondre différence et dysfonctionnement.",
+        "Importer ton ancien mode de fonctionnement."
+      ],
+      "next": [
+        "priorities",
+        "changes"
+      ]
+    },
+    {
+      "id": "priorities",
+      "number": "07",
+      "title": "Reprends le fil des priorités",
+      "short": "Comprends pourquoi les sujets actuels sont prioritaires avant de les challenger.",
+      "why": "Pour savoir si la direction reste pertinente ou si de nouvelles informations justifient un ajustement.",
+      "actions": [
+        "Demande sur quels critères les priorités actuelles ont été choisies.",
+        "Vérifie si les hypothèses sont toujours vraies.",
+        "Repère les nouvelles informations apparues depuis les derniers arbitrages.",
+        "Ne change l'ordre que si tu peux expliquer pourquoi."
+      ],
+      "questions": [
+        "Pourquoi faisons-nous cela maintenant ?",
+        "Qu'est-ce qui a changé depuis la décision ?",
+        "Qu'est-ce qui justifierait réellement une repriorisation ?"
+      ],
+      "watchouts": [
+        "Changer pour marquer ton arrivée.",
+        "Conserver une priorité uniquement parce qu'elle existe déjà."
+      ],
+      "next": [
+        "changes",
+        "trust"
+      ]
+    },
+    {
+      "id": "changes",
+      "number": "08",
+      "title": "Change peu, mais change clairement",
+      "short": "Quand tu identifies une amélioration utile, introduis-la avec intention.",
+      "why": "Pour préserver la stabilité tout en montrant rapidement que ton arrivée peut aider.",
+      "actions": [
+        "Choisis un petit nombre de changements visibles.",
+        "Explique le problème que chaque changement cherche à résoudre.",
+        "Privilégie les ajustements réversibles.",
+        "Observe les effets avant d'en ajouter d'autres."
+      ],
+      "questions": [
+        "Quel changement apporte le plus de valeur avec le moins de disruption ?",
+        "Est-ce que l'équipe comprend pourquoi nous changeons cela ?",
+        "Comment saurons-nous si cela aide ?"
+      ],
+      "watchouts": [
+        "Lancer plusieurs transformations en parallèle.",
+        "Créer du changement pour prouver ta valeur."
+      ],
+      "next": [
+        "trust",
+        "reset"
+      ]
+    },
+    {
+      "id": "trust",
+      "number": "09",
+      "title": "Gagne ta place sans chercher à l'imposer",
+      "short": "Ta légitimité viendra surtout de la qualité de tes décisions et de tes interactions.",
+      "why": "Pour construire une relation de travail saine avec une équipe qui n'a pas attendu ton arrivée pour fonctionner.",
+      "actions": [
+        "Reconnais explicitement ce qui existe déjà et fonctionne.",
+        "Demande de l'aide sur les sujets que tu ne maîtrises pas.",
+        "Tiens tes petits engagements.",
+        "Partage tes raisons quand tu proposes un changement."
+      ],
+      "questions": [
+        "Est-ce que j'écoute avant de modifier ?",
+        "Est-ce que je valorise la connaissance déjà présente ?",
+        "Est-ce que mes décisions deviennent prévisibles et compréhensibles ?"
+      ],
+      "watchouts": [
+        "Confondre leadership et prise de contrôle.",
+        "Chercher à être validé trop vite."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "J'ai peur de casser ce qui existe",
+      "short": "Reviens à ce qui fonctionne, ce qui est engagé et au plus petit changement utile.",
+      "why": "Parce qu'une reprise ne demande pas de tout comprendre ni de tout transformer immédiatement.",
+      "actions": [
+        "Liste ce que tu veux absolument préserver.",
+        "Identifie les engagements à ne pas perturber.",
+        "Choisis un seul problème réellement important.",
+        "Teste une amélioration limitée et réversible."
+      ],
+      "questions": [
+        "Qu'est-ce qui fonctionne déjà ?",
+        "Qu'est-ce qui est fragile ?",
+        "Quel est le plus petit changement utile ?"
+      ],
+      "watchouts": [
+        "Ne rien changer par peur de déranger.",
+        "Tout changer pour donner une direction."
+      ],
+      "next": [
+        "preserve",
+        "priorities",
+        "changes"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu reprends quelque chose qui tourne déjà ?",
+    "text": "Commence par comprendre ce qui est engagé, ce qui fonctionne et pourquoi les choix actuels ont été faits. Ton rôle n'est pas de repartir de zéro : c'est de reprendre le fil sans casser l'élan."
+  }
+}

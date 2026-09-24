@@ -1,0 +1,52 @@
+{
+  "id": "arrive-on-blocked-mission",
+  "title": "Je viens d'arriver et la mission semble déjà bloquée",
+  "subtitle": "Comprendre un contexte déjà tendu sans absorber immédiatement les diagnostics existants ni ajouter une nouvelle couche d'actions.",
+  "accent": "violet",
+  "cards": [
+    {
+      "journey": "start-mission.json",
+      "cardId": "mandate"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "expectations"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "symptoms"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "goal"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "positions"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "relationships"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "decisions"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "scope"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "reset-plan"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "sponsor"
+    }
+  ]
+}

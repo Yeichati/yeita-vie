@@ -1,0 +1,48 @@
+{
+  "id": "build-tech-dynamic",
+  "title": "Je dois créer une bonne dynamique avec une équipe tech",
+  "subtitle": "Construire une relation de travail où produit et tech peuvent comprendre le contexte, challenger les options et décider ensemble quand c'est utile.",
+  "accent": "yellow",
+  "cards": [
+    {
+      "journey": "start-mission.json",
+      "cardId": "communicate"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "understand-team"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "roles"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "context"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "listen"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "work-together"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "tradeoffs"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "disagreement"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "trust"
+    }
+  ]
+}

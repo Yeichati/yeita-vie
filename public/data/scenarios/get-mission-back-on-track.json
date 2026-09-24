@@ -1,0 +1,52 @@
+{
+  "id": "get-mission-back-on-track",
+  "title": "Je dois remettre ma mission sur les rails",
+  "subtitle": "Sortir de l'accumulation, retrouver le principal blocage et reconstruire une direction simple et compréhensible.",
+  "accent": "coral",
+  "cards": [
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "stop"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "symptoms"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "goal"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "facts"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "positions"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "tradeoffs"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "scope"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "reset-plan"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "sponsor"
+    },
+    {
+      "journey": "mission-stalling.json",
+      "cardId": "communicate"
+    }
+  ]
+}

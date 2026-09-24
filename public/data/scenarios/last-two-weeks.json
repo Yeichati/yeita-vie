@@ -1,0 +1,52 @@
+{
+  "id": "last-two-weeks",
+  "title": "Mes deux dernières semaines chez le client",
+  "subtitle": "Préparer une sortie où les responsabilités, la connaissance, les sujets ouverts et les relations restent exploitables après ton départ.",
+  "accent": "yellow",
+  "cards": [
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "outcome"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "ownership"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "knowledge"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "decisions"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "risks"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "open-topics"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "practice"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "relationships"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "communicate"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "final-check"
+    },
+    {
+      "journey": "prepare-handover.json",
+      "cardId": "retro"
+    }
+  ]
+}

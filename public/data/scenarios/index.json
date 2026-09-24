@@ -1,5 +1,16 @@
 {
   "scenarios": [
-    "first-24h.json"
+    "first-24h.json",
+    "first-week.json",
+    "take-over-existing-product.json",
+    "problem-unclear.json",
+    "everything-is-urgent.json",
+    "prepare-difficult-tradeoff.json",
+    "build-tech-dynamic.json",
+    "arrive-on-blocked-mission.json",
+    "prepare-important-product-communication.json",
+    "show-my-impact.json",
+    "get-mission-back-on-track.json",
+    "last-two-weeks.json"
   ]
 }

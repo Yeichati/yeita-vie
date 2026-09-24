@@ -1,0 +1,52 @@
+{
+  "id": "prepare-difficult-tradeoff",
+  "title": "Je dois préparer un arbitrage difficile",
+  "subtitle": "Structurer une décision quand plusieurs options sont défendables et que les stakeholders ne portent pas les mêmes priorités.",
+  "accent": "yellow",
+  "cards": [
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "positions"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "interests"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "decision"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "criteria"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "facts"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "options"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "risks"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "tradeoffs"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "recommendation"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "decision"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "communicate"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "id": "understand-what-doesnt-work",
+  "title": "Je dois comprendre ce qui ne fonctionne pas",
+  "subtitle": "Tu vois des irritants, des tensions ou de mauvais résultats. Avant de corriger, cherche à comprendre ce qui se passe réellement, pour qui, depuis quand et pourquoi.",
+  "accent": "coral",
+  "startHere": [
+    "symptoms",
+    "facts",
+    "people",
+    "patterns",
+    "causes"
+  ],
+  "cards": [
+    {
+      "id": "symptoms",
+      "number": "01",
+      "title": "Commence par décrire les symptômes",
+      "short": "Avant de chercher la cause, rends visible ce qui ne fonctionne concrètement pas.",
+      "why": "Pour éviter de partir d'une interprétation déjà chargée de solutions ou de responsabilités.",
+      "actions": [
+        "Liste les signaux visibles : retards, incompréhensions, erreurs, frustration, baisse d'usage, blocages.",
+        "Décris ce qui se passe sans expliquer encore pourquoi.",
+        "Précise qui est affecté et dans quelles situations.",
+        "Sépare les symptômes récurrents des incidents ponctuels."
+      ],
+      "questions": [
+        "Qu'est-ce qui ne fonctionne pas concrètement ?",
+        "Pour qui est-ce un problème ?",
+        "À quelle fréquence cela arrive-t-il ?",
+        "Quelles conséquences cela produit-il ?"
+      ],
+      "watchouts": [
+        "Nommer une cause alors que tu décris encore un symptôme.",
+        "Traiter le problème le plus visible comme le problème principal."
+      ],
+      "next": [
+        "facts",
+        "people"
+      ]
+    },
+    {
+      "id": "facts",
+      "number": "02",
+      "title": "Cherche les faits avant les explications",
+      "short": "Complète les ressentis avec ce que tu peux réellement observer ou mesurer.",
+      "why": "Pour distinguer ce qui est perçu de ce qui est établi et savoir où se trouvent encore les incertitudes.",
+      "actions": [
+        "Cherche les données, exemples, tickets, incidents ou verbatims disponibles.",
+        "Observe directement une situation concernée quand c'est possible.",
+        "Compare plusieurs périodes ou cas pour éviter de conclure sur un exemple isolé.",
+        "Note ce que tu ne peux pas encore vérifier."
+      ],
+      "questions": [
+        "Qu'est-ce que je sais réellement ?",
+        "Sur quelles preuves repose cette lecture ?",
+        "Quels éléments pourraient contredire mon intuition ?"
+      ],
+      "watchouts": [
+        "Chercher uniquement les données qui confirment ton hypothèse.",
+        "Confondre absence de donnée et absence de problème."
+      ],
+      "next": [
+        "people",
+        "patterns"
+      ]
+    },
+    {
+      "id": "people",
+      "number": "03",
+      "title": "Croise les perspectives",
+      "short": "Un dysfonctionnement n'a rarement qu'une seule lecture.",
+      "why": "Pour comprendre comment le même problème est vécu selon les rôles et éviter de construire ton diagnostic depuis un seul point de vue.",
+      "actions": [
+        "Parle aux personnes directement exposées au problème.",
+        "Cherche aussi le point de vue des personnes qui interviennent en amont et en aval.",
+        "Demande ce qu'elles voient, ce qu'elles ressentent et ce qu'elles ont déjà essayé.",
+        "Repère les divergences de perception sans chercher immédiatement à les résoudre."
+      ],
+      "questions": [
+        "Qui subit le problème ?",
+        "Qui le produit potentiellement sans le voir ?",
+        "Qui possède une lecture différente ?",
+        "Qu'est-ce que chacun considère comme la cause ?"
+      ],
+      "watchouts": [
+        "Transformer une personne en porte-parole de tout un groupe.",
+        "Chercher trop vite qui a tort ou raison."
+      ],
+      "next": [
+        "patterns",
+        "causes"
+      ]
+    },
+    {
+      "id": "patterns",
+      "number": "04",
+      "title": "Cherche les patterns",
+      "short": "Regroupe les signaux qui semblent parler du même mécanisme.",
+      "why": "Pour passer d'une liste d'irritants à une compréhension plus structurée du système.",
+      "actions": [
+        "Regroupe les symptômes qui apparaissent dans les mêmes contextes.",
+        "Repère les moments, équipes ou étapes où les problèmes se concentrent.",
+        "Cherche ce qui revient malgré des situations différentes.",
+        "Distingue les patterns stables des coïncidences."
+      ],
+      "questions": [
+        "Qu'est-ce qui revient régulièrement ?",
+        "Où le problème apparaît-il le plus souvent ?",
+        "Qu'est-ce qui est commun à plusieurs incidents ?"
+      ],
+      "watchouts": [
+        "Créer des catégories artificielles juste pour simplifier.",
+        "Forcer tous les problèmes dans un seul pattern."
+      ],
+      "next": [
+        "causes",
+        "system"
+      ]
+    },
+    {
+      "id": "causes",
+      "number": "05",
+      "title": "Explore les causes sans te précipiter",
+      "short": "Une cause plausible n'est pas encore une cause démontrée.",
+      "why": "Pour éviter de résoudre un symptôme ou de blâmer un acteur alors que le mécanisme réel se trouve ailleurs.",
+      "actions": [
+        "Formule plusieurs hypothèses de cause.",
+        "Cherche ce qui devrait être vrai si chaque hypothèse était correcte.",
+        "Teste les hypothèses avec des faits, observations ou exemples.",
+        "Cherche aussi les facteurs organisationnels, techniques ou process qui entretiennent le problème."
+      ],
+      "questions": [
+        "Pourquoi cela arrive-t-il ?",
+        "Qu'est-ce qui rend ce problème possible ou récurrent ?",
+        "Qu'est-ce qui me ferait abandonner cette hypothèse ?"
+      ],
+      "watchouts": [
+        "S'arrêter à la première explication crédible.",
+        "Confondre cause proche et cause racine."
+      ],
+      "next": [
+        "system",
+        "scope"
+      ]
+    },
+    {
+      "id": "system",
+      "number": "06",
+      "title": "Regarde le système, pas seulement le point de friction",
+      "short": "Un problème local peut être la conséquence d'un fonctionnement plus global.",
+      "why": "Pour éviter d'optimiser une étape tout en déplaçant le problème ailleurs.",
+      "actions": [
+        "Observe ce qui se passe avant et après le point de friction.",
+        "Repère les dépendances, handoffs et décisions qui influencent le sujet.",
+        "Cherche les incentives ou contraintes qui poussent les personnes à agir comme elles le font.",
+        "Regarde si le problème existe ailleurs sous une autre forme."
+      ],
+      "questions": [
+        "Qu'est-ce qui alimente ce problème en amont ?",
+        "Quelle conséquence aurait une correction locale ailleurs ?",
+        "Le système encourage-t-il involontairement ce comportement ?"
+      ],
+      "watchouts": [
+        "Chercher un coupable individuel pour un problème systémique.",
+        "Complexifier le diagnostic au point de ne plus pouvoir agir."
+      ],
+      "next": [
+        "scope",
+        "experiment"
+      ]
+    },
+    {
+      "id": "scope",
+      "number": "07",
+      "title": "Choisis ce que tu veux réellement résoudre",
+      "short": "Comprendre beaucoup de choses ne signifie pas devoir tout traiter.",
+      "why": "Pour concentrer l'effort sur un problème suffisamment important et actionnable.",
+      "actions": [
+        "Définis clairement le problème que tu veux traiter maintenant.",
+        "Vérifie qu'il est lié à ta mission et à un impact réel.",
+        "Sépare ce que tu peux influencer de ce qui est hors de ton périmètre.",
+        "Garde les autres sujets visibles sans les transformer en actions."
+      ],
+      "questions": [
+        "Quel problème vaut réellement la peine d'être traité ?",
+        "Quel problème puis-je influencer ?",
+        "Qu'est-ce qui peut attendre ?"
+      ],
+      "watchouts": [
+        "Choisir le problème le plus facile plutôt que le plus pertinent.",
+        "Élargir le scope à chaque nouvelle découverte."
+      ],
+      "next": [
+        "experiment",
+        "communicate"
+      ]
+    },
+    {
+      "id": "experiment",
+      "number": "08",
+      "title": "Teste avant de généraliser",
+      "short": "Une petite action peut confirmer ou invalider ton diagnostic.",
+      "why": "Pour apprendre avant d'engager une transformation plus lourde.",
+      "actions": [
+        "Choisis une action réversible qui teste ton hypothèse principale.",
+        "Définis ce que tu t'attends à observer si elle fonctionne.",
+        "Mesure avant et après quand c'est possible.",
+        "Réévalue ton diagnostic à partir du résultat."
+      ],
+      "questions": [
+        "Quelle petite action pourrait m'apprendre quelque chose rapidement ?",
+        "Qu'est-ce que j'attends comme signal ?",
+        "Que ferai-je si le résultat contredit mon hypothèse ?"
+      ],
+      "watchouts": [
+        "Présenter un test comme une solution définitive.",
+        "Changer trop de choses en même temps."
+      ],
+      "next": [
+        "communicate",
+        "reset"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "09",
+      "title": "Partage un diagnostic, pas un verdict",
+      "short": "Explique ce que tu comprends, ce qui reste incertain et ce que tu proposes d'explorer.",
+      "why": "Pour créer de l'alignement sans figer trop tôt une lecture qui peut encore évoluer.",
+      "actions": [
+        "Sépare faits, hypothèses et inconnues.",
+        "Explique les impacts observés avant de parler des solutions.",
+        "Présente les options ou tests envisagés.",
+        "Invite les personnes concernées à challenger ton diagnostic."
+      ],
+      "questions": [
+        "Qu'est-ce qui est certain ?",
+        "Qu'est-ce qui reste une hypothèse ?",
+        "Qu'est-ce que les autres doivent comprendre pour avancer avec moi ?"
+      ],
+      "watchouts": [
+        "Présenter ton analyse comme une vérité finale.",
+        "Utiliser le diagnostic pour désigner des responsables."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Je trouve des problèmes partout",
+      "short": "Reviens à un symptôme concret, son impact et la prochaine question utile.",
+      "why": "Parce qu'à force d'analyser, tout peut finir par ressembler à un problème à résoudre.",
+      "actions": [
+        "Choisis un seul symptôme important.",
+        "Écris les faits que tu connais réellement.",
+        "Identifie la principale incertitude.",
+        "Décide d'une seule action pour la réduire."
+      ],
+      "questions": [
+        "Quel est le problème le plus concret aujourd'hui ?",
+        "Quel impact réel produit-il ?",
+        "Qu'est-ce que je dois comprendre ensuite ?"
+      ],
+      "watchouts": [
+        "Créer une cartographie exhaustive pour te rassurer.",
+        "Transformer chaque faiblesse observée en chantier."
+      ],
+      "next": [
+        "symptoms",
+        "facts",
+        "scope"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Quelque chose ne fonctionne pas ?",
+    "text": "Commence par décrire ce que tu observes, puis croise les faits et les perspectives avant de chercher une cause. Ton objectif n'est pas de trouver rapidement une explication : c'est de construire un diagnostic assez solide pour agir."
+  }
+}

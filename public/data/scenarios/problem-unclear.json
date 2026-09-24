@@ -1,0 +1,48 @@
+{
+  "id": "problem-unclear",
+  "title": "Je sens qu'il y a un problème mais je ne sais pas lequel",
+  "subtitle": "Passer d'un sentiment diffus de dysfonctionnement à un problème suffisamment compris pour décider quoi explorer ensuite.",
+  "accent": "coral",
+  "cards": [
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "symptoms"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "notes"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "facts"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "people"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "users"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "patterns"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "causes"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "system"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "scope"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "experiment"
+    }
+  ]
+}

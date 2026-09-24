@@ -1,0 +1,307 @@
+{
+  "id": "mission-stalling",
+  "title": "Ma mission patine, comment reprendre de la hauteur ?",
+  "subtitle": "Quand tu as la tête dans le quotidien, il devient difficile de distinguer un ralentissement normal d'un vrai blocage. L'objectif est de sortir du bruit, comprendre ce qui freine la mission et retrouver une direction simple.",
+  "accent": "coral",
+  "startHere": [
+    "stop",
+    "symptoms",
+    "goal",
+    "constraints",
+    "relationships"
+  ],
+  "cards": [
+    {
+      "id": "stop",
+      "number": "01",
+      "title": "Arrête d'ajouter des actions",
+      "short": "Quand une mission patine, faire plus n'est pas toujours la bonne réponse.",
+      "why": "Pour créer suffisamment d'espace mental pour comprendre ce qui bloque réellement.",
+      "actions": [
+        "Bloque un moment sans réunion ni nouvelle action.",
+        "Liste les sujets actifs.",
+        "Identifie ceux que tu continues uniquement par inertie.",
+        "Mets temporairement de côté ce qui n'est pas essentiel."
+      ],
+      "questions": [
+        "Qu'est-ce que je fais actuellement par réflexe ?",
+        "Quels sujets consomment de l'énergie sans faire avancer la mission ?",
+        "Qu'est-ce que je peux arrêter maintenant ?"
+      ],
+      "watchouts": [
+        "Ajouter un nouveau process pour retrouver du contrôle.",
+        "Confondre activité élevée et progression."
+      ],
+      "next": [
+        "symptoms",
+        "goal"
+      ]
+    },
+    {
+      "id": "symptoms",
+      "number": "02",
+      "title": "Décris comment la mission patine",
+      "short": "Un sentiment de blocage peut cacher plusieurs problèmes très différents.",
+      "why": "Pour savoir si tu fais face à un manque de décision, d'alignement, de confiance, de capacité ou de clarté.",
+      "actions": [
+        "Décris les symptômes concrets.",
+        "Repère depuis quand ils existent.",
+        "Identifie les sujets qui n'avancent plus.",
+        "Note les boucles répétitives ou décisions constamment rouvertes."
+      ],
+      "questions": [
+        "Qu'est-ce qui n'avance plus ?",
+        "Depuis quand ?",
+        "Qu'est-ce qui revient sans cesse ?",
+        "Quel résultat attendu n'arrive pas ?"
+      ],
+      "watchouts": [
+        "Dire simplement que 'ça n'avance pas'.",
+        "Attribuer immédiatement le blocage à une personne."
+      ],
+      "next": [
+        "goal",
+        "constraints"
+      ]
+    },
+    {
+      "id": "goal",
+      "number": "03",
+      "title": "Reviens au but de la mission",
+      "short": "Le quotidien peut faire perdre de vue ce que tu es réellement venu accomplir.",
+      "why": "Pour distinguer les activités utiles des sujets qui ont progressivement pris toute la place.",
+      "actions": [
+        "Réécris l'objectif de la mission.",
+        "Compare-le avec ton activité actuelle.",
+        "Identifie ce qui contribue réellement à cet objectif.",
+        "Clarifie ce qui a éventuellement changé depuis le début."
+      ],
+      "questions": [
+        "Pourquoi suis-je ici ?",
+        "Quel résultat devrais-je aider à produire ?",
+        "Mon activité actuelle sert-elle encore cet objectif ?"
+      ],
+      "watchouts": [
+        "Rester fidèle à un objectif devenu obsolète.",
+        "Redéfinir la mission uniquement pour correspondre à ce que tu fais déjà."
+      ],
+      "next": [
+        "constraints",
+        "relationships"
+      ]
+    },
+    {
+      "id": "constraints",
+      "number": "04",
+      "title": "Identifie le vrai goulot d'étranglement",
+      "short": "La mission peut être bloquée par une contrainte unique qui rend toutes les autres actions peu utiles.",
+      "why": "Pour concentrer l'effort là où une amélioration peut réellement relancer la dynamique.",
+      "actions": [
+        "Liste les principaux freins.",
+        "Cherche lequel limite le plus la progression.",
+        "Distingue manque de capacité, information, décision, compétence ou accès.",
+        "Vérifie si ce blocage dépend de toi."
+      ],
+      "questions": [
+        "Qu'est-ce qui empêche réellement d'avancer ?",
+        "Si je pouvais débloquer une seule chose, laquelle aurait le plus d'effet ?",
+        "Est-ce dans mon influence ?"
+      ],
+      "watchouts": [
+        "Traiter plusieurs blocages simultanément.",
+        "Choisir le blocage le plus visible plutôt que le plus contraignant."
+      ],
+      "next": [
+        "relationships",
+        "decisions"
+      ]
+    },
+    {
+      "id": "relationships",
+      "number": "05",
+      "title": "Regarde les relations et la confiance",
+      "short": "Une mission peut ralentir parce que les personnes ne partagent plus suffisamment d'information ou de confiance.",
+      "why": "Pour détecter les blocages humains qui ne se voient pas dans un backlog ou un planning.",
+      "actions": [
+        "Observe où les conversations deviennent difficiles.",
+        "Identifie les sujets évités.",
+        "Demande directement ce qui crée de la frustration.",
+        "Regarde si certaines décisions se prennent désormais hors de ta présence."
+      ],
+      "questions": [
+        "Avec qui la relation s'est-elle dégradée ?",
+        "Qu'est-ce qui n'est plus dit clairement ?",
+        "Quelles attentes sont devenues implicites ?"
+      ],
+      "watchouts": [
+        "Psychologiser immédiatement la situation.",
+        "Créer davantage de réunions pour compenser un manque de confiance."
+      ],
+      "next": [
+        "decisions",
+        "scope"
+      ]
+    },
+    {
+      "id": "decisions",
+      "number": "06",
+      "title": "Cherche les décisions qui n'ont pas été prises",
+      "short": "Certaines missions patinent simplement parce que personne n'assume un arbitrage.",
+      "why": "Pour sortir des discussions répétées et remettre du mouvement.",
+      "actions": [
+        "Liste les décisions ouvertes depuis longtemps.",
+        "Clarifie qui doit trancher.",
+        "Rassemble l'information réellement nécessaire.",
+        "Fixe un moment de décision."
+      ],
+      "questions": [
+        "Quelle décision évitons-nous ?",
+        "Qui devrait la prendre ?",
+        "Qu'est-ce qui nous empêche de trancher ?"
+      ],
+      "watchouts": [
+        "Collecter toujours plus d'information pour éviter l'arbitrage.",
+        "Décider à la place de la bonne personne."
+      ],
+      "next": [
+        "scope",
+        "reset-plan"
+      ]
+    },
+    {
+      "id": "scope",
+      "number": "07",
+      "title": "Réduis le périmètre",
+      "short": "Un problème trop large peut rendre chaque action insignifiante.",
+      "why": "Pour retrouver une zone sur laquelle il est possible de créer du mouvement rapidement.",
+      "actions": [
+        "Choisis un objectif plus étroit.",
+        "Sépare ce qui est essentiel de ce qui peut attendre.",
+        "Cherche une victoire ou un apprentissage court terme.",
+        "Évite d'ouvrir de nouveaux fronts."
+      ],
+      "questions": [
+        "Quel périmètre puis-je réellement faire avancer ?",
+        "Qu'est-ce qui peut être repoussé ?",
+        "Quel petit résultat changerait la dynamique ?"
+      ],
+      "watchouts": [
+        "Réduire le scope au point de perdre le sens.",
+        "Multiplier les quick wins sans traiter le blocage principal."
+      ],
+      "next": [
+        "reset-plan",
+        "sponsor"
+      ]
+    },
+    {
+      "id": "reset-plan",
+      "number": "08",
+      "title": "Reconstruis un plan très court",
+      "short": "Quand le plan ne fonctionne plus, ne le remplace pas par un plan encore plus complexe.",
+      "why": "Pour retrouver de la lisibilité et remettre l'équipe ou les stakeholders en mouvement.",
+      "actions": [
+        "Choisis un objectif pour les prochains jours ou semaines.",
+        "Définis trois actions maximum.",
+        "Attribue clairement les responsabilités.",
+        "Fixe un moment de revue."
+      ],
+      "questions": [
+        "Quel résultat cherchons-nous maintenant ?",
+        "Quelles sont les trois prochaines actions ?",
+        "Comment saurons-nous que nous avons repris de l'élan ?"
+      ],
+      "watchouts": [
+        "Planifier trop loin.",
+        "Ajouter des actions pour donner une impression de contrôle."
+      ],
+      "next": [
+        "sponsor",
+        "communicate"
+      ]
+    },
+    {
+      "id": "sponsor",
+      "number": "09",
+      "title": "Réengage ton sponsor si nécessaire",
+      "short": "Certains blocages nécessitent un soutien ou un arbitrage qui dépasse ton périmètre.",
+      "why": "Pour éviter de porter seul un problème organisationnel ou politique que tu ne peux pas résoudre.",
+      "actions": [
+        "Présente le blocage de manière factuelle.",
+        "Explique ce que tu as déjà essayé.",
+        "Demande une aide ou décision précise.",
+        "Clarifie les conséquences si rien ne change."
+      ],
+      "questions": [
+        "Qu'est-ce que mon sponsor peut réellement débloquer ?",
+        "Ai-je formulé une demande claire ?",
+        "Qu'est-ce qui se passera si le blocage persiste ?"
+      ],
+      "watchouts": [
+        "Remonter chaque difficulté.",
+        "Attendre trop longtemps avant d'escalader un blocage structurel."
+      ],
+      "next": [
+        "communicate",
+        "reset"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "10",
+      "title": "Rends le reset visible",
+      "short": "Si tu changes de direction, explique pourquoi et ce qui va changer.",
+      "why": "Pour recréer de la confiance et éviter que le nouveau plan soit perçu comme une nouvelle oscillation.",
+      "actions": [
+        "Explique le constat sans dramatiser.",
+        "Rappelle l'objectif.",
+        "Présente le nouveau focus.",
+        "Indique ce qui est arrêté ou repoussé."
+      ],
+      "questions": [
+        "Qu'est-ce qui doit être compris par tous ?",
+        "Qu'est-ce qui change réellement ?",
+        "Qu'est-ce que nous arrêtons ?"
+      ],
+      "watchouts": [
+        "Présenter le reset comme un échec personnel.",
+        "Changer de direction sans fermer clairement les sujets précédents."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Je n'arrive plus à voir ce qui compte",
+      "short": "Reviens à l'objectif, au principal blocage et à une seule prochaine action.",
+      "why": "Parce que la perte de hauteur vient souvent d'une accumulation de sujets ouverts.",
+      "actions": [
+        "Écris l'objectif de la mission.",
+        "Choisis le principal blocage.",
+        "Mets le reste de côté.",
+        "Décide d'une action dans les prochaines 24 heures."
+      ],
+      "questions": [
+        "Quel résultat compte vraiment ?",
+        "Qu'est-ce qui bloque le plus ?",
+        "Quelle est ma prochaine action ?"
+      ],
+      "watchouts": [
+        "Refaire toute la stratégie d'un coup.",
+        "Ajouter encore un nouveau chantier."
+      ],
+      "next": [
+        "goal",
+        "constraints",
+        "reset-plan"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu as l'impression que ta mission n'avance plus ?",
+    "text": "Commence par arrêter d'ajouter des actions. Reviens à l'objectif, identifie le principal blocage et reconstruis un plan très court. Le but n'est pas de tout relancer : c'est de retrouver une direction."
+  }
+}

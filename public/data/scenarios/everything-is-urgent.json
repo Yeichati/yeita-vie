@@ -1,0 +1,48 @@
+{
+  "id": "everything-is-urgent",
+  "title": "Tout le monde me demande quelque chose d'urgent",
+  "subtitle": "Rendre les demandes comparables, expliciter les compromis et retrouver un ordre de priorité sans promettre de tout faire.",
+  "accent": "coral",
+  "cards": [
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "inventory"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "urgency"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "impact"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "interests"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "tradeoffs"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "scope"
+    },
+    {
+      "journey": "align-stakeholders.json",
+      "cardId": "decision"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "communicate"
+    },
+    {
+      "journey": "prioritize-urgency.json",
+      "cardId": "review"
+    }
+  ]
+}

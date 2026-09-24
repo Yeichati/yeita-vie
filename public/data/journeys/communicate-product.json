@@ -1,0 +1,280 @@
+{
+  "id": "communicate-product",
+  "title": "Je dois communiquer autour de mon produit",
+  "subtitle": "Bien communiquer sur un produit ne consiste pas à raconter tout ce que l'équipe fait. Il faut choisir ce que chaque audience doit comprendre, pourquoi cela compte et ce qu'elle doit pouvoir faire ensuite.",
+  "accent": "green",
+  "startHere": [
+    "audience",
+    "message",
+    "context",
+    "evidence",
+    "format"
+  ],
+  "cards": [
+    {
+      "id": "audience",
+      "number": "01",
+      "title": "Commence par ton audience",
+      "short": "Un même message ne fonctionne pas pour tout le monde.",
+      "why": "Pour adapter le niveau de détail, le vocabulaire et l'objectif de ta communication.",
+      "actions": [
+        "Identifie précisément à qui tu t'adresses.",
+        "Demande ce que cette audience connaît déjà.",
+        "Clarifie ce qu'elle doit comprendre ou décider.",
+        "Repère les préoccupations spécifiques de cette audience."
+      ],
+      "questions": [
+        "À qui est-ce que je parle ?",
+        "Que sait déjà cette audience ?",
+        "Qu'est-ce qu'elle doit comprendre ou faire ensuite ?"
+      ],
+      "watchouts": [
+        "Recycler exactement le même support pour toutes les audiences.",
+        "Communiquer depuis ton point de vue plutôt que celui du destinataire."
+      ],
+      "next": [
+        "message",
+        "context"
+      ]
+    },
+    {
+      "id": "message",
+      "number": "02",
+      "title": "Choisis le message principal",
+      "short": "Si tout est important, rien ne ressort.",
+      "why": "Pour donner une direction claire à ta communication et éviter l'effet catalogue.",
+      "actions": [
+        "Résume ton message en une phrase.",
+        "Choisis les deux ou trois idées secondaires utiles.",
+        "Supprime ce qui n'aide pas à comprendre le message principal.",
+        "Vérifie que la conclusion est identifiable rapidement."
+      ],
+      "questions": [
+        "Quelle est la seule idée que je veux qu'on retienne ?",
+        "Qu'est-ce qui est secondaire ?",
+        "Qu'est-ce que je peux supprimer ?"
+      ],
+      "watchouts": [
+        "Communiquer toute l'activité de l'équipe.",
+        "Multiplier les messages pour satisfaire tous les sujets."
+      ],
+      "next": [
+        "context",
+        "evidence"
+      ]
+    },
+    {
+      "id": "context",
+      "number": "03",
+      "title": "Donne le bon niveau de contexte",
+      "short": "Explique le pourquoi avant de plonger dans le quoi.",
+      "why": "Pour que l'audience comprenne comment interpréter l'information et pourquoi elle est importante.",
+      "actions": [
+        "Rappelle le problème ou l'objectif.",
+        "Explique ce qui a changé ou ce qui motive la communication.",
+        "Donne uniquement le contexte nécessaire.",
+        "Relie le sujet aux enjeux de l'audience."
+      ],
+      "questions": [
+        "Pourquoi cette information compte-t-elle maintenant ?",
+        "Quel contexte manque pour la comprendre ?",
+        "Qu'est-ce que cette audience risque de mal interpréter ?"
+      ],
+      "watchouts": [
+        "Commencer directement par des détails internes.",
+        "Transformer le contexte en historique exhaustif."
+      ],
+      "next": [
+        "evidence",
+        "format"
+      ]
+    },
+    {
+      "id": "evidence",
+      "number": "04",
+      "title": "Appuie ton message sur des éléments concrets",
+      "short": "Les exemples, données et verbatims rendent une communication plus crédible et plus compréhensible.",
+      "why": "Pour éviter les communications trop abstraites ou uniquement basées sur des opinions.",
+      "actions": [
+        "Choisis quelques données utiles.",
+        "Ajoute un exemple concret si nécessaire.",
+        "Utilise des verbatims utilisateurs quand ils éclairent vraiment le sujet.",
+        "Indique les limites ou incertitudes importantes."
+      ],
+      "questions": [
+        "Quel élément rend ce message tangible ?",
+        "Ai-je une preuve ou seulement une conviction ?",
+        "Quelles limites dois-je rendre visibles ?"
+      ],
+      "watchouts": [
+        "Ajouter des métriques décoratives.",
+        "Surcharger la communication avec trop de preuves."
+      ],
+      "next": [
+        "format",
+        "action"
+      ]
+    },
+    {
+      "id": "format",
+      "number": "05",
+      "title": "Choisis le bon format",
+      "short": "Le canal et la forme influencent autant la compréhension que le contenu.",
+      "why": "Pour utiliser le niveau d'interaction adapté au sujet : informer, expliquer, débattre ou décider.",
+      "actions": [
+        "Choisis entre écrit, réunion, démo ou échange direct.",
+        "Adapte la longueur à l'importance du sujet.",
+        "Privilégie l'asynchrone pour l'information stable.",
+        "Garde les réunions pour les sujets nécessitant interaction ou décision."
+      ],
+      "questions": [
+        "Est-ce que ce sujet nécessite vraiment une réunion ?",
+        "Doit-on informer, discuter ou décider ?",
+        "Quel format sera le plus facile à retrouver plus tard ?"
+      ],
+      "watchouts": [
+        "Utiliser une réunion pour diffuser une information simple.",
+        "Utiliser uniquement l'écrit pour un sujet conflictuel ou ambigu."
+      ],
+      "next": [
+        "action",
+        "cadence"
+      ]
+    },
+    {
+      "id": "action",
+      "number": "06",
+      "title": "Clarifie ce que tu attends après la communication",
+      "short": "Une communication peut informer, demander un feedback, déclencher une action ou préparer une décision.",
+      "why": "Pour éviter les messages qui laissent chacun deviner ce qu'il doit faire ensuite.",
+      "actions": [
+        "Indique explicitement si aucune action n'est attendue.",
+        "Formule clairement les demandes de feedback.",
+        "Donne les prochaines étapes.",
+        "Précise les échéances quand elles existent."
+      ],
+      "questions": [
+        "Qu'est-ce que j'attends du destinataire ?",
+        "Doit-il agir, répondre, décider ou simplement savoir ?",
+        "Est-ce explicite dans mon message ?"
+      ],
+      "watchouts": [
+        "Demander un feedback vague.",
+        "Créer de l'urgence sans action précise."
+      ],
+      "next": [
+        "cadence",
+        "feedback"
+      ]
+    },
+    {
+      "id": "cadence",
+      "number": "07",
+      "title": "Installe une cadence utile",
+      "short": "Une communication régulière peut créer de la confiance si elle apporte réellement de la valeur.",
+      "why": "Pour rendre l'activité produit lisible sans produire du reporting pour le reporting.",
+      "actions": [
+        "Identifie les audiences qui ont besoin d'un suivi régulier.",
+        "Définis une fréquence adaptée.",
+        "Standardise légèrement le format pour faciliter la lecture.",
+        "Supprime la cadence si elle n'apporte plus de valeur."
+      ],
+      "questions": [
+        "Qui a besoin d'une visibilité régulière ?",
+        "À quelle fréquence l'information change-t-elle réellement ?",
+        "Ce rituel aide-t-il encore quelqu'un ?"
+      ],
+      "watchouts": [
+        "Créer un reporting hebdomadaire par défaut.",
+        "Mesurer la qualité de la communication au nombre de messages envoyés."
+      ],
+      "next": [
+        "feedback",
+        "adapt"
+      ]
+    },
+    {
+      "id": "feedback",
+      "number": "08",
+      "title": "Vérifie ce qui a été compris",
+      "short": "Envoyer un message ne signifie pas qu'il a été compris comme tu le souhaitais.",
+      "why": "Pour détecter rapidement les malentendus et améliorer ta manière de communiquer.",
+      "actions": [
+        "Observe les questions qui reviennent.",
+        "Demande ponctuellement ce qui a été retenu.",
+        "Repère les interprétations inattendues.",
+        "Ajuste ton message ou ton format."
+      ],
+      "questions": [
+        "Qu'est-ce que les personnes ont réellement compris ?",
+        "Qu'est-ce qui reste flou ?",
+        "Quelles questions reviennent systématiquement ?"
+      ],
+      "watchouts": [
+        "Attribuer toute incompréhension à un manque d'attention.",
+        "Réexpliquer davantage sans simplifier."
+      ],
+      "next": [
+        "adapt",
+        "reset"
+      ]
+    },
+    {
+      "id": "adapt",
+      "number": "09",
+      "title": "Adapte ton niveau de transparence",
+      "short": "Transparence ne veut pas dire partager tout, tout le temps, à tout le monde.",
+      "why": "Pour donner suffisamment de visibilité sans créer de bruit ou partager prématurément des informations sensibles ou instables.",
+      "actions": [
+        "Partage ce qui aide réellement l'audience.",
+        "Indique clairement ce qui est encore incertain.",
+        "Distingue exploration, décision et engagement.",
+        "Évite de masquer les mauvaises nouvelles importantes."
+      ],
+      "questions": [
+        "Cette information aide-t-elle réellement cette audience ?",
+        "Est-elle suffisamment stable pour être partagée ?",
+        "Qu'est-ce qui doit être transparent même si c'est inconfortable ?"
+      ],
+      "watchouts": [
+        "Confondre transparence et diffusion totale.",
+        "Attendre que tout soit parfait avant de communiquer."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "J'ai trop de choses à raconter",
+      "short": "Reviens à l'audience, au message principal et à l'action attendue.",
+      "why": "Parce qu'une communication devient vite confuse quand elle essaie de tout couvrir.",
+      "actions": [
+        "Écris le nom de ton audience.",
+        "Résume ton message en une phrase.",
+        "Supprime tout ce qui ne l'aide pas.",
+        "Indique clairement ce que tu attends ensuite."
+      ],
+      "questions": [
+        "Qui doit comprendre quoi ?",
+        "Pourquoi cela compte ?",
+        "Que doit-il se passer ensuite ?"
+      ],
+      "watchouts": [
+        "Créer un support plus long pour éviter de choisir.",
+        "Confondre exhaustivité et clarté."
+      ],
+      "next": [
+        "audience",
+        "message",
+        "action"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu dois parler de ton produit ?",
+    "text": "Commence par identifier ton audience et le message qu'elle doit réellement retenir. Communiquer sur un produit, ce n'est pas raconter tout ce que l'équipe fait : c'est rendre l'essentiel compréhensible et actionnable."
+  }
+}

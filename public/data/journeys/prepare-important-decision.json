@@ -1,0 +1,306 @@
+{
+  "id": "prepare-important-decision",
+  "title": "Je dois préparer une décision importante",
+  "subtitle": "Une bonne décision ne demande pas d'éliminer toute incertitude. Elle demande de comprendre le problème, les options, les risques et ce qui justifie de décider maintenant.",
+  "accent": "yellow",
+  "startHere": [
+    "decision",
+    "context",
+    "criteria",
+    "options",
+    "risks"
+  ],
+  "cards": [
+    {
+      "id": "decision",
+      "number": "01",
+      "title": "Formule la décision à prendre",
+      "short": "Commence par écrire précisément ce qui doit être décidé.",
+      "why": "Pour éviter de résoudre plusieurs problèmes à la fois ou de discuter longtemps sans savoir ce qui doit réellement être tranché.",
+      "actions": [
+        "Écris la décision sous forme de question.",
+        "Précise son périmètre.",
+        "Sépare les décisions liées mais distinctes.",
+        "Clarifie qui devra décider."
+      ],
+      "questions": [
+        "Quelle décision doit être prise ?",
+        "Qu'est-ce qui est hors périmètre ?",
+        "Qui porte la décision finale ?"
+      ],
+      "watchouts": [
+        "Formuler la décision comme une solution déjà choisie.",
+        "Mélanger plusieurs arbitrages différents."
+      ],
+      "next": [
+        "context",
+        "criteria"
+      ]
+    },
+    {
+      "id": "context",
+      "number": "02",
+      "title": "Rassemble le contexte nécessaire",
+      "short": "Apporte suffisamment d'information pour décider, sans noyer la discussion.",
+      "why": "Pour permettre aux décideurs de comprendre pourquoi le sujet existe et pourquoi il mérite une décision maintenant.",
+      "actions": [
+        "Résume le problème ou l'opportunité.",
+        "Explique pourquoi la décision est nécessaire maintenant.",
+        "Présente les contraintes principales.",
+        "Inclue uniquement les informations utiles à l'arbitrage."
+      ],
+      "questions": [
+        "Pourquoi devons-nous décider ?",
+        "Pourquoi maintenant ?",
+        "Quel contexte est indispensable pour comprendre le choix ?"
+      ],
+      "watchouts": [
+        "Transformer le support de décision en dossier exhaustif.",
+        "Omettre un élément gênant pour simplifier le choix."
+      ],
+      "next": [
+        "criteria",
+        "facts"
+      ]
+    },
+    {
+      "id": "criteria",
+      "number": "03",
+      "title": "Définis les critères de décision",
+      "short": "Décide sur quels éléments les options seront réellement comparées.",
+      "why": "Pour éviter de changer de critère en fonction de l'option que chacun préfère.",
+      "actions": [
+        "Liste les critères importants.",
+        "Distingue critères obligatoires et préférences.",
+        "Vérifie que les décideurs partagent ces critères.",
+        "Évite d'en utiliser trop."
+      ],
+      "questions": [
+        "Qu'est-ce qui compte réellement dans cette décision ?",
+        "Quels critères sont non négociables ?",
+        "Quels compromis sommes-nous prêts à accepter ?"
+      ],
+      "watchouts": [
+        "Créer une grille complexe qui donne une illusion d'objectivité.",
+        "Définir les critères après avoir choisi l'option."
+      ],
+      "next": [
+        "options",
+        "facts"
+      ]
+    },
+    {
+      "id": "facts",
+      "number": "04",
+      "title": "Sépare faits et hypothèses",
+      "short": "Rends visible ce que tu sais et ce que tu supposes.",
+      "why": "Pour que l'incertitude fasse partie de la décision au lieu d'être cachée.",
+      "actions": [
+        "Liste les faits établis.",
+        "Identifie les hypothèses importantes.",
+        "Indique le niveau de confiance.",
+        "Cherche les informations qui pourraient réellement changer la décision."
+      ],
+      "questions": [
+        "Qu'est-ce que nous savons ?",
+        "Qu'est-ce que nous supposons ?",
+        "Quelle incertitude est vraiment critique ?"
+      ],
+      "watchouts": [
+        "Attendre une certitude impossible.",
+        "Présenter une hypothèse forte comme un fait."
+      ],
+      "next": [
+        "options",
+        "risks"
+      ]
+    },
+    {
+      "id": "options",
+      "number": "05",
+      "title": "Construis de vraies options",
+      "short": "Présente des choix réellement distincts, y compris parfois ne rien faire.",
+      "why": "Pour permettre un véritable arbitrage plutôt que valider une solution déjà décidée.",
+      "actions": [
+        "Génère plusieurs options crédibles.",
+        "Inclue le statu quo quand il est pertinent.",
+        "Décris ce qui différencie réellement les options.",
+        "Évite les fausses options volontairement faibles."
+      ],
+      "questions": [
+        "Quelles sont nos alternatives réelles ?",
+        "Que se passe-t-il si nous ne décidons rien ?",
+        "Existe-t-il une option intermédiaire ou réversible ?"
+      ],
+      "watchouts": [
+        "Présenter une seule option et demander une validation.",
+        "Créer trop d'options pour éviter de trancher."
+      ],
+      "next": [
+        "risks",
+        "recommendation"
+      ]
+    },
+    {
+      "id": "risks",
+      "number": "06",
+      "title": "Rends les risques et compromis visibles",
+      "short": "Chaque option a un coût, un risque ou un renoncement.",
+      "why": "Pour éviter les décisions séduisantes en apparence mais dont les conséquences n'ont pas été assumées.",
+      "actions": [
+        "Liste les principaux risques de chaque option.",
+        "Décris ce qui est gagné et perdu.",
+        "Distingue risques réversibles et irréversibles.",
+        "Identifie les signaux à surveiller après la décision."
+      ],
+      "questions": [
+        "Quel risque acceptons-nous ?",
+        "Quel compromis faisons-nous ?",
+        "Que pourrions-nous regretter plus tard ?"
+      ],
+      "watchouts": [
+        "Lister tellement de risques que plus aucune option ne semble possible.",
+        "Minimiser les risques de l'option préférée."
+      ],
+      "next": [
+        "recommendation",
+        "timing"
+      ]
+    },
+    {
+      "id": "recommendation",
+      "number": "07",
+      "title": "Formule une recommandation claire",
+      "short": "Si ton rôle le demande, dis ce que tu recommandes et pourquoi.",
+      "why": "Pour ne pas transférer toute la charge de réflexion au décideur après avoir fait l'analyse.",
+      "actions": [
+        "Choisis l'option que tu recommandes.",
+        "Explique les critères décisifs.",
+        "Nommer les incertitudes restantes.",
+        "Indique ce qui te ferait changer d'avis."
+      ],
+      "questions": [
+        "Quelle option recommanderais-je aujourd'hui ?",
+        "Pourquoi ?",
+        "Quelle information pourrait changer ma recommandation ?"
+      ],
+      "watchouts": [
+        "Dissimuler ta préférence derrière une analyse neutre.",
+        "Présenter ta recommandation comme une certitude."
+      ],
+      "next": [
+        "timing",
+        "communicate"
+      ]
+    },
+    {
+      "id": "timing",
+      "number": "08",
+      "title": "Décide quand tu as assez d'information",
+      "short": "Chercher encore de l'information a aussi un coût.",
+      "why": "Pour éviter la paralysie analytique et décider quand l'incertitude restante est acceptable.",
+      "actions": [
+        "Identifie les inconnues qui peuvent réellement changer le choix.",
+        "Estime le coût d'attendre.",
+        "Décide si une exploration supplémentaire vaut le délai.",
+        "Fixe un moment pour trancher."
+      ],
+      "questions": [
+        "Qu'avons-nous réellement besoin de savoir avant de décider ?",
+        "Quel est le coût de l'attente ?",
+        "L'information supplémentaire peut-elle changer le choix ?"
+      ],
+      "watchouts": [
+        "Continuer à analyser pour éviter d'assumer la décision.",
+        "Décider vite uniquement pour montrer de la vitesse."
+      ],
+      "next": [
+        "communicate",
+        "follow-up"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "09",
+      "title": "Prépare la communication de la décision",
+      "short": "La qualité de la décision ne suffit pas : les personnes doivent comprendre ce qui a été choisi.",
+      "why": "Pour permettre une exécution cohérente et éviter que la décision soit réinterprétée.",
+      "actions": [
+        "Rappelle le problème et les critères.",
+        "Explique le choix et les compromis.",
+        "Indique les prochaines actions.",
+        "Clarifie ce qui reste ouvert."
+      ],
+      "questions": [
+        "Qu'est-ce que les personnes doivent comprendre ?",
+        "Qu'est-ce qui change concrètement ?",
+        "Qu'est-ce qui ne change pas ?"
+      ],
+      "watchouts": [
+        "Communiquer uniquement la conclusion.",
+        "Cacher les compromis pour rendre la décision plus séduisante."
+      ],
+      "next": [
+        "follow-up",
+        "reset"
+      ]
+    },
+    {
+      "id": "follow-up",
+      "number": "10",
+      "title": "Prévois comment réévaluer la décision",
+      "short": "Certaines décisions doivent pouvoir être revisitées quand de nouvelles informations apparaissent.",
+      "why": "Pour éviter de confondre décision claire et décision éternelle.",
+      "actions": [
+        "Définis les signaux qui justifieraient une réévaluation.",
+        "Note les hypothèses critiques.",
+        "Fixe éventuellement une date de revue.",
+        "Documente suffisamment la décision pour comprendre plus tard son contexte."
+      ],
+      "questions": [
+        "Qu'est-ce qui nous ferait changer d'avis ?",
+        "Quand devons-nous revoir cette décision ?",
+        "Quelles hypothèses devons-nous surveiller ?"
+      ],
+      "watchouts": [
+        "Réouvrir la décision trop souvent.",
+        "Ne jamais la réévaluer malgré un changement de contexte."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Je n'arrive pas à trancher",
+      "short": "Reviens à la décision, aux critères et à l'incertitude qui bloque réellement.",
+      "why": "Parce qu'une décision devient souvent confuse quand trop d'éléments secondaires se mélangent.",
+      "actions": [
+        "Réécris la décision en une phrase.",
+        "Choisis trois critères maximum.",
+        "Identifie l'inconnue la plus importante.",
+        "Décide si elle mérite réellement plus d'investigation."
+      ],
+      "questions": [
+        "Quelle décision dois-je vraiment prendre ?",
+        "Qu'est-ce qui compte le plus ?",
+        "Quelle incertitude m'empêche réellement d'avancer ?"
+      ],
+      "watchouts": [
+        "Créer une nouvelle analyse plus complexe.",
+        "Attendre qu'une option devienne évidemment parfaite."
+      ],
+      "next": [
+        "decision",
+        "criteria",
+        "timing"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Une décision importante à préparer ?",
+    "text": "Commence par formuler précisément ce qui doit être décidé, puis rends visibles les critères, les options, les risques et les incertitudes. Une bonne décision n'exige pas de tout savoir : elle exige de savoir pourquoi tu choisis."
+  }
+}

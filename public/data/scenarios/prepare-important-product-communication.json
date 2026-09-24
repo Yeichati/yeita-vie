@@ -1,0 +1,44 @@
+{
+  "id": "prepare-important-product-communication",
+  "title": "Je dois préparer une communication importante autour du produit",
+  "subtitle": "Construire un message qui aide une audience précise à comprendre le contexte, les choix et ce qui doit se passer ensuite.",
+  "accent": "green",
+  "cards": [
+    {
+      "journey": "communicate-product.json",
+      "cardId": "audience"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "message"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "context"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "facts"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "evidence"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "risks"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "format"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "action"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "feedback"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "id": "take-over-existing-product",
+  "title": "Je reprends un produit déjà lancé",
+  "subtitle": "Comprendre le produit, son histoire et l'équipe avant de chercher à réorienter ce qui existe déjà.",
+  "accent": "green",
+  "cards": [
+    {
+      "journey": "take-over-moving-team-product.json",
+      "cardId": "motion"
+    },
+    {
+      "journey": "take-over-moving-team-product.json",
+      "cardId": "commitments"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "purpose"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "users"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "history"
+    },
+    {
+      "journey": "take-over-moving-team-product.json",
+      "cardId": "preserve"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "understand-team"
+    },
+    {
+      "journey": "take-over-moving-team-product.json",
+      "cardId": "priorities"
+    },
+    {
+      "journey": "measure-my-impact.json",
+      "cardId": "baseline"
+    },
+    {
+      "journey": "take-over-moving-team-product.json",
+      "cardId": "changes"
+    }
+  ]
+}

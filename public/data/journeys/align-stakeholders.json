@@ -1,0 +1,280 @@
+{
+  "id": "align-stakeholders",
+  "title": "Je dois aligner des stakeholders qui ne veulent pas la même chose",
+  "subtitle": "Quand les attentes divergent, l'objectif n'est pas forcément d'obtenir un consensus. Il faut rendre les différences explicites, comprendre ce qu'elles protègent et construire un arbitrage compréhensible.",
+  "accent": "violet",
+  "startHere": [
+    "positions",
+    "interests",
+    "facts",
+    "common-ground",
+    "tradeoffs"
+  ],
+  "cards": [
+    {
+      "id": "positions",
+      "number": "01",
+      "title": "Rends les positions visibles",
+      "short": "Commence par comprendre ce que chacun demande réellement.",
+      "why": "Pour éviter les discussions floues où tout le monde semble en désaccord sans savoir précisément sur quoi.",
+      "actions": [
+        "Reformule la position de chaque stakeholder.",
+        "Sépare les demandes concrètes des préférences.",
+        "Repère les points d'accord déjà présents.",
+        "Note les désaccords précis."
+      ],
+      "questions": [
+        "Que veut réellement chaque personne ?",
+        "Sur quoi sommes-nous déjà d'accord ?",
+        "Quel est le désaccord exact ?"
+      ],
+      "watchouts": [
+        "Résumer une position de manière caricaturale.",
+        "Chercher immédiatement qui a raison."
+      ],
+      "next": [
+        "interests",
+        "facts"
+      ]
+    },
+    {
+      "id": "interests",
+      "number": "02",
+      "title": "Comprends ce que chacun cherche à protéger",
+      "short": "Derrière une position se trouvent souvent un objectif, un risque ou une contrainte.",
+      "why": "Pour trouver des options qui répondent mieux aux besoins réels que les solutions initialement défendues.",
+      "actions": [
+        "Demande pourquoi le sujet est important pour chaque stakeholder.",
+        "Identifie les risques qu'ils cherchent à éviter.",
+        "Repère les objectifs ou incentives qui influencent leur position.",
+        "Cherche ce qui est négociable et ce qui l'est moins."
+      ],
+      "questions": [
+        "Qu'est-ce que cette personne essaie de protéger ?",
+        "Quel risque voit-elle ?",
+        "Quel résultat cherche-t-elle à obtenir ?"
+      ],
+      "watchouts": [
+        "Supposer les motivations sans les vérifier.",
+        "Psychologiser un désaccord de fond."
+      ],
+      "next": [
+        "facts",
+        "common-ground"
+      ]
+    },
+    {
+      "id": "facts",
+      "number": "03",
+      "title": "Sépare faits, hypothèses et préférences",
+      "short": "Une partie des désaccords vient parfois de lectures différentes de la réalité.",
+      "why": "Pour savoir ce qui peut être résolu par de l'information et ce qui nécessite réellement un arbitrage.",
+      "actions": [
+        "Liste les faits sur lesquels tout le monde s'accorde.",
+        "Identifie les hypothèses encore non vérifiées.",
+        "Sépare les contraintes réelles des préférences.",
+        "Cherche les données manquantes qui pourraient faire évoluer les positions."
+      ],
+      "questions": [
+        "Sur quoi sommes-nous factuellement d'accord ?",
+        "Quelles hypothèses différentes expliquent nos positions ?",
+        "Quelle information pourrait réduire le désaccord ?"
+      ],
+      "watchouts": [
+        "Utiliser la donnée comme argument d'autorité.",
+        "Faire croire qu'un choix de valeur peut être tranché uniquement par les faits."
+      ],
+      "next": [
+        "common-ground",
+        "options"
+      ]
+    },
+    {
+      "id": "common-ground",
+      "number": "04",
+      "title": "Reviens à l'objectif commun",
+      "short": "Un désaccord devient plus facile à traiter quand les personnes partagent le même problème à résoudre.",
+      "why": "Pour sortir des solutions défendues et remettre la discussion sur le résultat attendu.",
+      "actions": [
+        "Reformule l'objectif commun.",
+        "Vérifie que chacun accepte le problème à résoudre.",
+        "Rappelle les contraintes partagées.",
+        "Utilise cet objectif comme critère pour évaluer les options."
+      ],
+      "questions": [
+        "Quel résultat cherchons-nous tous à obtenir ?",
+        "Quel problème voulons-nous réellement résoudre ?",
+        "Quelles contraintes devons-nous tous accepter ?"
+      ],
+      "watchouts": [
+        "Inventer un objectif commun artificiel.",
+        "Utiliser l'objectif commun pour minimiser les désaccords réels."
+      ],
+      "next": [
+        "options",
+        "tradeoffs"
+      ]
+    },
+    {
+      "id": "options",
+      "number": "05",
+      "title": "Crée plusieurs options",
+      "short": "Ne reste pas enfermé dans un choix entre deux positions initiales.",
+      "why": "Pour permettre de nouveaux compromis et tester des réponses qui satisfont mieux les intérêts réels.",
+      "actions": [
+        "Cherche plusieurs manières de répondre au problème.",
+        "Varie scope, timing, niveau de risque ou population concernée.",
+        "Fais contribuer les stakeholders à la création d'options.",
+        "Évite de présenter ton option préférée comme la seule réaliste."
+      ],
+      "questions": [
+        "Quelles autres options existent ?",
+        "Peut-on séquencer ou réduire le sujet ?",
+        "Existe-t-il une option réversible ?"
+      ],
+      "watchouts": [
+        "Créer de fausses options juste pour légitimer un choix déjà fait.",
+        "Chercher une solution qui satisfait tout le monde parfaitement."
+      ],
+      "next": [
+        "tradeoffs",
+        "decision"
+      ]
+    },
+    {
+      "id": "tradeoffs",
+      "number": "06",
+      "title": "Rends les compromis explicites",
+      "short": "L'alignement ne supprime pas les coûts ou renoncements.",
+      "why": "Pour que les personnes comprennent ce qu'elles gagnent, ce qu'elles abandonnent et pourquoi.",
+      "actions": [
+        "Liste les bénéfices et coûts de chaque option.",
+        "Explique les risques et incertitudes.",
+        "Montre ce qui est repoussé ou sacrifié.",
+        "Vérifie que les principaux compromis sont compris."
+      ],
+      "questions": [
+        "Qu'est-ce que nous gagnons ?",
+        "Qu'est-ce que nous acceptons de perdre ou repousser ?",
+        "Quel risque prenons-nous ?"
+      ],
+      "watchouts": [
+        "Masquer les inconvénients pour obtenir l'adhésion.",
+        "Présenter un compromis comme une solution gagnant-gagnant parfaite."
+      ],
+      "next": [
+        "decision",
+        "communicate"
+      ]
+    },
+    {
+      "id": "decision",
+      "number": "07",
+      "title": "Clarifie comment la décision sera prise",
+      "short": "Tout le monde n'a pas besoin d'être d'accord, mais chacun doit comprendre le processus.",
+      "why": "Pour éviter les réunions infinies et les décisions qui semblent arbitraires.",
+      "actions": [
+        "Clarifie qui décide.",
+        "Identifie qui doit être consulté.",
+        "Définis les critères de décision.",
+        "Fixe un moment où il faudra trancher."
+      ],
+      "questions": [
+        "Qui porte la décision finale ?",
+        "Qui doit être entendu avant de décider ?",
+        "Quels critères utiliserons-nous ?"
+      ],
+      "watchouts": [
+        "Chercher le consensus quand il n'est pas nécessaire.",
+        "Changer les règles de décision en cours de discussion."
+      ],
+      "next": [
+        "communicate",
+        "follow-up"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "08",
+      "title": "Explique la décision et son raisonnement",
+      "short": "Une décision comprise est plus facile à accepter qu'une décision simplement annoncée.",
+      "why": "Pour maintenir la confiance même chez les personnes dont l'option n'a pas été retenue.",
+      "actions": [
+        "Rappelle le problème et les critères.",
+        "Explique les options considérées.",
+        "Nommer les compromis acceptés.",
+        "Indique ce qui pourrait conduire à réévaluer la décision."
+      ],
+      "questions": [
+        "Est-ce que chacun comprend pourquoi ce choix a été fait ?",
+        "Les objections importantes ont-elles été entendues ?",
+        "Qu'est-ce qui pourrait faire évoluer la décision ?"
+      ],
+      "watchouts": [
+        "Faire semblant que tout le monde était d'accord.",
+        "Réouvrir immédiatement la décision à chaque désaccord."
+      ],
+      "next": [
+        "follow-up",
+        "reset"
+      ]
+    },
+    {
+      "id": "follow-up",
+      "number": "09",
+      "title": "Vérifie que l'alignement tient dans l'action",
+      "short": "Un accord en réunion ne garantit pas une exécution alignée.",
+      "why": "Pour détecter rapidement les incompréhensions ou résistances qui réapparaissent une fois la décision mise en œuvre.",
+      "actions": [
+        "Clarifie les prochaines actions et responsables.",
+        "Vérifie que chacun agit selon la même décision.",
+        "Observe les signaux de désalignement.",
+        "Réouvre uniquement les éléments réellement nouveaux."
+      ],
+      "questions": [
+        "Est-ce que nos actions reflètent réellement la décision ?",
+        "Quel désaccord réapparaît dans l'exécution ?",
+        "Y a-t-il une nouvelle information qui justifie de revoir le choix ?"
+      ],
+      "watchouts": [
+        "Confondre désaccord persistant et mauvaise volonté.",
+        "Recommencer toute la discussion au moindre inconfort."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "La discussion tourne en rond",
+      "short": "Reviens au désaccord précis, à l'objectif commun et à la règle de décision.",
+      "why": "Parce que les discussions bloquent souvent quand les personnes parlent de solutions différentes sans partager le même cadre.",
+      "actions": [
+        "Écris le désaccord en une phrase.",
+        "Reformule l'objectif commun.",
+        "Identifie l'information manquante.",
+        "Clarifie qui devra trancher et quand."
+      ],
+      "questions": [
+        "Sur quoi sommes-nous réellement en désaccord ?",
+        "Qu'est-ce qui pourrait nous faire avancer ?",
+        "Avons-nous besoin de plus d'information ou d'un arbitrage ?"
+      ],
+      "watchouts": [
+        "Ajouter une nouvelle réunion sans changer le cadre.",
+        "Chercher à obtenir l'unanimité."
+      ],
+      "next": [
+        "positions",
+        "common-ground",
+        "decision"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Les stakeholders tirent dans des directions différentes ?",
+    "text": "Commence par rendre les désaccords explicites et comprendre ce que chacun cherche à protéger. L'objectif n'est pas forcément que tout le monde pense pareil : c'est d'arriver à une décision compréhensible et assumée."
+  }
+}

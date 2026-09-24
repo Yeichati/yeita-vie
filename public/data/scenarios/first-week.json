@@ -1,0 +1,48 @@
+{
+  "id": "first-week",
+  "title": "Ma première semaine de mission",
+  "subtitle": "Un fil conducteur pour passer de la découverte du contexte à des premiers focus clairs sans vouloir tout comprendre ni tout changer.",
+  "accent": "violet",
+  "cards": [
+    {
+      "journey": "start-mission.json",
+      "cardId": "mandate"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "expectations"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "people"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "purpose"
+    },
+    {
+      "journey": "discover-product.json",
+      "cardId": "users"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "observe"
+    },
+    {
+      "journey": "build-tech-relationship.json",
+      "cardId": "understand-team"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "notes"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "focus"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "plan"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "id": "measure-my-impact",
+  "title": "Je dois savoir si mon travail a réellement de l’impact",
+  "subtitle": "L'impact ne se résume pas à ce que tu livres. Il faut relier ton travail à des changements observables : pour les utilisateurs, le produit, l'équipe ou l'organisation.",
+  "accent": "violet",
+  "startHere": [
+    "intent",
+    "baseline",
+    "signals",
+    "attribution",
+    "time"
+  ],
+  "cards": [
+    {
+      "id": "intent",
+      "number": "01",
+      "title": "Clarifie l'impact recherché",
+      "short": "Avant de mesurer, définis ce que tu essaies réellement de changer.",
+      "why": "Pour éviter de mesurer uniquement l'activité ou les livrables.",
+      "actions": [
+        "Formule le changement attendu.",
+        "Identifie qui devrait en bénéficier.",
+        "Relie ce changement à la mission ou au produit.",
+        "Sépare résultat attendu et solution mise en place."
+      ],
+      "questions": [
+        "Qu'est-ce que j'essaie réellement d'améliorer ?",
+        "Pour qui ?",
+        "Quel changement concret voudrais-je observer ?"
+      ],
+      "watchouts": [
+        "Définir l'impact par le nombre de fonctionnalités livrées.",
+        "Choisir les métriques parce qu'elles sont faciles à obtenir."
+      ],
+      "next": [
+        "baseline",
+        "signals"
+      ]
+    },
+    {
+      "id": "baseline",
+      "number": "02",
+      "title": "Comprends le point de départ",
+      "short": "Tu ne peux pas apprécier un changement si tu ignores la situation initiale.",
+      "why": "Pour disposer d'un repère permettant de voir si quelque chose s'améliore réellement.",
+      "actions": [
+        "Collecte les données existantes.",
+        "Documente les comportements ou irritants actuels.",
+        "Note les limites de la baseline.",
+        "Utilise des éléments qualitatifs si les données manquent."
+      ],
+      "questions": [
+        "Où en sommes-nous aujourd'hui ?",
+        "Que savons-nous réellement de la situation actuelle ?",
+        "Qu'est-ce qui manque pour disposer d'un bon repère ?"
+      ],
+      "watchouts": [
+        "Attendre une baseline parfaite avant d'agir.",
+        "Inventer une précision que les données n'ont pas."
+      ],
+      "next": [
+        "signals",
+        "time"
+      ]
+    },
+    {
+      "id": "signals",
+      "number": "03",
+      "title": "Choisis des signaux utiles",
+      "short": "Cherche les signaux qui indiquent réellement que le changement recherché se produit.",
+      "why": "Pour suivre l'effet de ton travail plutôt que son volume.",
+      "actions": [
+        "Choisis quelques indicateurs quantitatifs ou qualitatifs.",
+        "Privilégie les signaux proches du problème.",
+        "Distingue métriques de résultat et signaux avancés.",
+        "Évite de multiplier les indicateurs."
+      ],
+      "questions": [
+        "Quel signal me ferait dire que la situation s'améliore ?",
+        "Quel indicateur pourrait bouger sans créer de vraie valeur ?",
+        "Quel signal peut apparaître rapidement ?"
+      ],
+      "watchouts": [
+        "Créer trop de métriques.",
+        "Confondre corrélation et impact."
+      ],
+      "next": [
+        "attribution",
+        "time"
+      ]
+    },
+    {
+      "id": "attribution",
+      "number": "04",
+      "title": "Reste humble sur l'attribution",
+      "short": "Un changement observé n'est pas toujours causé uniquement par ton travail.",
+      "why": "Pour éviter de surévaluer ton impact ou de tirer des conclusions trop fortes à partir d'un résultat positif.",
+      "actions": [
+        "Liste les autres facteurs ayant pu influencer le résultat.",
+        "Compare avec des périodes ou populations pertinentes quand c'est possible.",
+        "Utilise des expériences ou tests quand le contexte le permet.",
+        "Parle en termes de contribution quand l'attribution directe est impossible."
+      ],
+      "questions": [
+        "Qu'est-ce qui a changé en parallèle ?",
+        "Quel autre facteur pourrait expliquer ce résultat ?",
+        "Puis-je parler de causalité ou seulement de contribution ?"
+      ],
+      "watchouts": [
+        "S'attribuer tout résultat positif.",
+        "Refuser toute mesure parce que l'attribution parfaite est impossible."
+      ],
+      "next": [
+        "time",
+        "qualitative"
+      ]
+    },
+    {
+      "id": "time",
+      "number": "05",
+      "title": "Donne le temps au changement d'apparaître",
+      "short": "Certains effets sont immédiats, d'autres mettent des semaines ou des mois à devenir visibles.",
+      "why": "Pour éviter de déclarer trop tôt un succès ou un échec.",
+      "actions": [
+        "Définis quand tu t'attends à voir les premiers signaux.",
+        "Sépare effets court terme et effets durables.",
+        "Planifie des points de mesure adaptés.",
+        "Garde une trace des hypothèses temporelles."
+      ],
+      "questions": [
+        "Quand devrait-on raisonnablement voir un effet ?",
+        "Quel signal peut apparaître tôt ?",
+        "Quel impact nécessite plus de recul ?"
+      ],
+      "watchouts": [
+        "Mesurer trop tôt puis conclure.",
+        "Attendre trop longtemps sans regarder les signaux intermédiaires."
+      ],
+      "next": [
+        "qualitative",
+        "team"
+      ]
+    },
+    {
+      "id": "qualitative",
+      "number": "06",
+      "title": "Ajoute le qualitatif quand il apporte du sens",
+      "short": "Les chiffres montrent parfois qu'un changement existe sans expliquer pourquoi.",
+      "why": "Pour comprendre les mécanismes derrière les résultats et détecter des effets invisibles dans les métriques.",
+      "actions": [
+        "Parle aux utilisateurs ou équipes concernées.",
+        "Collecte des exemples concrets.",
+        "Observe les changements de comportement.",
+        "Cherche les effets inattendus positifs ou négatifs."
+      ],
+      "questions": [
+        "Comment les personnes vivent-elles le changement ?",
+        "Qu'est-ce qui s'est réellement amélioré ou dégradé ?",
+        "Quel mécanisme explique les données observées ?"
+      ],
+      "watchouts": [
+        "Utiliser quelques verbatims comme preuve absolue.",
+        "Ignorer les signaux qualitatifs parce qu'ils sont difficiles à quantifier."
+      ],
+      "next": [
+        "team",
+        "decisions"
+      ]
+    },
+    {
+      "id": "team",
+      "number": "07",
+      "title": "Mesure aussi l'impact sur le système de travail",
+      "short": "Ton impact peut concerner le produit mais aussi la capacité de l'équipe à mieux décider ou mieux travailler.",
+      "why": "Pour rendre visible une partie de la valeur d'un PM ou consultant qui ne se traduit pas immédiatement dans une métrique produit.",
+      "actions": [
+        "Observe la qualité des décisions.",
+        "Regarde si l'équipe gagne en autonomie ou en clarté.",
+        "Mesure les irritants réduits ou les boucles de feedback raccourcies.",
+        "Demande aux partenaires ce qui a changé dans leur manière de travailler."
+      ],
+      "questions": [
+        "L'équipe prend-elle de meilleures décisions ?",
+        "Les problèmes sont-ils détectés plus tôt ?",
+        "Le travail est-il plus clair ou plus fluide ?"
+      ],
+      "watchouts": [
+        "Transformer toute amélioration de process en impact majeur.",
+        "Mesurer uniquement le ressenti de l'équipe."
+      ],
+      "next": [
+        "decisions",
+        "communicate"
+      ]
+    },
+    {
+      "id": "decisions",
+      "number": "08",
+      "title": "Utilise la mesure pour décider",
+      "short": "Mesurer n'a de valeur que si cela peut influencer la suite.",
+      "why": "Pour éviter les dashboards qui décrivent le passé sans aider à choisir.",
+      "actions": [
+        "Définis les décisions que chaque métrique doit éclairer.",
+        "Fixe des seuils ou signaux de réévaluation quand c'est utile.",
+        "Utilise les résultats pour poursuivre, ajuster ou arrêter.",
+        "Supprime les mesures qui ne changent jamais aucune décision."
+      ],
+      "questions": [
+        "Quelle décision cette information peut-elle influencer ?",
+        "Que ferons-nous si le signal est mauvais ?",
+        "Qu'est-ce qui nous ferait changer de direction ?"
+      ],
+      "watchouts": [
+        "Mesurer parce que cela semble professionnel.",
+        "Continuer une initiative malgré des signaux contraires sans reposer la question."
+      ],
+      "next": [
+        "communicate",
+        "reset"
+      ]
+    },
+    {
+      "id": "communicate",
+      "number": "09",
+      "title": "Raconte l'impact avec nuance",
+      "short": "Présente ce qui a changé, ce qui reste incertain et ce que tu en conclus.",
+      "why": "Pour rendre ton travail visible sans survendre sa contribution.",
+      "actions": [
+        "Rappelle le problème initial.",
+        "Montre les signaux observés.",
+        "Indique les limites d'attribution.",
+        "Explique la décision ou prochaine étape qui en découle."
+      ],
+      "questions": [
+        "Qu'est-ce qui a réellement changé ?",
+        "Quelle part puis-je raisonnablement attribuer à notre travail ?",
+        "Que décidons-nous grâce à cette information ?"
+      ],
+      "watchouts": [
+        "Transformer toute amélioration en success story.",
+        "Cacher les résultats mitigés."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Je ne sais pas quoi mesurer",
+      "short": "Reviens au changement que tu cherches à produire.",
+      "why": "Parce qu'une métrique utile commence par une intention claire, pas par un dashboard.",
+      "actions": [
+        "Écris le problème initial.",
+        "Formule le changement recherché.",
+        "Choisis un signal observable.",
+        "Définis quelle décision ce signal pourrait influencer."
+      ],
+      "questions": [
+        "Qu'est-ce qui devrait changer si mon travail a de l'impact ?",
+        "Comment pourrais-je l'observer ?",
+        "Que ferai-je avec cette information ?"
+      ],
+      "watchouts": [
+        "Chercher une North Star pour tout.",
+        "Mesurer uniquement ce qui est disponible."
+      ],
+      "next": [
+        "intent",
+        "signals",
+        "decisions"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu veux savoir si ton travail change réellement quelque chose ?",
+    "text": "Commence par définir le changement recherché, puis choisis quelques signaux qui peuvent montrer s'il se produit. Mesurer ton impact ne consiste pas à prouver que tu as raison : c'est apprendre si ton travail produit l'effet attendu."
+  }
+}

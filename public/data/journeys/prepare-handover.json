@@ -1,0 +1,307 @@
+{
+  "id": "prepare-handover",
+  "title": "Je dois préparer ma sortie de mission / transmettre proprement",
+  "subtitle": "Une bonne sortie ne consiste pas à laisser beaucoup de documentation. Elle consiste à rendre l'équipe suffisamment autonome pour continuer sans toi, avec le bon contexte, les bonnes décisions et les risques visibles.",
+  "accent": "yellow",
+  "startHere": [
+    "outcome",
+    "ownership",
+    "knowledge",
+    "decisions",
+    "risks"
+  ],
+  "cards": [
+    {
+      "id": "outcome",
+      "number": "01",
+      "title": "Clarifie ce qui doit rester après toi",
+      "short": "Commence par définir ce que l'équipe doit être capable de faire sans toi.",
+      "why": "Pour construire la transmission autour de l'autonomie plutôt que de la quantité de documents produits.",
+      "actions": [
+        "Liste les responsabilités que tu portes encore.",
+        "Identifie ce qui doit continuer après ton départ.",
+        "Définis les compétences ou connaissances à transférer.",
+        "Clarifie ce qui peut réellement s'arrêter avec la mission."
+      ],
+      "questions": [
+        "Qu'est-ce qui doit continuer sans moi ?",
+        "Qu'est-ce que je porte encore aujourd'hui ?",
+        "Qu'est-ce qui disparaîtra naturellement avec mon départ ?"
+      ],
+      "watchouts": [
+        "Tout considérer comme à transmettre.",
+        "Mesurer la qualité du handover au nombre de pages écrites."
+      ],
+      "next": [
+        "ownership",
+        "knowledge"
+      ]
+    },
+    {
+      "id": "ownership",
+      "number": "02",
+      "title": "Transfère les responsabilités avant les documents",
+      "short": "Une information sans propriétaire devient vite inutilisable.",
+      "why": "Pour que chacun sache ce qu'il devra porter une fois la mission terminée.",
+      "actions": [
+        "Associe chaque responsabilité importante à une personne ou équipe.",
+        "Clarifie ce qui change avec ton départ.",
+        "Vérifie que les nouveaux propriétaires acceptent et comprennent le rôle.",
+        "Commence le transfert avant ton dernier jour."
+      ],
+      "questions": [
+        "Qui reprend quoi ?",
+        "Cette personne sait-elle réellement qu'elle devient propriétaire ?",
+        "De quoi a-t-elle besoin pour être autonome ?"
+      ],
+      "watchouts": [
+        "Attribuer des responsabilités sans accord.",
+        "Faire le transfert uniquement lors de la dernière semaine."
+      ],
+      "next": [
+        "knowledge",
+        "decisions"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "number": "03",
+      "title": "Transmets la connaissance réellement utile",
+      "short": "Documente ce qu'une personne aura du mal à retrouver seule.",
+      "why": "Pour éviter de noyer l'équipe sous des informations obsolètes ou évidentes.",
+      "actions": [
+        "Identifie les connaissances critiques.",
+        "Privilégie les décisions, raisons, dépendances et zones sensibles.",
+        "Mets à jour uniquement les documents qui seront réellement utilisés.",
+        "Supprime ou signale les informations obsolètes."
+      ],
+      "questions": [
+        "Qu'est-ce qui serait difficile à reconstruire après mon départ ?",
+        "Quelles informations sont seulement dans ma tête ?",
+        "Quel document sera réellement consulté ?"
+      ],
+      "watchouts": [
+        "Créer une documentation exhaustive par peur d'oublier.",
+        "Laisser des documents contradictoires ou périmés."
+      ],
+      "next": [
+        "decisions",
+        "risks"
+      ]
+    },
+    {
+      "id": "decisions",
+      "number": "04",
+      "title": "Laisse l'histoire des décisions importantes",
+      "short": "Le contexte d'une décision est souvent plus précieux que la décision elle-même.",
+      "why": "Pour éviter que les futurs responsables rouvrent les mêmes débats sans comprendre pourquoi certains choix ont été faits.",
+      "actions": [
+        "Liste les décisions structurantes.",
+        "Explique leur contexte et les options écartées.",
+        "Note les hypothèses encore valides ou fragiles.",
+        "Indique les décisions qui pourraient devoir être revisitées."
+      ],
+      "questions": [
+        "Quelles décisions seraient incompréhensibles sans contexte ?",
+        "Qu'avons-nous volontairement décidé de ne pas faire ?",
+        "Qu'est-ce qui pourrait justifier une réévaluation ?"
+      ],
+      "watchouts": [
+        "Écrire uniquement le résultat final.",
+        "Présenter les décisions passées comme immuables."
+      ],
+      "next": [
+        "risks",
+        "open-topics"
+      ]
+    },
+    {
+      "id": "risks",
+      "number": "05",
+      "title": "Rends les risques visibles",
+      "short": "Une bonne transmission inclut aussi ce qui n'est pas résolu.",
+      "why": "Pour permettre à l'équipe d'anticiper les difficultés plutôt que de les découvrir après ton départ.",
+      "actions": [
+        "Liste les principaux risques connus.",
+        "Indique leur probabilité ou impact si utile.",
+        "Explique les signaux à surveiller.",
+        "Associe un propriétaire aux risques importants."
+      ],
+      "questions": [
+        "Qu'est-ce qui pourrait mal se passer après mon départ ?",
+        "Quels signaux indiqueraient que le risque se matérialise ?",
+        "Qui doit garder ce sujet en tête ?"
+      ],
+      "watchouts": [
+        "Dramatiser tous les sujets ouverts.",
+        "Cacher un risque pour donner l'impression que tout est terminé."
+      ],
+      "next": [
+        "open-topics",
+        "practice"
+      ]
+    },
+    {
+      "id": "open-topics",
+      "number": "06",
+      "title": "Clarifie les sujets encore ouverts",
+      "short": "La mission peut se terminer sans que tout soit résolu.",
+      "why": "Pour éviter que les sujets en cours disparaissent avec ton départ ou soient repris sans contexte.",
+      "actions": [
+        "Liste les sujets ouverts.",
+        "Indique leur état et la prochaine décision attendue.",
+        "Explique pourquoi ils ne sont pas terminés.",
+        "Clarifie leur priorité réelle."
+      ],
+      "questions": [
+        "Quels sujets restent ouverts ?",
+        "Pourquoi ?",
+        "Quelle est la prochaine étape ?",
+        "Qui doit les reprendre ?"
+      ],
+      "watchouts": [
+        "Présenter tous les sujets comme urgents.",
+        "Chercher à tout fermer artificiellement avant de partir."
+      ],
+      "next": [
+        "practice",
+        "relationships"
+      ]
+    },
+    {
+      "id": "practice",
+      "number": "07",
+      "title": "Fais pratiquer avant de partir",
+      "short": "Le meilleur test d'une transmission est de laisser les autres faire sans toi.",
+      "why": "Pour détecter les dépendances cachées avant qu'il soit trop tard.",
+      "actions": [
+        "Laisse progressivement les nouveaux propriétaires prendre les décisions.",
+        "Observe où ils ont encore besoin de toi.",
+        "Réponds aux questions sans reprendre systématiquement la main.",
+        "Corrige les trous de transmission détectés."
+      ],
+      "questions": [
+        "Que se passe-t-il si je ne participe pas à cette réunion ?",
+        "Qui peut prendre cette décision à ma place ?",
+        "Où reste-t-il une dépendance à moi ?"
+      ],
+      "watchouts": [
+        "Continuer à tout faire jusqu'au dernier jour.",
+        "Intervenir trop vite dès qu'une personne hésite."
+      ],
+      "next": [
+        "relationships",
+        "final-check"
+      ]
+    },
+    {
+      "id": "relationships",
+      "number": "08",
+      "title": "Fais aussi un handover relationnel",
+      "short": "Certaines relations et circuits d'information doivent être transmis, pas seulement les sujets.",
+      "why": "Pour éviter que des stakeholders perdent leur point d'entrée ou que des relations utiles disparaissent avec toi.",
+      "actions": [
+        "Présente les nouveaux responsables aux stakeholders clés.",
+        "Explique les nouveaux points de contact.",
+        "Partage les particularités relationnelles utiles.",
+        "Fais les introductions avant ton départ."
+      ],
+      "questions": [
+        "Qui dépend encore de moi comme point d'entrée ?",
+        "Qui doit connaître mon successeur ou relais ?",
+        "Quelles relations sont critiques pour la suite ?"
+      ],
+      "watchouts": [
+        "Faire uniquement un email d'introduction le dernier jour.",
+        "Partager des jugements personnels comme s'ils étaient des faits."
+      ],
+      "next": [
+        "final-check",
+        "retro"
+      ]
+    },
+    {
+      "id": "final-check",
+      "number": "09",
+      "title": "Teste si l'équipe peut continuer sans toi",
+      "short": "Avant de partir, vérifie que la continuité ne repose plus sur ta présence.",
+      "why": "Pour repérer les dernières dépendances et les corriger tant que tu es encore disponible.",
+      "actions": [
+        "Passe en revue responsabilités, décisions, risques et sujets ouverts.",
+        "Demande aux personnes ce qui leur manque encore.",
+        "Teste une période où tu interviens le moins possible.",
+        "Corrige uniquement les trous réellement importants."
+      ],
+      "questions": [
+        "Qu'est-ce qui bloque encore sans moi ?",
+        "Quelle connaissance n'a pas encore de propriétaire ?",
+        "Quelle décision dépend encore trop de moi ?"
+      ],
+      "watchouts": [
+        "Chercher un handover parfait.",
+        "Créer de nouveaux documents à la dernière minute."
+      ],
+      "next": [
+        "retro",
+        "reset"
+      ]
+    },
+    {
+      "id": "retro",
+      "number": "10",
+      "title": "Laisse un dernier retour utile",
+      "short": "Une sortie de mission peut aussi transmettre ce que tu as appris sur le produit, l'équipe et la collaboration.",
+      "why": "Pour transformer ton expérience en apprentissage utile sans produire un audit final.",
+      "actions": [
+        "Partage ce qui a le mieux fonctionné.",
+        "Identifie quelques points de vigilance.",
+        "Distingue les faits de ton interprétation.",
+        "Propose des pistes sans créer une nouvelle roadmap."
+      ],
+      "questions": [
+        "Qu'est-ce qui mérite d'être préservé ?",
+        "Qu'est-ce qui pourrait être amélioré ?",
+        "Quel apprentissage serait utile après mon départ ?"
+      ],
+      "watchouts": [
+        "Transformer la rétro en bilan de performance des personnes.",
+        "Lancer de nouveaux chantiers juste avant de partir."
+      ],
+      "next": [
+        "reset"
+      ]
+    },
+    {
+      "id": "reset",
+      "number": "SOS",
+      "title": "Il me reste trop de choses à transmettre",
+      "short": "Priorise ce qui créerait une dépendance ou un risque réel après ton départ.",
+      "why": "Parce qu'une transmission exhaustive est impossible et rarement utile.",
+      "actions": [
+        "Liste les responsabilités qui dépendent encore de toi.",
+        "Choisis les connaissances impossibles à reconstruire facilement.",
+        "Identifie les principaux risques.",
+        "Transmets d'abord ces éléments."
+      ],
+      "questions": [
+        "Qu'est-ce qui casserait réellement après mon départ ?",
+        "Qu'est-ce qui peut être retrouvé sans moi ?",
+        "Quelle dépendance dois-je absolument supprimer ?"
+      ],
+      "watchouts": [
+        "Documenter tout par peur d'oublier.",
+        "Essayer de terminer tous les sujets avant de partir."
+      ],
+      "next": [
+        "ownership",
+        "knowledge",
+        "final-check"
+      ]
+    }
+  ],
+  "starter": {
+    "mark": "→",
+    "title": "Tu prépares la fin de ta mission ?",
+    "text": "Commence par identifier ce qui doit continuer sans toi, puis transfère les responsabilités, le contexte et les risques. Une bonne sortie ne laisse pas seulement de la documentation : elle laisse de l'autonomie."
+  }
+}
