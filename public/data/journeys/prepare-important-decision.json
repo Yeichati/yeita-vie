@@ -35,6 +35,10 @@
       "next": [
         "context",
         "criteria"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -61,6 +65,10 @@
       "next": [
         "criteria",
         "facts"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -87,6 +95,10 @@
       "next": [
         "options",
         "facts"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -113,6 +125,10 @@
       "next": [
         "options",
         "risks"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -139,6 +155,10 @@
       "next": [
         "risks",
         "recommendation"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -165,6 +185,10 @@
       "next": [
         "recommendation",
         "timing"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -191,6 +215,10 @@
       "next": [
         "timing",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -217,6 +245,10 @@
       "next": [
         "communicate",
         "follow-up"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -243,6 +275,10 @@
       "next": [
         "follow-up",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -268,6 +304,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -295,6 +335,10 @@
         "decision",
         "criteria",
         "timing"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

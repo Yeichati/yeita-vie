@@ -48,5 +48,9 @@
       "journey": "prepare-handover.json",
       "cardId": "retro"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

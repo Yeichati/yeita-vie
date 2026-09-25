@@ -44,5 +44,9 @@
       "journey": "take-over-moving-team-product.json",
       "cardId": "changes"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

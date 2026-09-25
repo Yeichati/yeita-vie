@@ -1,6 +1,6 @@
 {
   "name": "Yei'ta vie",
-  "eyebrow": "PLAYGROUND CONSULTANT PM",
+  "eyebrow": "",
   "hero": {
     "title": "Ton début de mission,",
     "highlight": "sans la montagne.",
@@ -66,5 +66,12 @@
     "label": "Yeita",
     "url": "https://www.yeita.fr/",
     "suffix": "❤️"
+  },
+  "roleFilter": {
+    "homeKicker": "CHOISIS TON RÔLE",
+    "homeTitle": "Quel est ton rôle ?",
+    "homeText": "Le rôle sélectionné filtre les fiches et les scénarios proposés. Tu peux le changer à tout moment.",
+    "barLabel": "Rôle",
+    "changeLabel": "Changer de rôle"
   }
 }

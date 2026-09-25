@@ -35,6 +35,10 @@
       "next": [
         "expectations",
         "people"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -59,6 +63,10 @@
       "next": [
         "people",
         "focus"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -84,6 +92,10 @@
       "next": [
         "observe",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -111,6 +123,10 @@
       "next": [
         "notes",
         "needs"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -136,6 +152,10 @@
       "next": [
         "focus",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -163,6 +183,10 @@
       "next": [
         "plan",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -188,6 +212,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -214,6 +242,10 @@
       "next": [
         "observe",
         "focus"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -240,6 +272,10 @@
       "next": [
         "focus",
         "plan"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -269,6 +305,10 @@
         "notes",
         "focus",
         "plan"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

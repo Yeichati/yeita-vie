@@ -44,5 +44,8 @@
       "journey": "prioritize-urgency.json",
       "cardId": "review"
     }
+  ],
+  "roles": [
+    "product-manager"
   ]
 }

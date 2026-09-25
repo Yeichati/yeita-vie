@@ -36,6 +36,10 @@
       "next": [
         "facts",
         "people"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -62,6 +66,10 @@
       "next": [
         "people",
         "patterns"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -89,6 +97,10 @@
       "next": [
         "patterns",
         "causes"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -115,6 +127,10 @@
       "next": [
         "causes",
         "system"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -141,6 +157,10 @@
       "next": [
         "system",
         "scope"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -167,6 +187,10 @@
       "next": [
         "scope",
         "experiment"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -193,6 +217,10 @@
       "next": [
         "experiment",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -219,6 +247,10 @@
       "next": [
         "communicate",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -244,6 +276,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -271,6 +307,10 @@
         "symptoms",
         "facts",
         "scope"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

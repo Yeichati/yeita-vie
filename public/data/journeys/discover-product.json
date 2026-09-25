@@ -36,6 +36,10 @@
       "next": [
         "users",
         "context"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -65,6 +69,10 @@
       "next": [
         "explore",
         "data"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -94,6 +102,10 @@
         "users",
         "data",
         "questions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -122,6 +134,10 @@
         "history",
         "tech",
         "context"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -151,6 +167,10 @@
         "context",
         "tech",
         "questions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -181,6 +201,10 @@
         "data",
         "tech",
         "questions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -209,6 +233,10 @@
       "next": [
         "questions",
         "model"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -237,6 +265,10 @@
       "next": [
         "questions",
         "model"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -265,6 +297,10 @@
       "next": [
         "model",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -292,6 +328,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -320,6 +360,10 @@
       "next": [
         "questions",
         "model"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

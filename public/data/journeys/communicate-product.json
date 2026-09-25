@@ -35,6 +35,10 @@
       "next": [
         "message",
         "context"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -61,6 +65,10 @@
       "next": [
         "context",
         "evidence"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -87,6 +95,10 @@
       "next": [
         "evidence",
         "format"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -113,6 +125,10 @@
       "next": [
         "format",
         "action"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -139,6 +155,10 @@
       "next": [
         "action",
         "cadence"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -165,6 +185,10 @@
       "next": [
         "cadence",
         "feedback"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -191,6 +215,10 @@
       "next": [
         "feedback",
         "adapt"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -217,6 +245,10 @@
       "next": [
         "adapt",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -242,6 +274,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -269,6 +305,10 @@
         "audience",
         "message",
         "action"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

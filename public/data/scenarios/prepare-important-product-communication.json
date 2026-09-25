@@ -40,5 +40,9 @@
       "journey": "communicate-product.json",
       "cardId": "feedback"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

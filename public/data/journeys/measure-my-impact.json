@@ -35,6 +35,10 @@
       "next": [
         "baseline",
         "signals"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -61,6 +65,10 @@
       "next": [
         "signals",
         "time"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -87,6 +95,10 @@
       "next": [
         "attribution",
         "time"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -113,6 +125,10 @@
       "next": [
         "time",
         "qualitative"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -139,6 +155,10 @@
       "next": [
         "qualitative",
         "team"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -165,6 +185,10 @@
       "next": [
         "team",
         "decisions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -191,6 +215,10 @@
       "next": [
         "decisions",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -217,6 +245,10 @@
       "next": [
         "communicate",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -242,6 +274,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -269,6 +305,10 @@
         "intent",
         "signals",
         "decisions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

@@ -44,5 +44,9 @@
       "journey": "start-mission.json",
       "cardId": "plan"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

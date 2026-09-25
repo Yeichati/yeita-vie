@@ -44,5 +44,9 @@
       "journey": "understand-what-doesnt-work.json",
       "cardId": "experiment"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

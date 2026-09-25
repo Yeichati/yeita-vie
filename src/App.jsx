@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 
 const DATA_ROOT = `${import.meta.env.BASE_URL}data`
+const ROLE_STORAGE_KEY = 'yeita-vie-role'
 
 async function getJson(path) {
-  const response = await fetch(path)
+  const response = await fetch(path, { cache: 'no-store' })
   if (!response.ok) throw new Error(`Impossible de charger ${path}`)
   return response.json()
 }
@@ -11,27 +12,62 @@ async function getJson(path) {
 async function loadCollection(folder, manifestKey) {
   const manifest = await getJson(`${DATA_ROOT}/${folder}/index.json`)
   const filenames = manifest[manifestKey] ?? []
-  const items = await Promise.all(
+  return Promise.all(
     filenames.map(async (filename) => ({
       filename,
       data: await getJson(`${DATA_ROOT}/${folder}/${filename}`),
     })),
   )
-  return items
 }
 
 async function loadData() {
-  const [app, journeyEntries, scenarioEntries] = await Promise.all([
+  const [app, roleData, journeyEntries, scenarioEntries] = await Promise.all([
     getJson(`${DATA_ROOT}/app.json`),
+    getJson(`${DATA_ROOT}/roles.json`),
     loadCollection('journeys', 'journeys'),
     loadCollection('scenarios', 'scenarios'),
   ])
 
   return {
     app,
+    roles: roleData.roles ?? [],
     journeys: journeyEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
     scenarios: scenarioEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
   }
+}
+
+function hasRole(item, roleId) {
+  return item?.roles?.includes(roleId)
+}
+
+function RolePills({ roles, selectedRoleId, onChange, compact = false }) {
+  return (
+    <div className={`role-pills ${compact ? 'compact' : ''}`} role="group" aria-label="Choisir un rôle">
+      {roles.map((role) => (
+        <button
+          key={role.id}
+          type="button"
+          className={role.id === selectedRoleId ? 'active' : ''}
+          onClick={() => onChange(role.id)}
+        >
+          {compact && role.shortLabel ? role.shortLabel : role.label}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+function RoleBadges({ roleIds, roleById }) {
+  if (!roleIds?.length) return null
+  return (
+    <div className="role-badges">
+      {roleIds.map((id) => {
+        const role = roleById[id]
+        if (!role) return null
+        return <span key={id}>{role.shortLabel || role.label}</span>
+      })}
+    </div>
+  )
 }
 
 function StarterBox({ starter }) {
@@ -47,18 +83,16 @@ function StarterBox({ starter }) {
   )
 }
 
-function CardDialog({ card, labels, onClose, nextCard, onOpenNext }) {
+function CardDialog({ card, labels, onClose, nextCard, onOpenNext, roleById }) {
   const dialogRef = useRef(null)
 
   useEffect(() => {
     const onKeyDown = (event) => {
       if (event.key === 'Escape') onClose()
     }
-
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
     window.addEventListener('keydown', onKeyDown)
-
     return () => {
       document.body.style.overflow = previousOverflow
       window.removeEventListener('keydown', onKeyDown)
@@ -81,6 +115,7 @@ function CardDialog({ card, labels, onClose, nextCard, onOpenNext }) {
           <div className="dialog-meta">
             <span className="dialog-num">{labels.sheetLabel} {card.number}</span>
             {card._sourceTitle && <span className="source-pill">{card._sourceTitle}</span>}
+            <RoleBadges roleIds={card.roles} roleById={roleById} />
           </div>
           <h2 id="card-title">{card.title}</h2>
           <p className="dialog-lead">{card.short}</p>
@@ -120,9 +155,16 @@ function CardDialog({ card, labels, onClose, nextCard, onOpenNext }) {
   )
 }
 
-function Home({ app, journeys, scenarios, onChoose }) {
+function Home({ app, roles, selectedRoleId, onRoleChange, journeys, scenarios, onChoose }) {
   return (
     <section className="home-shell">
+      <div className="role-home-block">
+        <span className="section-kicker">{app.roleFilter.homeKicker}</span>
+        <h2>{app.roleFilter.homeTitle}</h2>
+        <p>{app.roleFilter.homeText}</p>
+        <RolePills roles={roles} selectedRoleId={selectedRoleId} onChange={onRoleChange} />
+      </div>
+
       <div className="home-intro">
         <span className="section-kicker">{app.home.kicker}</span>
         <h2>{app.home.title}</h2>
@@ -154,6 +196,19 @@ function Home({ app, journeys, scenarios, onChoose }) {
   )
 }
 
+function RoleFilterBar({ app, roles, selectedRoleId, onRoleChange }) {
+  const selected = roles.find((role) => role.id === selectedRoleId)
+  return (
+    <div className="role-filter-bar">
+      <div className="role-filter-inner">
+        <span className="role-filter-label">{app.roleFilter.barLabel}</span>
+        <strong>{selected?.label}</strong>
+        <RolePills roles={roles} selectedRoleId={selectedRoleId} onChange={onRoleChange} compact />
+      </div>
+    </div>
+  )
+}
+
 function LibrarySidebar({ title, note, items, activeId, onSelect }) {
   return (
     <aside className="journey-sidebar">
@@ -182,6 +237,7 @@ function LibrarySidebar({ title, note, items, activeId, onSelect }) {
 export default function App() {
   const [data, setData] = useState(null)
   const [view, setView] = useState('home')
+  const [selectedRoleId, setSelectedRoleId] = useState(null)
   const [journeyId, setJourneyId] = useState(null)
   const [scenarioId, setScenarioId] = useState(null)
   const [query, setQuery] = useState('')
@@ -193,37 +249,62 @@ export default function App() {
     loadData()
       .then((loaded) => {
         setData(loaded)
-        setJourneyId(loaded.journeys[0]?.id ?? null)
-        setScenarioId(loaded.scenarios[0]?.id ?? null)
+        const stored = localStorage.getItem(ROLE_STORAGE_KEY)
+        const validStored = loaded.roles.some((role) => role.id === stored)
+        const initialRole = validStored ? stored : (loaded.roles.find((role) => role.id === 'product-manager')?.id ?? loaded.roles[0]?.id)
+        setSelectedRoleId(initialRole)
       })
       .catch(setError)
   }, [])
 
-  const journey = data?.journeys.find((item) => item.id === journeyId) ?? data?.journeys[0]
-  const scenario = data?.scenarios.find((item) => item.id === scenarioId) ?? data?.scenarios[0]
-
-  useEffect(() => {
-    if (view === 'home') {
-      window.scrollTo({ top: 0, behavior: 'auto' })
-      return
-    }
-
-    requestAnimationFrame(() => {
-      libraryRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' })
-    })
-  }, [view, journeyId, scenarioId])
+  const roleById = useMemo(() => {
+    if (!data) return {}
+    return Object.fromEntries(data.roles.map((role) => [role.id, role]))
+  }, [data])
 
   const journeyByFilename = useMemo(() => {
     if (!data) return {}
     return Object.fromEntries(data.journeys.map((item) => [item._filename, item]))
   }, [data])
 
+  const filteredJourneys = useMemo(() => {
+    if (!data || !selectedRoleId) return []
+    return data.journeys.filter((journey) => journey.cards?.some((card) => hasRole(card, selectedRoleId)))
+  }, [data, selectedRoleId])
+
+  const filteredScenarios = useMemo(() => {
+    if (!data || !selectedRoleId) return []
+    return data.scenarios.filter((scenario) => hasRole(scenario, selectedRoleId))
+  }, [data, selectedRoleId])
+
+  useEffect(() => {
+    if (!selectedRoleId) return
+    localStorage.setItem(ROLE_STORAGE_KEY, selectedRoleId)
+    setJourneyId((current) => filteredJourneys.some((item) => item.id === current) ? current : (filteredJourneys[0]?.id ?? null))
+    setScenarioId((current) => filteredScenarios.some((item) => item.id === current) ? current : (filteredScenarios[0]?.id ?? null))
+    setQuery('')
+    setOpenCardKey(null)
+  }, [selectedRoleId, filteredJourneys, filteredScenarios])
+
+  const journey = filteredJourneys.find((item) => item.id === journeyId) ?? filteredJourneys[0]
+  const scenario = filteredScenarios.find((item) => item.id === scenarioId) ?? filteredScenarios[0]
+
+  useEffect(() => {
+    if (view === 'home') {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+      return
+    }
+    requestAnimationFrame(() => {
+      libraryRef.current?.scrollIntoView({ block: 'start', behavior: 'auto' })
+    })
+  }, [view, journeyId, scenarioId, selectedRoleId])
+
   const scenarioCards = useMemo(() => {
-    if (!scenario) return []
+    if (!scenario || !selectedRoleId) return []
     return (scenario.cards ?? []).map((reference, index) => {
       const sourceJourney = journeyByFilename[reference.journey]
       const sourceCard = sourceJourney?.cards.find((card) => card.id === reference.cardId)
-      if (!sourceJourney || !sourceCard) return null
+      if (!sourceJourney || !sourceCard || !hasRole(sourceCard, selectedRoleId)) return null
       return {
         ...sourceCard,
         _key: `${reference.journey}:${reference.cardId}:${index}`,
@@ -231,16 +312,19 @@ export default function App() {
         _sourceFilename: reference.journey,
       }
     }).filter(Boolean)
-  }, [scenario, journeyByFilename])
+  }, [scenario, selectedRoleId, journeyByFilename])
+
+  const activeJourneyCards = useMemo(() => {
+    if (!journey || !selectedRoleId) return []
+    return (journey.cards ?? [])
+      .filter((card) => hasRole(card, selectedRoleId))
+      .map((card) => ({ ...card, _key: card.id }))
+  }, [journey, selectedRoleId])
 
   const displayedCards = useMemo(() => {
-    const source = view === 'scenarios'
-      ? scenarioCards
-      : (journey?.cards ?? []).map((card) => ({ ...card, _key: card.id }))
-
+    const source = view === 'scenarios' ? scenarioCards : activeJourneyCards
     const normalized = query.trim().toLowerCase()
     if (!normalized) return source
-
     return source.filter((card) => {
       const searchable = [
         card.title,
@@ -253,22 +337,17 @@ export default function App() {
       ].filter(Boolean).join(' ').toLowerCase()
       return searchable.includes(normalized)
     })
-  }, [view, journey, scenarioCards, query])
+  }, [view, activeJourneyCards, scenarioCards, query])
 
-  const allActiveCards = view === 'scenarios'
-    ? scenarioCards
-    : (journey?.cards ?? []).map((card) => ({ ...card, _key: card.id }))
-
+  const allActiveCards = view === 'scenarios' ? scenarioCards : activeJourneyCards
   const openCard = allActiveCards.find((card) => card._key === openCardKey) ?? null
   const openIndex = openCard ? allActiveCards.findIndex((card) => card._key === openCard._key) : -1
   const nextCard = openIndex >= 0 && openIndex < allActiveCards.length - 1 ? allActiveCards[openIndex + 1] : null
 
-  if (error) {
-    return <main className="status-page"><strong>Impossible de charger Yei'ta vie.</strong><span>{error.message}</span></main>
-  }
-  if (!data) return <main className="status-page">Chargement…</main>
+  if (error) return <main className="status-page"><strong>Impossible de charger Yei'ta vie.</strong><span>{error.message}</span></main>
+  if (!data || !selectedRoleId) return <main className="status-page">Chargement…</main>
 
-  const { app, journeys, scenarios } = data
+  const { app, roles } = data
   const activeContent = view === 'scenarios' ? scenario : journey
   const contentLabels = view === 'scenarios' ? app.scenario : app.journey
 
@@ -298,11 +377,14 @@ export default function App() {
         </nav>
       </header>
 
+      {view !== 'home' && (
+        <RoleFilterBar app={app} roles={roles} selectedRoleId={selectedRoleId} onRoleChange={setSelectedRoleId} />
+      )}
+
       <main id="top">
         {view === 'home' && (
           <section className="hero">
             <div className="hero-copy">
-              <span className="eyebrow">{app.eyebrow}</span>
               <h1>{app.hero.title}<br /><span>{app.hero.highlight}</span></h1>
               <p>{app.hero.tagline}</p>
             </div>
@@ -315,15 +397,23 @@ export default function App() {
         )}
 
         {view === 'home' ? (
-          <Home app={app} journeys={journeys} scenarios={scenarios} onChoose={changeView} />
-        ) : (
+          <Home
+            app={app}
+            roles={roles}
+            selectedRoleId={selectedRoleId}
+            onRoleChange={setSelectedRoleId}
+            journeys={filteredJourneys}
+            scenarios={filteredScenarios}
+            onChoose={changeView}
+          />
+        ) : activeContent ? (
           <section ref={libraryRef} className="journey-shell">
             <LibrarySidebar
               title={view === 'scenarios' ? app.scenario.sidebarTitle : app.sidebar.title}
               note={view === 'scenarios'
                 ? { title: app.scenario.noteTitle, text: app.scenario.noteText }
                 : { title: app.sidebar.noteTitle, text: app.sidebar.noteText }}
-              items={view === 'scenarios' ? scenarios : journeys}
+              items={view === 'scenarios' ? filteredScenarios : filteredJourneys}
               activeId={activeContent?.id}
               onSelect={(id) => {
                 if (view === 'scenarios') setScenarioId(id)
@@ -336,7 +426,10 @@ export default function App() {
             <section className="journey-content">
               <div className="journey-heading">
                 <div>
-                  <span className="section-kicker">{contentLabels.kicker}</span>
+                  <div className="heading-meta-row">
+                    <span className="section-kicker">{contentLabels.kicker}</span>
+                    {view === 'scenarios' && <RoleBadges roleIds={scenario?.roles} roleById={roleById} />}
+                  </div>
                   <h2>{activeContent?.title}</h2>
                   <p>{activeContent?.subtitle}</p>
                 </div>
@@ -375,6 +468,7 @@ export default function App() {
                       <span className="num">{view === 'scenarios' ? String(index + 1).padStart(2, '0') : card.number}</span>
                       {card._sourceTitle && <span className="card-source">{card._sourceTitle}</span>}
                     </div>
+                    <RoleBadges roleIds={card.roles} roleById={roleById} />
                     <h3>{card.title}</h3>
                     <p>{card.short}</p>
                     <span className="open">↗</span>
@@ -385,6 +479,8 @@ export default function App() {
               </div>
             </section>
           </section>
+        ) : (
+          <section className="empty-library">Aucun contenu n'est disponible pour ce rôle.</section>
         )}
       </main>
 
@@ -401,6 +497,7 @@ export default function App() {
           onClose={() => setOpenCardKey(null)}
           nextCard={view === 'scenarios' ? nextCard : null}
           onOpenNext={setOpenCardKey}
+          roleById={roleById}
         />
       )}
     </>

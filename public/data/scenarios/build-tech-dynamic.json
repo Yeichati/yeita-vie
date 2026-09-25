@@ -44,5 +44,9 @@
       "journey": "build-tech-relationship.json",
       "cardId": "trust"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

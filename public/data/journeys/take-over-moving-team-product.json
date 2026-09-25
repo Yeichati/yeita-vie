@@ -35,6 +35,10 @@
       "next": [
         "commitments",
         "people"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -61,6 +65,10 @@
       "next": [
         "history",
         "preserve"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -87,6 +95,10 @@
       "next": [
         "history",
         "preserve"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -113,6 +125,10 @@
       "next": [
         "preserve",
         "observe"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -139,6 +155,10 @@
       "next": [
         "observe",
         "priorities"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -165,6 +185,10 @@
       "next": [
         "priorities",
         "changes"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -191,6 +215,10 @@
       "next": [
         "changes",
         "trust"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -217,6 +245,10 @@
       "next": [
         "trust",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -242,6 +274,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -269,6 +305,10 @@
         "preserve",
         "priorities",
         "changes"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

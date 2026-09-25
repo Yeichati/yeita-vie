@@ -35,6 +35,10 @@
       "next": [
         "symptoms",
         "goal"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -62,6 +66,10 @@
       "next": [
         "goal",
         "constraints"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -88,6 +96,10 @@
       "next": [
         "constraints",
         "relationships"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -114,6 +126,10 @@
       "next": [
         "relationships",
         "decisions"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -140,6 +156,10 @@
       "next": [
         "decisions",
         "scope"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -166,6 +186,10 @@
       "next": [
         "scope",
         "reset-plan"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -192,6 +216,10 @@
       "next": [
         "reset-plan",
         "sponsor"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -218,6 +246,10 @@
       "next": [
         "sponsor",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -244,6 +276,9 @@
       "next": [
         "communicate",
         "reset"
+      ],
+      "roles": [
+        "product-manager"
       ]
     },
     {
@@ -269,6 +304,10 @@
       ],
       "next": [
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -296,6 +335,10 @@
         "goal",
         "constraints",
         "reset-plan"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

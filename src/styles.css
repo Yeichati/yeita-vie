@@ -266,3 +266,93 @@ button, input { font: inherit; }
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+/* V6 — rôle global */
+.role-home-block {
+  margin-bottom: 56px;
+  padding: 26px 28px;
+  border: 1.5px solid var(--ink);
+  border-radius: 20px;
+  background: var(--paper-2);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+.role-home-block h2 {
+  margin: 7px 0 8px;
+  font-size: clamp(28px, 3vw, 42px);
+  letter-spacing: -.045em;
+}
+.role-home-block p {
+  max-width: 720px;
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.role-pills { display: flex; flex-wrap: wrap; gap: 9px; }
+.role-pills button {
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  padding: 9px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.role-pills button:hover { background: #ece8ff; }
+.role-pills button.active { background: var(--purple); color: white; box-shadow: 3px 3px 0 var(--ink); }
+.role-pills.compact { margin-left: auto; gap: 6px; }
+.role-pills.compact button { padding: 5px 9px; font-size: 11px; box-shadow: none; }
+
+.role-filter-bar {
+  position: sticky;
+  top: 72px;
+  z-index: 14;
+  background: rgba(247,245,239,.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+}
+.role-filter-inner {
+  min-height: 42px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6px 34px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.role-filter-label { font-size: 10px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); }
+.role-filter-inner > strong { font-size: 12px; }
+
+/* account for the compact role bar when sticky */
+.journey-shell { scroll-margin-top: 114px; }
+.journey-sidebar { top: 132px; }
+
+.role-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.role-badges span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 21px;
+  padding: 3px 7px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255,255,255,.8);
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+.play-card > .role-badges { position: absolute; left: 24px; top: 56px; }
+.play-card h3 { margin-top: 54px; }
+.heading-meta-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.heading-meta-row .section-kicker { margin-bottom: 0; }
+.empty-library { max-width: 900px; margin: 80px auto; padding: 40px; text-align: center; color: var(--muted); }
+
+@media (max-width: 950px) {
+  .journey-sidebar { top: auto; }
+}
+@media (max-width: 680px) {
+  .role-filter-inner { padding: 6px 18px; }
+  .role-filter-inner > strong { display: none; }
+  .role-pills.compact { margin-left: auto; }
+  .role-home-block { padding: 22px; margin-bottom: 40px; }
+  .play-card > .role-badges { left: 20px; }
+}

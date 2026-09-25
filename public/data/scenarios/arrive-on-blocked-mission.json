@@ -48,5 +48,8 @@
       "journey": "mission-stalling.json",
       "cardId": "sponsor"
     }
+  ],
+  "roles": [
+    "product-manager"
   ]
 }

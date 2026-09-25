@@ -44,5 +44,9 @@
       "journey": "measure-my-impact.json",
       "cardId": "communicate"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }

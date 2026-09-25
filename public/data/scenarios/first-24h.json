@@ -41,5 +41,9 @@
     "mark": "→",
     "title": "Ton objectif n'est pas de tout comprendre en 24h",
     "text": "Utilise ces fiches comme un fil conducteur. Arrête-toi sur celles qui répondent à ce que tu rencontres réellement et adapte l'ordre si ton contexte l'exige."
-  }
+  },
+  "roles": [
+    "product-manager",
+    "product-designer"
+  ]
 }

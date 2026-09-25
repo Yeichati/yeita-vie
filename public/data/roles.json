@@ -1,0 +1,14 @@
+{
+  "roles": [
+    {
+      "id": "product-manager",
+      "label": "Product Manager",
+      "shortLabel": "Product Manager"
+    },
+    {
+      "id": "product-designer",
+      "label": "Product Designer",
+      "shortLabel": "Product Designer"
+    }
+  ]
+}

@@ -37,6 +37,10 @@
       "next": [
         "urgency",
         "impact"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -67,6 +71,10 @@
         "impact",
         "constraints",
         "noise"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -96,6 +104,10 @@
       "next": [
         "constraints",
         "tradeoffs"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -125,6 +137,9 @@
       "next": [
         "tradeoffs",
         "scope"
+      ],
+      "roles": [
+        "product-manager"
       ]
     },
     {
@@ -154,6 +169,10 @@
         "scope",
         "communicate",
         "review"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -182,6 +201,10 @@
       "next": [
         "communicate",
         "review"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -210,6 +233,10 @@
       "next": [
         "review",
         "pressure"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -238,6 +265,10 @@
       "next": [
         "tradeoffs",
         "review"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -267,6 +298,9 @@
         "communicate",
         "review",
         "reset"
+      ],
+      "roles": [
+        "product-manager"
       ]
     },
     {
@@ -295,6 +329,10 @@
       "next": [
         "inventory",
         "reset"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     },
     {
@@ -325,6 +363,10 @@
         "urgency",
         "tradeoffs",
         "communicate"
+      ],
+      "roles": [
+        "product-manager",
+        "product-designer"
       ]
     }
   ],

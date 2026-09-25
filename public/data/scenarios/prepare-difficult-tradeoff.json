@@ -48,5 +48,9 @@
       "journey": "prepare-important-decision.json",
       "cardId": "communicate"
     }
+  ],
+  "roles": [
+    "product-manager",
+    "product-designer"
   ]
 }
