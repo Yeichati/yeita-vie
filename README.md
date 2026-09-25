@@ -1,29 +1,41 @@
-# Yei'ta vie 
+# Yei'ta vie
 
-## Rôles
+## Navigation
 
-La source de vérité est :
+Le header expose désormais deux entrées principales :
+- **Playground** : parcours et scénarios existants ;
+- **Yekigai** : jeu de cartes pour les entretiens.
 
-`public/data/roles.json`
+Le Yekigai est aussi accessible depuis la page d'accueil.
 
-Rôles actuels :
-- Product Manager
-- Product Designer
+## Gameplay Yekigai
 
-Les rôles ne sont pas définis au niveau des journeys. Ils sont portés par :
-- les fiches (`cards[].roles`)
-- les scénarios (`roles`)
+1. Choix du jeu : **Product Manager** ou **Product Designer**.
+2. Tri instinctif des 12 cartes : « Ça me ressemble », « Ça dépend », « Pas vraiment moi ».
+3. Choix forcé de **3 cartes fortes**.
+4. Choix forcé de **2 cartes rejetées**.
+5. Discussion guidée avec relances, signaux à observer et notes recruteur.
+6. Synthèse finale copiable, sans score ni diagnostic de personnalité.
 
-Un journey est visible pour un rôle dès qu'au moins une de ses fiches est compatible avec ce rôle.
+## Données
 
-## UX
+Le contenu Yekigai est entièrement piloté par JSON :
 
-- choix du rôle sur la page d'accueil ;
-- rôle conservé dans `localStorage` ;
-- petit bandeau de changement de rôle sous le header dans les vues Parcours et Scénarios ;
-- filtrage des fiches, des parcours et des scénarios selon le rôle ;
-- badges PM / PD sur les fiches et scénarios ;
-- les JSON sont chargés avec `cache: 'no-store'` pour éviter les anciennes versions de données en cache.
+```text
+public/data/yekigai/
+├── index.json
+├── product-manager.json
+└── product-designer.json
+```
+
+Chaque deck contient 12 cartes avec :
+- une affirmation ;
+- un thème ;
+- des relances de discussion ;
+- des signaux à observer ;
+- l'indication qu'une carte est partagée ou non entre les deux métiers.
+
+Les parcours et scénarios Product Designer ajoutés après la V6 sont également inclus dans cette archive.
 
 ## Lancer en local
 

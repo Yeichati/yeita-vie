@@ -15,7 +15,8 @@
   "navigation": {
     "label": "Navigation principale",
     "journeys": "Parcours",
-    "scenarios": "Scénarios"
+    "scenarios": "Scénarios",
+    "yekigai": "Yekigai"
   },
   "home": {
     "kicker": "COMMENT TU VEUX AVANCER ?",
@@ -32,6 +33,12 @@
       "title": "Je veux être guidé",
       "text": "Suis une sélection de fiches déjà assemblées pour un contexte précis, dans un ordre qui te donne un fil conducteur.",
       "countLabel": "scénarios disponibles"
+    },
+    "yekigai": {
+      "tag": "YEKIGAI",
+      "title": "Je veux parler de ce qui me motive",
+      "text": "Un jeu de cartes court pour faire émerger préférences, moteurs et points de friction pendant un entretien.",
+      "countLabel": "cartes par jeu"
     }
   },
   "sidebar": {
@@ -73,5 +80,42 @@
     "homeText": "Le rôle sélectionné filtre les fiches et les scénarios proposés. Tu peux le changer à tout moment.",
     "barLabel": "Rôle",
     "changeLabel": "Changer de rôle"
+  },
+  "yekigai": {
+    "kicker": "YEKIGAI",
+    "title": "Ce qui te donne envie de faire ce métier.",
+    "text": "Pas de score, pas de bon profil. Tu parcours les cartes, tu choisis celles qui te ressemblent le plus et le moins, puis l’échange sert à comprendre ce qu’il y a derrière.",
+    "start": "Commencer une session",
+    "chooseDeck": "Choisis le jeu",
+    "duration": "10–15 min",
+    "landingNote": "Le candidat choisit relativement les cartes qui lui ressemblent le plus et le moins. Le recruteur creuse ensuite les raisons, les exemples et les nuances derrière ces choix.",
+    "pickPositive": {
+      "title": "Choisis les 3 qui te ressemblent le plus.",
+      "text": "Parmi les 12 cartes, lesquelles décrivent le mieux ce qui te donne de l’énergie ou ta manière naturelle d’aborder le rôle ? Choisis-en exactement 3."
+    },
+    "pickNegative": {
+      "title": "Choisis les 2 qui te ressemblent le moins.",
+      "text": "Parmi les 9 cartes restantes, lesquelles sont les plus éloignées de ta manière de fonctionner ? Il ne s’agit pas de les rejeter : choisis simplement les 2 qui te correspondent le moins."
+    },
+    "discussion": {
+      "title": "Creuse les choix.",
+      "text": "Le recruteur utilise les relances pour comprendre le pourquoi et note uniquement ce qui est utile.",
+      "promptsLabel": "Relances possibles",
+      "signalsLabel": "À observer",
+      "notesLabel": "Notes de l’échange",
+      "notesPlaceholder": "Exemple concret, nuance, tension, verbatim…"
+    },
+    "summary": {
+      "title": "Synthèse de la session",
+      "text": "Une trace de discussion, pas un diagnostic de personnalité.",
+      "positiveLabel": "3 cartes qui me ressemblent le plus",
+      "negativeLabel": "2 cartes qui me ressemblent le moins",
+      "copy": "Copier la synthèse",
+      "restart": "Nouvelle session"
+    },
+    "discover": {
+      "title": "Prends connaissance des 12 cartes.",
+      "text": "Lis l’ensemble du jeu avant de choisir. Ne cherche pas à dire si chaque carte est vraie ou fausse pour toi : tu vas les comparer entre elles."
+    }
   }
 }

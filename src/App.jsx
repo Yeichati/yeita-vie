@@ -21,11 +21,12 @@ async function loadCollection(folder, manifestKey) {
 }
 
 async function loadData() {
-  const [app, roleData, journeyEntries, scenarioEntries] = await Promise.all([
+  const [app, roleData, journeyEntries, scenarioEntries, yekigaiEntries] = await Promise.all([
     getJson(`${DATA_ROOT}/app.json`),
     getJson(`${DATA_ROOT}/roles.json`),
     loadCollection('journeys', 'journeys'),
     loadCollection('scenarios', 'scenarios'),
+    loadCollection('yekigai', 'decks'),
   ])
 
   return {
@@ -33,6 +34,7 @@ async function loadData() {
     roles: roleData.roles ?? [],
     journeys: journeyEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
     scenarios: scenarioEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
+    yekigaiDecks: yekigaiEntries.map(({ filename, data }) => ({ ...data, _filename: filename })),
   }
 }
 
@@ -155,7 +157,8 @@ function CardDialog({ card, labels, onClose, nextCard, onOpenNext, roleById }) {
   )
 }
 
-function Home({ app, roles, selectedRoleId, onRoleChange, journeys, scenarios, onChoose }) {
+function Home({ app, roles, selectedRoleId, onRoleChange, journeys, scenarios, yekigaiDecks, onChoose }) {
+  const cardsPerDeck = yekigaiDecks[0]?.cards?.length ?? 0
   return (
     <section className="home-shell">
       <div className="role-home-block">
@@ -188,6 +191,16 @@ function Home({ app, roles, selectedRoleId, onRoleChange, journeys, scenarios, o
           <p>{app.home.scenarios.text}</p>
           <div className="entry-footer">
             <span>{scenarios.length} {app.home.scenarios.countLabel}</span>
+            <b>↗</b>
+          </div>
+        </button>
+
+        <button className="entry-card yekigai-entry" onClick={() => onChoose('yekigai')}>
+          <span className="entry-tag">{app.home.yekigai.tag}</span>
+          <strong>{app.home.yekigai.title}</strong>
+          <p>{app.home.yekigai.text}</p>
+          <div className="entry-footer">
+            <span>{cardsPerDeck} {app.home.yekigai.countLabel}</span>
             <b>↗</b>
           </div>
         </button>
@@ -231,6 +244,342 @@ function LibrarySidebar({ title, note, items, activeId, onSelect }) {
         </div>
       )}
     </aside>
+  )
+}
+
+function ChoiceCard({ card, selected, onClick }) {
+  return (
+    <button type="button" className={`yekigai-choice-card ${selected ? 'selected' : ''}`} onClick={onClick}>
+      <div className="yekigai-card-meta">
+        <span>{card.theme}</span>
+      </div>
+      <strong>{card.statement}</strong>
+      <span className="choice-check">{selected ? '✓' : '+'}</span>
+    </button>
+  )
+}
+
+function YekigaiPage({ app, decks, roles, initialRoleId }) {
+  const labels = app.yekigai
+  const [deckId, setDeckId] = useState(() => decks.find((deck) => deck.roleId === initialRoleId)?.id ?? decks[0]?.id)
+  const [phase, setPhase] = useState('landing')
+  const [positiveIds, setPositiveIds] = useState([])
+  const [negativeIds, setNegativeIds] = useState([])
+  const [discussionIndex, setDiscussionIndex] = useState(0)
+  const [notes, setNotes] = useState({})
+  const [copied, setCopied] = useState(false)
+
+  const deck = decks.find((item) => item.id === deckId) ?? decks[0]
+  const cards = deck?.cards ?? []
+  const roleById = Object.fromEntries(roles.map((role) => [role.id, role]))
+
+  useEffect(() => {
+    if (phase !== 'landing') return
+    const matching = decks.find((item) => item.roleId === initialRoleId)
+    if (matching) setDeckId(matching.id)
+  }, [initialRoleId, decks, phase])
+
+  const resetSession = (nextDeckId = deckId) => {
+    setDeckId(nextDeckId)
+    setPhase('landing')
+    setPositiveIds([])
+    setNegativeIds([])
+    setDiscussionIndex(0)
+    setNotes({})
+    setCopied(false)
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }
+
+  const startSession = () => {
+    setPhase('discover')
+    setPositiveIds([])
+    setNegativeIds([])
+    setDiscussionIndex(0)
+    setNotes({})
+    setCopied(false)
+    window.scrollTo({ top: 0, behavior: 'auto' })
+  }
+
+  const toggleSelection = (id, setSelectedIds, limit) => {
+    setSelectedIds((previous) => {
+      if (previous.includes(id)) return previous.filter((item) => item !== id)
+      if (previous.length >= limit) return previous
+      return [...previous, id]
+    })
+  }
+
+  const discussionCards = useMemo(() => {
+    const positives = positiveIds.map((id) => ({ ...cards.find((card) => card.id === id), _stance: 'positive' })).filter((card) => card.id)
+    const negatives = negativeIds.map((id) => ({ ...cards.find((card) => card.id === id), _stance: 'negative' })).filter((card) => card.id)
+    return [...positives, ...negatives]
+  }, [positiveIds, negativeIds, cards])
+
+  const buildSummary = () => {
+    const roleName = roleById[deck?.roleId]?.label ?? deck?.title ?? ''
+    const lines = [`Yekigai — ${roleName}`, '']
+    lines.push('3 cartes qui me ressemblent le plus')
+    positiveIds.forEach((id) => {
+      const card = cards.find((item) => item.id === id)
+      if (card) lines.push(`- ${card.statement}${notes[id] ? `\n  Notes : ${notes[id]}` : ''}`)
+    })
+    lines.push('', '2 cartes qui me ressemblent le moins')
+    negativeIds.forEach((id) => {
+      const card = cards.find((item) => item.id === id)
+      if (card) lines.push(`- ${card.statement}${notes[id] ? `\n  Notes : ${notes[id]}` : ''}`)
+    })
+    return lines.join('\n')
+  }
+
+  const copySummary = async () => {
+    try {
+      await navigator.clipboard.writeText(buildSummary())
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1600)
+    } catch {
+      setCopied(false)
+    }
+  }
+
+  if (!deck) return <section className="yekigai-shell"><div className="empty">Aucun jeu Yekigai disponible.</div></section>
+
+  if (phase === 'landing') {
+    return (
+      <section className="yekigai-shell yekigai-landing">
+        <div className="yekigai-hero">
+          <div>
+            <span className="section-kicker">{labels.kicker}</span>
+            <h1>{labels.title}</h1>
+            <p>{labels.text}</p>
+          </div>
+          <div className="yekigai-rules">
+            <span>{labels.duration}</span>
+            <strong>12 cartes → 3 + 2 → discussion</strong>
+            <p>{labels.landingNote}</p>
+          </div>
+        </div>
+
+        <div className="deck-section">
+          <span className="section-kicker">{labels.chooseDeck}</span>
+          <div className="deck-grid">
+            {decks.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                className={`deck-card ${item.id === deckId ? 'selected' : ''}`}
+                onClick={() => setDeckId(item.id)}
+              >
+                <span>{roleById[item.roleId]?.shortLabel ?? 'JEU'}</span>
+                <strong>{item.title}</strong>
+                <p>{item.subtitle}</p>
+                <small>{item.cards?.length ?? 0} cartes</small>
+              </button>
+            ))}
+          </div>
+          <button type="button" className="yekigai-primary" onClick={startSession}>{labels.start} →</button>
+        </div>
+      </section>
+    )
+  }
+
+  if (phase === 'discover') {
+    return (
+      <section className="yekigai-session-shell wide">
+        <div className="yekigai-step-head">
+          <div>
+            <span className="section-kicker">ÉTAPE 1 · DÉCOUVERTE</span>
+            <h2>{labels.discover.title}</h2>
+            <p>{labels.discover.text}</p>
+          </div>
+          <strong>{cards.length} cartes</strong>
+        </div>
+        <div className="yekigai-choice-grid discover-grid">
+          {cards.map((card) => (
+            <article key={card.id} className="yekigai-choice-card discover-card">
+              <div className="yekigai-card-meta"><span>{card.theme}</span></div>
+              <strong>{card.statement}</strong>
+            </article>
+          ))}
+        </div>
+        <div className="yekigai-bottom-actions">
+          <button type="button" className="yekigai-secondary" onClick={() => setPhase('landing')}>← Changer de jeu</button>
+          <button type="button" className="yekigai-primary" onClick={() => setPhase('positive')}>Faire mes choix →</button>
+        </div>
+      </section>
+    )
+  }
+
+  if (phase === 'positive') {
+    return (
+      <section className="yekigai-session-shell wide">
+        <div className="yekigai-step-head">
+          <div>
+            <span className="section-kicker">ÉTAPE 2 · LE PLUS</span>
+            <h2>{labels.pickPositive.title}</h2>
+            <p>{labels.pickPositive.text}</p>
+          </div>
+          <strong>{positiveIds.length} / 3</strong>
+        </div>
+        <div className="yekigai-choice-grid">
+          {cards.map((card) => (
+            <ChoiceCard
+              key={card.id}
+              card={card}
+              selected={positiveIds.includes(card.id)}
+              onClick={() => toggleSelection(card.id, setPositiveIds, 3)}
+            />
+          ))}
+        </div>
+        <div className="yekigai-bottom-actions">
+          <button type="button" className="yekigai-secondary" onClick={() => setPhase('discover')}>← Revoir les cartes</button>
+          <button type="button" className="yekigai-primary" disabled={positiveIds.length !== 3} onClick={() => { setNegativeIds([]); setPhase('negative') }}>Continuer →</button>
+        </div>
+      </section>
+    )
+  }
+
+  if (phase === 'negative') {
+    const remainingCards = cards.filter((card) => !positiveIds.includes(card.id))
+    return (
+      <section className="yekigai-session-shell wide">
+        <div className="yekigai-step-head">
+          <div>
+            <span className="section-kicker">ÉTAPE 3 · LE MOINS</span>
+            <h2>{labels.pickNegative.title}</h2>
+            <p>{labels.pickNegative.text}</p>
+          </div>
+          <strong>{negativeIds.length} / 2</strong>
+        </div>
+        <div className="yekigai-choice-grid">
+          {remainingCards.map((card) => (
+            <ChoiceCard
+              key={card.id}
+              card={card}
+              selected={negativeIds.includes(card.id)}
+              onClick={() => toggleSelection(card.id, setNegativeIds, 2)}
+            />
+          ))}
+        </div>
+        <div className="yekigai-bottom-actions">
+          <button type="button" className="yekigai-secondary" onClick={() => setPhase('positive')}>← Revenir aux 3 cartes</button>
+          <button
+            type="button"
+            className="yekigai-primary"
+            disabled={negativeIds.length !== 2}
+            onClick={() => { setDiscussionIndex(0); setPhase('discussion') }}
+          >
+            Passer à la discussion →
+          </button>
+        </div>
+      </section>
+    )
+  }
+
+  if (phase === 'discussion') {
+    const card = discussionCards[discussionIndex]
+    const isLast = discussionIndex === discussionCards.length - 1
+    return (
+      <section className="yekigai-session-shell discuss-shell">
+        <div className="yekigai-step-head">
+          <div>
+            <span className="section-kicker">ÉTAPE 4 · DISCUSSION</span>
+            <h2>{labels.discussion.title}</h2>
+            <p>{labels.discussion.text}</p>
+          </div>
+          <strong>{discussionIndex + 1} / {discussionCards.length}</strong>
+        </div>
+
+        <article className={`discussion-card ${card._stance}`}>
+          <div className="discussion-statement">
+            <span>{card._stance === 'positive' ? 'ME RESSEMBLE LE PLUS' : 'ME RESSEMBLE LE MOINS'} · {card.theme}</span>
+            <h3>{card.statement}</h3>
+          </div>
+          <div className="discussion-grid">
+            <section>
+              <h4>{labels.discussion.promptsLabel}</h4>
+              <ul>{card.prompts?.map((prompt) => <li key={prompt}>{prompt}</li>)}</ul>
+            </section>
+            <section>
+              <h4>{labels.discussion.signalsLabel}</h4>
+              <div className="signal-pills">{card.signals?.map((signal) => <span key={signal}>{signal}</span>)}</div>
+            </section>
+          </div>
+          <label className="notes-field">
+            <span>{labels.discussion.notesLabel}</span>
+            <textarea
+              value={notes[card.id] ?? ''}
+              onChange={(event) => setNotes((previous) => ({ ...previous, [card.id]: event.target.value }))}
+              placeholder={labels.discussion.notesPlaceholder}
+              rows="5"
+            />
+          </label>
+        </article>
+
+        <div className="yekigai-bottom-actions">
+          <button
+            type="button"
+            className="yekigai-secondary"
+            disabled={discussionIndex === 0}
+            onClick={() => setDiscussionIndex((index) => Math.max(0, index - 1))}
+          >
+            ← Précédente
+          </button>
+          <button
+            type="button"
+            className="yekigai-primary"
+            onClick={() => isLast ? setPhase('summary') : setDiscussionIndex((index) => index + 1)}
+          >
+            {isLast ? 'Voir la synthèse →' : 'Carte suivante →'}
+          </button>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <section className="yekigai-session-shell wide summary-shell">
+      <div className="yekigai-step-head">
+        <div>
+          <span className="section-kicker">TERMINÉ</span>
+          <h2>{labels.summary.title}</h2>
+          <p>{labels.summary.text}</p>
+        </div>
+        <strong>{deck.title}</strong>
+      </div>
+
+      <div className="summary-columns">
+        <section className="summary-block positive">
+          <h3>{labels.summary.positiveLabel}</h3>
+          {positiveIds.map((id) => {
+            const card = cards.find((item) => item.id === id)
+            return (
+              <article key={id}>
+                <span>{card.theme}</span>
+                <strong>{card.statement}</strong>
+                {notes[id] && <p>{notes[id]}</p>}
+              </article>
+            )
+          })}
+        </section>
+        <section className="summary-block negative">
+          <h3>{labels.summary.negativeLabel}</h3>
+          {negativeIds.map((id) => {
+            const card = cards.find((item) => item.id === id)
+            return (
+              <article key={id}>
+                <span>{card.theme}</span>
+                <strong>{card.statement}</strong>
+                {notes[id] && <p>{notes[id]}</p>}
+              </article>
+            )
+          })}
+        </section>
+      </div>
+
+      <div className="yekigai-bottom-actions summary-actions">
+        <button type="button" className="yekigai-secondary" onClick={copySummary}>{copied ? 'Copié ✓' : labels.summary.copy}</button>
+        <button type="button" className="yekigai-primary" onClick={() => resetSession()}>{labels.summary.restart}</button>
+      </div>
+    </section>
   )
 }
 
@@ -290,7 +639,7 @@ export default function App() {
   const scenario = filteredScenarios.find((item) => item.id === scenarioId) ?? filteredScenarios[0]
 
   useEffect(() => {
-    if (view === 'home') {
+    if (view === 'home' || view === 'yekigai') {
       window.scrollTo({ top: 0, behavior: 'auto' })
       return
     }
@@ -347,7 +696,7 @@ export default function App() {
   if (error) return <main className="status-page"><strong>Impossible de charger Yei'ta vie.</strong><span>{error.message}</span></main>
   if (!data || !selectedRoleId) return <main className="status-page">Chargement…</main>
 
-  const { app, roles } = data
+  const { app, roles, yekigaiDecks } = data
   const activeContent = view === 'scenarios' ? scenario : journey
   const contentLabels = view === 'scenarios' ? app.scenario : app.journey
 
@@ -371,13 +720,14 @@ export default function App() {
           <span className="brand-dot" />
           <span>{app.name}</span>
         </button>
-        <nav className="top-nav" aria-label={app.navigation.label}>
+        <nav className="top-nav primary-nav" aria-label={app.navigation.label}>
           <button className={view === 'journeys' ? 'active' : ''} onClick={() => changeView('journeys')}>{app.navigation.journeys}</button>
           <button className={view === 'scenarios' ? 'active' : ''} onClick={() => changeView('scenarios')}>{app.navigation.scenarios}</button>
+          <button className={view === 'yekigai' ? 'active' : ''} onClick={() => changeView('yekigai')}>{app.navigation.yekigai}</button>
         </nav>
       </header>
 
-      {view !== 'home' && (
+      {(view === 'journeys' || view === 'scenarios') && (
         <RoleFilterBar app={app} roles={roles} selectedRoleId={selectedRoleId} onRoleChange={setSelectedRoleId} />
       )}
 
@@ -404,8 +754,11 @@ export default function App() {
             onRoleChange={setSelectedRoleId}
             journeys={filteredJourneys}
             scenarios={filteredScenarios}
+            yekigaiDecks={yekigaiDecks}
             onChoose={changeView}
           />
+        ) : view === 'yekigai' ? (
+          <YekigaiPage app={app} decks={yekigaiDecks} roles={roles} initialRoleId={selectedRoleId} />
         ) : activeContent ? (
           <section ref={libraryRef} className="journey-shell">
             <LibrarySidebar

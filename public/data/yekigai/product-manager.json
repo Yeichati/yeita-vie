@@ -1,0 +1,152 @@
+{
+  "id": "product-manager",
+  "roleId": "product-manager",
+  "title": "Product Manager",
+  "subtitle": "12 cartes pour faire émerger ce qui donne de l'énergie, ce qui coûte et la manière d'aborder le rôle.",
+  "cards": [
+    {
+      "id": "pm-ambiguity",
+      "statement": "Je préfère arriver quand tout reste à structurer plutôt que quand le cadre est déjà bien posé.",
+      "theme": "Ambiguïté",
+      "shared": true,
+      "prompts": [
+        "Qu'est-ce qui te plaît dans un contexte peu structuré ?",
+        "À partir de quel niveau de flou ça devient inconfortable ?",
+        "Tu as un exemple récent où tu as créé ton propre cadre ?"
+      ],
+      "signals": ["Rapport à l'ambiguïté", "Besoin de cadre", "Autonomie"]
+    },
+    {
+      "id": "pm-challenge",
+      "statement": "J'aime challenger une décision même quand elle est déjà bien engagée.",
+      "theme": "Challenge",
+      "shared": true,
+      "prompts": [
+        "Qu'est-ce qui te fait décider qu'une décision mérite d'être challengée ?",
+        "Comment tu t'y prends quand la personne en face est très convaincue ?",
+        "Quand est-ce que tu préfères laisser passer plutôt que rouvrir le débat ?"
+      ],
+      "signals": ["Assertivité", "Gestion du désaccord", "Lecture du contexte"]
+    },
+    {
+      "id": "pm-learning",
+      "statement": "Une mission où j'apprends beaucoup me motive, même si mon impact est moins visible au début.",
+      "theme": "Apprentissage",
+      "shared": true,
+      "prompts": [
+        "Qu'est-ce que tu as envie d'apprendre en ce moment ?",
+        "Combien de temps acceptes-tu d'apprendre avant d'avoir besoin de sentir ton impact ?",
+        "Raconte une mission où l'apprentissage a réellement compté pour toi."
+      ],
+      "signals": ["Moteur d'apprentissage", "Rapport à l'impact", "Patience"]
+    },
+    {
+      "id": "pm-collective",
+      "statement": "Je préfère faire progresser le collectif plutôt qu'être la personne qui a la meilleure réponse.",
+      "theme": "Collectif",
+      "shared": true,
+      "prompts": [
+        "À quoi vois-tu qu'un collectif progresse ?",
+        "Dans quelles situations as-tu malgré tout envie de prendre la main ?",
+        "Donne un exemple où tu as rendu une équipe plus autonome."
+      ],
+      "signals": ["Leadership", "Transmission", "Rapport à l'expertise"]
+    },
+    {
+      "id": "pm-users",
+      "statement": "J'ai besoin de contact régulier avec les utilisateurs pour garder de l'énergie dans mon travail.",
+      "theme": "Utilisateurs",
+      "shared": true,
+      "prompts": [
+        "Qu'est-ce que le contact utilisateur t'apporte personnellement ?",
+        "Que fais-tu quand l'accès aux utilisateurs est difficile ?",
+        "Quel échange utilisateur t'a fait changer d'avis récemment ?"
+      ],
+      "signals": ["Proximité utilisateur", "Curiosité", "Énergie relationnelle"]
+    },
+    {
+      "id": "pm-iteration",
+      "statement": "Je peux accepter une solution imparfaite si elle permet d'apprendre vite.",
+      "theme": "Itération",
+      "shared": true,
+      "prompts": [
+        "Qu'est-ce qu'une imperfection acceptable pour toi ?",
+        "Qu'est-ce que tu refuses de sacrifier, même pour aller vite ?",
+        "Raconte un compromis vitesse / qualité que tu as dû assumer."
+      ],
+      "signals": ["Rapport au compromis", "Pragmatisme", "Gestion du risque"]
+    },
+    {
+      "id": "pm-prioritization",
+      "statement": "J'aime davantage décider de ce qu'on ne fera pas que remplir une roadmap.",
+      "theme": "Priorisation",
+      "shared": false,
+      "prompts": [
+        "Qu'est-ce qui rend un non facile ou difficile à dire pour toi ?",
+        "Comment tu réagis quand plusieurs demandes sont légitimes ?",
+        "Quel arbitrage difficile as-tu pris récemment ?"
+      ],
+      "signals": ["Capacité d'arbitrage", "Clarté", "Rapport au conflit"]
+    },
+    {
+      "id": "pm-tech",
+      "statement": "Un sujet très technique me donne envie de comprendre suffisamment pour pouvoir challenger les choix.",
+      "theme": "Technique",
+      "shared": false,
+      "prompts": [
+        "Jusqu'où as-tu besoin de comprendre la technique pour être à l'aise ?",
+        "Comment évites-tu de marcher sur le rôle des développeurs ?",
+        "Donne un exemple où ta compréhension technique a changé une décision produit."
+      ],
+      "signals": ["Curiosité technique", "Collaboration Engineering", "Limites de rôle"]
+    },
+    {
+      "id": "pm-data",
+      "statement": "Quand les données et les convictions de l'équipe se contredisent, j'ai envie de creuser avant de trancher.",
+      "theme": "Décision",
+      "shared": false,
+      "prompts": [
+        "Qu'est-ce qui peut te faire douter d'une donnée ?",
+        "Comment distingues-tu une conviction forte d'un biais ?",
+        "Raconte une fois où tu as changé de décision après avoir creusé."
+      ],
+      "signals": ["Pensée critique", "Rapport à la donnée", "Humilité"]
+    },
+    {
+      "id": "pm-stakeholders",
+      "statement": "Je préfère passer du temps à aligner plusieurs parties prenantes plutôt que pousser seul une décision plus vite.",
+      "theme": "Alignement",
+      "shared": false,
+      "prompts": [
+        "Quand l'alignement devient-il utile plutôt que coûteux ?",
+        "Comment tu avances quand l'accord complet est impossible ?",
+        "Quel type de partie prenante te demande le plus d'énergie ?"
+      ],
+      "signals": ["Influence", "Patience", "Recherche de consensus"]
+    },
+    {
+      "id": "pm-ownership",
+      "statement": "Je suis plus motivé par un problème à résoudre que par la propriété d'un périmètre produit précis.",
+      "theme": "Ownership",
+      "shared": false,
+      "prompts": [
+        "Qu'est-ce qui te donne le sentiment d'être propriétaire d'un sujet ?",
+        "Est-ce important pour toi d'avoir un périmètre clairement identifié ?",
+        "Comment réagis-tu quand ton rôle change au cours d'une mission ?"
+      ],
+      "signals": ["Rapport au territoire", "Flexibilité", "Motivation par le problème"]
+    },
+    {
+      "id": "pm-visible-impact",
+      "statement": "J'ai besoin de voir des effets concrets de mon travail assez rapidement pour rester engagé.",
+      "theme": "Impact",
+      "shared": false,
+      "prompts": [
+        "Qu'est-ce qu'un effet concret pour toi ?",
+        "Que fais-tu dans les contextes où l'impact met des mois à apparaître ?",
+        "Quel résultat t'a rendu particulièrement fier récemment ?"
+      ],
+      "signals": ["Besoin de feedback", "Motivation par l'impact", "Temporalité"]
+    }
+  ]
+}
