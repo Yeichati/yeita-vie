@@ -1,0 +1,217 @@
+{
+  "id": "design-in-existing-system",
+  "title": "Je dois concevoir dans un système existant",
+  "subtitle": "Comprends les règles, contraintes et incohérences de l'existant avant de décider ce qu'il faut respecter, étendre ou remettre en question.",
+  "accent": "violet",
+  "startHere": [
+    "map-system",
+    "patterns",
+    "constraints",
+    "reuse",
+    "exceptions"
+  ],
+  "cards": [
+    {
+      "id": "map-system",
+      "number": "01",
+      "title": "Cartographie ce qui existe",
+      "short": "Avant de créer, comprends les briques, règles et sources de vérité déjà utilisées.",
+      "why": "Pour éviter d'introduire une nouvelle logique alors qu'une réponse existe déjà ailleurs dans le produit.",
+      "actions": [
+        "Identifie le design system, les composants, patterns et guidelines disponibles.",
+        "Repère les écrans ou flows proches de ton sujet.",
+        "Demande quelles parties de l'existant sont réellement maintenues."
+      ],
+      "questions": [
+        "Quelle est la source de vérité actuelle ?",
+        "Quels patterns sont réellement utilisés en production ?",
+        "Où existe-t-il déjà une réponse à mon problème ?"
+      ],
+      "watchouts": [
+        "Se fier uniquement au fichier de design system.",
+        "Considérer tout l'existant comme cohérent parce qu'il est déjà en production."
+      ],
+      "next": [
+        "patterns",
+        "constraints"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "patterns",
+      "number": "02",
+      "title": "Comprends la logique derrière les patterns",
+      "short": "Ne réutilise pas un composant uniquement parce qu'il ressemble à ce dont tu as besoin.",
+      "why": "Pour préserver la cohérence d'usage, pas seulement la cohérence visuelle.",
+      "actions": [
+        "Regarde dans quels contextes chaque pattern est utilisé.",
+        "Comprends le comportement, les états et les règles associés.",
+        "Compare ton besoin à l'intention initiale du pattern."
+      ],
+      "questions": [
+        "Quel problème ce pattern résout-il ?",
+        "Mon contexte suit-il la même logique d'interaction ?",
+        "Quelles attentes utilisateur ce pattern crée-t-il ?"
+      ],
+      "watchouts": [
+        "Réutiliser un composant pour des raisons purement visuelles.",
+        "Créer une variante avant d'avoir compris la règle existante."
+      ],
+      "next": [
+        "reuse",
+        "exceptions"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "constraints",
+      "number": "03",
+      "title": "Rends visibles les contraintes du système",
+      "short": "Intègre tôt les contraintes techniques, produit, contenu et accessibilité.",
+      "why": "Pour éviter de découvrir tard qu'une proposition cohérente en maquette ne l'est pas dans le produit réel.",
+      "actions": [
+        "Échange avec la tech sur les contraintes et possibilités existantes.",
+        "Identifie les règles métier qui façonnent l'expérience.",
+        "Vérifie les contraintes d'accessibilité et de contenu.",
+        "Distingue les vraies contraintes des habitudes historiques."
+      ],
+      "questions": [
+        "Qu'est-ce qui est réellement contraint ?",
+        "Qu'est-ce qui est difficile mais possible ?",
+        "Quelles contraintes ont un impact direct sur l'utilisateur ?"
+      ],
+      "watchouts": [
+        "Traiter une habitude comme une contrainte immuable.",
+        "Découvrir les contraintes seulement au handoff."
+      ],
+      "next": [
+        "reuse",
+        "exceptions"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "reuse",
+      "number": "04",
+      "title": "Réutilise quand cela sert l'expérience",
+      "short": "La cohérence est utile quand elle réduit l'effort de compréhension pour l'utilisateur.",
+      "why": "Pour tirer parti des apprentissages déjà incarnés dans le produit sans transformer le design system en règle absolue.",
+      "actions": [
+        "Privilégie les composants existants quand leur logique répond au besoin.",
+        "Réutilise les conventions que les utilisateurs connaissent déjà.",
+        "Documente les adaptations nécessaires plutôt que de créer silencieusement des variantes."
+      ],
+      "questions": [
+        "La réutilisation simplifie-t-elle l'expérience ?",
+        "Le pattern existant répond-il réellement au cas d'usage ?",
+        "Une adaptation est-elle suffisante ?"
+      ],
+      "watchouts": [
+        "Sacrifier l'usage pour éviter toute nouvelle variante.",
+        "Créer une nouvelle solution uniquement pour différencier ton sujet."
+      ],
+      "next": [
+        "exceptions",
+        "debt"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "exceptions",
+      "number": "05",
+      "title": "Challenge l'existant quand il ne répond plus au besoin",
+      "short": "Un système sert le produit ; il ne doit pas empêcher une meilleure réponse à un problème réel.",
+      "why": "Pour permettre au système d'évoluer lorsque les nouveaux usages révèlent ses limites.",
+      "actions": [
+        "Décris précisément pourquoi le pattern existant ne suffit pas.",
+        "Cherche si le problème apparaît ailleurs dans le produit.",
+        "Propose une évolution générique quand le besoin dépasse ton seul écran.",
+        "Discute du coût de cohérence et du coût d'exception avec l'équipe."
+      ],
+      "questions": [
+        "Est-ce une exception locale ou une limite du système ?",
+        "Qui d'autre bénéficierait de cette évolution ?",
+        "Qu'est-ce que cette nouvelle règle implique ailleurs ?"
+      ],
+      "watchouts": [
+        "Créer une exception sans documenter pourquoi.",
+        "Transformer chaque nouveau besoin en évolution globale du design system."
+      ],
+      "next": [
+        "debt",
+        "document"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "debt",
+      "number": "06",
+      "title": "Repère la dette UX sans vouloir tout réparer",
+      "short": "Les incohérences rencontrées sont utiles à documenter, pas nécessairement à traiter dans ton sujet.",
+      "why": "Pour distinguer ce qui empêche ton expérience de fonctionner de ce qui mérite un chantier séparé.",
+      "actions": [
+        "Capture les incohérences rencontrées pendant ton travail.",
+        "Évalue leur impact sur l'usage et leur fréquence.",
+        "Sépare ce qui bloque ton sujet de ce qui peut être traité plus tard.",
+        "Partage les patterns de dette qui semblent systémiques."
+      ],
+      "questions": [
+        "Cette incohérence gêne-t-elle réellement l'utilisateur ?",
+        "Doit-elle être corrigée maintenant pour réussir ce sujet ?",
+        "Est-ce un cas isolé ou un pattern de dette ?"
+      ],
+      "watchouts": [
+        "Élargir chaque feature en chantier de nettoyage.",
+        "Ignorer systématiquement la dette parce qu'elle est hors scope."
+      ],
+      "next": [
+        "document"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "document",
+      "number": "07",
+      "title": "Laisse le système plus compréhensible qu'avant",
+      "short": "Documente les décisions qui modifient ou précisent les règles d'expérience.",
+      "why": "Pour éviter que les mêmes arbitrages soient redécouverts à chaque nouveau sujet.",
+      "actions": [
+        "Documente les nouveaux patterns, variantes et règles utiles.",
+        "Explique le contexte et l'intention plutôt que seulement la forme.",
+        "Aligne la documentation design et l'implémentation réelle.",
+        "Signale les décisions temporaires ou les limites connues."
+      ],
+      "questions": [
+        "Que devra comprendre la prochaine personne qui utilisera ce pattern ?",
+        "La règle est-elle visible au bon endroit ?",
+        "La documentation correspond-elle à ce qui sera réellement livré ?"
+      ],
+      "watchouts": [
+        "Documenter uniquement les propriétés visuelles.",
+        "Laisser une nouvelle variante exister sans règle d'usage."
+      ],
+      "next": [],
+      "roles": [
+        "product-designer"
+      ]
+    }
+  ],
+  "starter": {
+    "title": "Tu ne sais pas jusqu'où respecter l'existant ?",
+    "text": "Commence par comprendre la logique des patterns et les contraintes réelles. Tu pourras ensuite distinguer ce qu'il faut réutiliser de ce qu'il faut faire évoluer."
+  }
+}

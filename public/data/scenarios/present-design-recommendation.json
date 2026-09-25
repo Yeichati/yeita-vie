@@ -1,0 +1,48 @@
+{
+  "id": "present-design-recommendation",
+  "title": "Je dois présenter une recommandation de design à des stakeholders",
+  "subtitle": "Construis une recommandation qui part du problème, rend les preuves et compromis visibles et aide le groupe à prendre une décision.",
+  "accent": "violet",
+  "cards": [
+    {
+      "journey": "communicate-product.json",
+      "cardId": "audience"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "frame"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "evidence"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "options"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "risks"
+    },
+    {
+      "journey": "prepare-important-decision.json",
+      "cardId": "recommendation"
+    },
+    {
+      "journey": "design-in-existing-system.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "action"
+    },
+    {
+      "journey": "communicate-product.json",
+      "cardId": "feedback"
+    }
+  ],
+  "roles": [
+    "product-designer",
+    "product-manager"
+  ]
+}

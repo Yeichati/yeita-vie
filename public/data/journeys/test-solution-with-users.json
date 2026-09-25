@@ -1,0 +1,215 @@
+{
+  "id": "test-solution-with-users",
+  "title": "Je dois tester une solution avec des utilisateurs",
+  "subtitle": "Prépare un test qui t'aide à apprendre où l'expérience fonctionne, où elle casse et ce que tu dois décider ensuite.",
+  "accent": "yellow",
+  "startHere": [
+    "learning-goal",
+    "prototype",
+    "tasks",
+    "protocol",
+    "observe"
+  ],
+  "cards": [
+    {
+      "id": "learning-goal",
+      "number": "01",
+      "title": "Décide ce que tu veux apprendre",
+      "short": "Un test utile commence par une incertitude précise.",
+      "why": "Pour éviter d'évaluer toute l'expérience en même temps et finir avec des retours impossibles à prioriser.",
+      "actions": [
+        "Liste les principales incertitudes de la solution.",
+        "Choisis celles qui présentent le plus de risque pour l'utilisateur ou la décision.",
+        "Définis ce que le test peut réellement te permettre d'observer."
+      ],
+      "questions": [
+        "Quelle question doit absolument trouver un début de réponse ?",
+        "Qu'est-ce qui serait coûteux à découvrir trop tard ?",
+        "Que ne pourra pas démontrer ce test ?"
+      ],
+      "watchouts": [
+        "Tester uniquement pour obtenir une validation générale.",
+        "Chercher à mesurer trop de choses en une seule session."
+      ],
+      "next": [
+        "prototype",
+        "tasks"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "prototype",
+      "number": "02",
+      "title": "Prototype seulement ce dont tu as besoin",
+      "short": "Adapte la fidélité du prototype à la question posée.",
+      "why": "Pour investir ton temps dans l'apprentissage plutôt que dans une finition qui n'améliore pas le test.",
+      "actions": [
+        "Identifie les écrans, états et interactions nécessaires aux tâches testées.",
+        "Choisis le niveau de fidélité minimal qui permet une réaction crédible.",
+        "Simule manuellement ce qui n'a pas besoin d'être construit."
+      ],
+      "questions": [
+        "Qu'est-ce qui doit être réaliste pour que le comportement soit interprétable ?",
+        "Qu'est-ce que je peux laisser volontairement incomplet ?",
+        "Est-ce que je conçois pour tester ou pour impressionner ?"
+      ],
+      "watchouts": [
+        "Polir des détails sans lien avec l'objectif.",
+        "Créer un prototype tellement incomplet qu'il guide artificiellement le participant."
+      ],
+      "next": [
+        "tasks",
+        "protocol"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "tasks",
+      "number": "03",
+      "title": "Écris des tâches, pas des instructions",
+      "short": "Donne un objectif au participant sans lui expliquer le chemin.",
+      "why": "Pour observer si l'interface permet réellement de comprendre quoi faire.",
+      "actions": [
+        "Formule des situations proches d'un contexte réel.",
+        "Donne un objectif sans utiliser les libellés de l'interface comme indices.",
+        "Prépare plusieurs tâches si elles couvrent des risques différents."
+      ],
+      "questions": [
+        "Est-ce que ma consigne révèle la réponse ?",
+        "Cette tâche ressemble-t-elle à quelque chose qu'un utilisateur ferait vraiment ?",
+        "Qu'est-ce que j'observerai si le participant se trompe ?"
+      ],
+      "watchouts": [
+        "Dire où cliquer.",
+        "Écrire une tâche tellement artificielle qu'elle ne teste pas l'usage réel."
+      ],
+      "next": [
+        "protocol"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "protocol",
+      "number": "04",
+      "title": "Prépare un protocole simple et stable",
+      "short": "Garde un cadre comparable entre les sessions tout en laissant le participant agir.",
+      "why": "Pour limiter les variations créées par ta manière d'animer et mieux comparer les comportements.",
+      "actions": [
+        "Prépare une introduction courte et neutre.",
+        "Décide quand intervenir et quand laisser la personne chercher.",
+        "Prépare les mêmes relances principales pour chaque session.",
+        "Teste ton protocole une fois avant les vraies sessions."
+      ],
+      "questions": [
+        "À quel moment vais-je aider ?",
+        "Quelles informations doivent être données à tous les participants ?",
+        "Qu'est-ce que je veux observer avant de poser une question ?"
+      ],
+      "watchouts": [
+        "Changer le protocole dès qu'une session devient inconfortable.",
+        "Aider trop vite."
+      ],
+      "next": [
+        "observe"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "observe",
+      "number": "05",
+      "title": "Observe avant de demander un avis",
+      "short": "Les comportements pendant la tâche valent souvent plus qu'un jugement général après coup.",
+      "why": "Pour repérer les incompréhensions, hésitations et stratégies que le participant ne saura pas toujours expliquer.",
+      "actions": [
+        "Observe où la personne regarde, hésite, revient en arrière ou change de stratégie.",
+        "Note ce qu'elle essaie de faire avant de lui demander pourquoi.",
+        "Demande ensuite comment elle a compris la situation."
+      ],
+      "questions": [
+        "Que s'est-il passé avant que la personne bloque ?",
+        "Qu'avait-elle compris à ce moment-là ?",
+        "Le problème vient-il de l'interface, du contenu, du modèle mental ou du contexte ?"
+      ],
+      "watchouts": [
+        "Se concentrer uniquement sur les commentaires verbaux.",
+        "Expliquer le fonctionnement au moment où le participant hésite."
+      ],
+      "next": [
+        "signals",
+        "decide"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "signals",
+      "number": "06",
+      "title": "Distingue les signaux des préférences",
+      "short": "Tous les retours utilisateurs n'ont pas la même valeur pour une décision de design.",
+      "why": "Pour éviter de transformer chaque préférence exprimée en demande de modification.",
+      "actions": [
+        "Sépare les problèmes observés des opinions ou suggestions.",
+        "Cherche si plusieurs participants rencontrent le même mécanisme.",
+        "Regarde la gravité du problème et son impact sur la tâche.",
+        "Conserve les suggestions comme matière, pas comme solution imposée."
+      ],
+      "questions": [
+        "Est-ce un problème observé ou une préférence déclarée ?",
+        "Quelle conséquence ce problème a-t-il sur l'usage ?",
+        "Est-ce récurrent ou contextuel ?"
+      ],
+      "watchouts": [
+        "Compter les votes sur une solution.",
+        "Appliquer directement la solution proposée par un participant."
+      ],
+      "next": [
+        "decide"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "decide",
+      "number": "07",
+      "title": "Décide quoi changer, garder ou retester",
+      "short": "Termine le test par des décisions explicites et des inconnues assumées.",
+      "why": "Pour transformer les observations en prochaine étape concrète sans prétendre que le test a répondu à tout.",
+      "actions": [
+        "Liste les problèmes qui nécessitent une modification.",
+        "Identifie ce qui peut rester en l'état malgré des préférences divergentes.",
+        "Note les questions qui nécessitent un nouveau test ou une autre méthode.",
+        "Relie chaque changement au signal qui le justifie."
+      ],
+      "questions": [
+        "Quel changement répond au problème observé ?",
+        "Qu'est-ce que nous choisissons de ne pas modifier ?",
+        "Quelle incertitude reste trop importante ?"
+      ],
+      "watchouts": [
+        "Refondre toute la solution après quelques sessions.",
+        "Sortir du test sans décision explicite."
+      ],
+      "next": [],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    }
+  ],
+  "starter": {
+    "title": "Ton prototype est prêt mais ton test ne l'est pas ?",
+    "text": "Commence par la question d'apprentissage. Le bon prototype et les bonnes tâches en découleront."
+  }
+}

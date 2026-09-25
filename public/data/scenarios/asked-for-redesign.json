@@ -1,0 +1,48 @@
+{
+  "id": "asked-for-redesign",
+  "title": "On me demande une refonte",
+  "subtitle": "Avant de tout refaire, clarifie ce qui motive la demande, ce qui dysfonctionne réellement et ce qui mérite d'être conservé.",
+  "accent": "coral",
+  "cards": [
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "symptoms"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "facts"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "existing-knowledge"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "observe"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "patterns"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "frame"
+    },
+    {
+      "journey": "design-in-existing-system.json",
+      "cardId": "reuse"
+    },
+    {
+      "journey": "design-in-existing-system.json",
+      "cardId": "debt"
+    },
+    {
+      "journey": "understand-what-doesnt-work.json",
+      "cardId": "experiment"
+    }
+  ],
+  "roles": [
+    "product-designer",
+    "product-manager"
+  ]
+}

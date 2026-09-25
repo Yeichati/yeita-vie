@@ -1,0 +1,47 @@
+{
+  "id": "first-48h-product-designer",
+  "title": "Mes premières 48h en tant que Product Designer chez un client",
+  "subtitle": "Un fil conducteur pour comprendre le contexte, les usages, l'équipe et l'existant avant de te précipiter dans les maquettes.",
+  "accent": "violet",
+  "cards": [
+    {
+      "journey": "start-mission.json",
+      "cardId": "mandate"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "people"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "observe"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "existing-knowledge"
+    },
+    {
+      "journey": "design-in-existing-system.json",
+      "cardId": "map-system"
+    },
+    {
+      "journey": "design-in-existing-system.json",
+      "cardId": "constraints"
+    },
+    {
+      "journey": "understand-usage-before-design.json",
+      "cardId": "question"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "notes"
+    },
+    {
+      "journey": "start-mission.json",
+      "cardId": "focus"
+    }
+  ],
+  "roles": [
+    "product-designer"
+  ]
+}

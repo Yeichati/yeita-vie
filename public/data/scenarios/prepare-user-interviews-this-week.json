@@ -1,0 +1,40 @@
+{
+  "id": "prepare-user-interviews-this-week",
+  "title": "Je dois préparer des entretiens utilisateurs cette semaine",
+  "subtitle": "Une séquence courte pour passer d'une intention de recherche à des entretiens exploitables sans transformer le guide en questionnaire de validation.",
+  "accent": "mint",
+  "cards": [
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "objective"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "method"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "participants"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "guide"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "conduct"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "notes"
+    },
+    {
+      "journey": "prepare-user-research.json",
+      "cardId": "synthesis"
+    }
+  ],
+  "roles": [
+    "product-designer",
+    "product-manager"
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "understand-usage-before-design",
+  "title": "Je dois comprendre un usage avant de concevoir",
+  "subtitle": "Avant de dessiner une solution, rends l'usage suffisamment concret pour savoir ce que tu essaies réellement d'améliorer.",
+  "accent": "mint",
+  "startHere": [
+    "question",
+    "existing-knowledge",
+    "observe",
+    "patterns",
+    "frame"
+  ],
+  "cards": [
+    {
+      "id": "question",
+      "number": "01",
+      "title": "Clarifie ce que tu cherches à comprendre",
+      "short": "Transforme une demande vague en question d'apprentissage.",
+      "why": "Pour éviter de collecter beaucoup d'informations sans savoir ce qu'elles doivent t'aider à décider.",
+      "actions": [
+        "Reformule la demande en une ou deux questions auxquelles tu veux pouvoir répondre.",
+        "Distingue ce que tu veux comprendre de ce que tu veux déjà concevoir.",
+        "Note les hypothèses que l'équipe semble considérer comme acquises."
+      ],
+      "questions": [
+        "Qu'est-ce que nous essayons réellement de comprendre ?",
+        "Quelle décision cette exploration doit-elle éclairer ?",
+        "Quelles hypothèses sont encore peu étayées ?"
+      ],
+      "watchouts": [
+        "Commencer directement par chercher une solution.",
+        "Accumuler des questions sans lien avec une décision."
+      ],
+      "next": [
+        "existing-knowledge",
+        "observe"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "existing-knowledge",
+      "number": "02",
+      "title": "Pars de ce que l'équipe sait déjà",
+      "short": "Recherche les apprentissages existants avant de relancer une discovery complète.",
+      "why": "Pour ne pas refaire inutilement du travail déjà réalisé et repérer rapidement les zones encore floues.",
+      "actions": [
+        "Cherche les études, retours support, analytics, verbatims et décisions déjà documentées.",
+        "Demande ce qui a déjà été appris auprès des utilisateurs.",
+        "Repère la date, le contexte et les limites des enseignements existants."
+      ],
+      "questions": [
+        "Qu'avons-nous déjà appris ?",
+        "Qu'est-ce qui reste valable aujourd'hui ?",
+        "Qu'est-ce qui repose surtout sur une intuition interne ?"
+      ],
+      "watchouts": [
+        "Considérer une ancienne étude comme une vérité intemporelle.",
+        "Ignorer les connaissances informelles détenues par l'équipe."
+      ],
+      "next": [
+        "observe",
+        "evidence"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "observe",
+      "number": "03",
+      "title": "Regarde l'usage réel",
+      "short": "Observe ce que les personnes font, pas seulement ce qu'elles disent faire.",
+      "why": "Parce que les comportements, contournements et hésitations révèlent souvent des besoins difficiles à verbaliser.",
+      "actions": [
+        "Observe des utilisateurs dans leur contexte quand c'est possible.",
+        "Demande-leur de te montrer une tâche réelle plutôt que de la raconter abstraitement.",
+        "Note les étapes, hésitations, contournements et éléments de contexte."
+      ],
+      "questions": [
+        "Que fait réellement la personne ?",
+        "Où adapte-t-elle le produit à sa manière ?",
+        "Qu'est-ce qui semble fluide, coûteux ou fragile ?"
+      ],
+      "watchouts": [
+        "Interpréter immédiatement chaque comportement.",
+        "Guider l'utilisateur vers la manière dont tu imagines qu'il devrait faire."
+      ],
+      "next": [
+        "evidence",
+        "patterns"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "evidence",
+      "number": "04",
+      "title": "Croise plusieurs formes de preuves",
+      "short": "Ne fais pas reposer ta compréhension sur une seule source.",
+      "why": "Pour distinguer un signal isolé d'un comportement suffisamment crédible pour influencer la conception.",
+      "actions": [
+        "Mets en regard observations, verbatims, données quantitatives et retours opérationnels.",
+        "Note ce qui converge, ce qui se contredit et ce qui reste inconnu.",
+        "Cherche des explications alternatives avant de conclure."
+      ],
+      "questions": [
+        "Quelles sources soutiennent cette interprétation ?",
+        "Qu'est-ce qui pourrait expliquer autrement ce que j'observe ?",
+        "Ai-je assez d'éléments pour avancer ou dois-je encore apprendre ?"
+      ],
+      "watchouts": [
+        "Chercher uniquement des preuves qui confirment ton intuition.",
+        "Donner le même poids à toutes les sources sans regarder leur qualité."
+      ],
+      "next": [
+        "patterns",
+        "frame"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "patterns",
+      "number": "05",
+      "title": "Fais émerger les patterns",
+      "short": "Regroupe les observations avant de transformer chaque irritant en problème de design.",
+      "why": "Pour identifier les mécanismes récurrents derrière plusieurs symptômes plutôt que traiter des anecdotes une par une.",
+      "actions": [
+        "Regroupe les observations qui racontent un même comportement ou besoin.",
+        "Sépare les cas récurrents des exceptions.",
+        "Formule les patterns avec des faits observables avant d'ajouter ton interprétation."
+      ],
+      "questions": [
+        "Qu'est-ce qui revient réellement ?",
+        "Quels comportements semblent avoir la même cause ?",
+        "Quelles différences de contexte changent l'usage ?"
+      ],
+      "watchouts": [
+        "Créer des catégories trop vite.",
+        "Forcer des observations différentes à entrer dans un même pattern."
+      ],
+      "next": [
+        "frame"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "frame",
+      "number": "06",
+      "title": "Formule le problème d'usage",
+      "short": "Transforme tes apprentissages en problème suffisamment précis pour guider la conception sans imposer la solution.",
+      "why": "Pour donner à l'équipe un point de départ partagé et éviter que la solution soit contenue dans la formulation du problème.",
+      "actions": [
+        "Décris la personne ou le contexte concerné.",
+        "Formule ce qu'elle essaie d'accomplir et ce qui l'en empêche.",
+        "Rattache le problème aux preuves les plus solides.",
+        "Liste explicitement ce qui reste incertain."
+      ],
+      "questions": [
+        "Quel usage essayons-nous d'améliorer ?",
+        "Pour qui et dans quel contexte ?",
+        "Quelle partie de cette formulation est encore une hypothèse ?"
+      ],
+      "watchouts": [
+        "Formuler le problème comme une fonctionnalité manquante.",
+        "Faire disparaître les incertitudes pour rendre le cadrage plus propre."
+      ],
+      "next": [
+        "share"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "share",
+      "number": "07",
+      "title": "Partage ce que tu as compris avant de concevoir",
+      "short": "Aligne l'équipe sur les apprentissages, les inconnues et le problème avant de partir en solution.",
+      "why": "Pour permettre aux autres métiers de challenger la compréhension du problème avant que le coût de changement augmente.",
+      "actions": [
+        "Présente les principaux faits, patterns et incertitudes.",
+        "Montre ce qui a changé dans ta compréhension.",
+        "Demande explicitement ce que l'équipe conteste ou interprète autrement."
+      ],
+      "questions": [
+        "Est-ce que l'équipe reconnaît ce problème ?",
+        "Qu'est-ce qui manque pour être suffisamment alignés ?",
+        "Sommes-nous prêts à explorer des solutions ?"
+      ],
+      "watchouts": [
+        "Présenter une synthèse comme une conclusion définitive.",
+        "Utiliser la restitution uniquement pour faire valider ton interprétation."
+      ],
+      "next": [],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    }
+  ],
+  "starter": {
+    "title": "Tu ne sais pas par où commencer ?",
+    "text": "Commence par clarifier ce que tu veux apprendre, puis cherche ce que l'équipe sait déjà avant de repartir sur le terrain."
+  }
+}

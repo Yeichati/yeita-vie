@@ -1,0 +1,214 @@
+{
+  "id": "prepare-user-research",
+  "title": "Je dois préparer et mener une recherche utilisateur",
+  "subtitle": "Construis une recherche assez cadrée pour apprendre quelque chose d'utile sans transformer l'entretien en validation déguisée.",
+  "accent": "coral",
+  "startHere": [
+    "objective",
+    "method",
+    "participants",
+    "guide",
+    "conduct"
+  ],
+  "cards": [
+    {
+      "id": "objective",
+      "number": "01",
+      "title": "Définis l'objectif de recherche",
+      "short": "Commence par ce que tu veux apprendre, pas par les questions que tu veux poser.",
+      "why": "Pour choisir un dispositif cohérent et éviter les entretiens généralistes qui produisent beaucoup de matière mais peu de décisions.",
+      "actions": [
+        "Écris une courte liste de questions de recherche.",
+        "Relie chaque question à une décision ou une incertitude.",
+        "Priorise ce qui doit absolument être appris pendant cette recherche."
+      ],
+      "questions": [
+        "Quelle incertitude voulons-nous réduire ?",
+        "Que ferons-nous différemment selon ce que nous apprenons ?",
+        "Qu'est-ce qui est hors périmètre de cette recherche ?"
+      ],
+      "watchouts": [
+        "Confondre objectif de recherche et hypothèse à confirmer.",
+        "Vouloir répondre à trop de sujets dans une seule étude."
+      ],
+      "next": [
+        "method",
+        "participants"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "method",
+      "number": "02",
+      "title": "Choisis une méthode adaptée",
+      "short": "Fais correspondre la méthode à ce que tu cherches à apprendre.",
+      "why": "Parce qu'un entretien, une observation ou un test ne répondent pas aux mêmes questions.",
+      "actions": [
+        "Identifie si tu veux comprendre un comportement, une perception, un contexte ou évaluer une solution.",
+        "Choisis la méthode la plus simple qui permette de réduire l'incertitude.",
+        "Adapte l'ambition à ton temps, ton accès aux utilisateurs et au niveau de risque."
+      ],
+      "questions": [
+        "Ai-je besoin de ce que les gens disent, de ce qu'ils font, ou des deux ?",
+        "Est-ce une recherche exploratoire ou évaluative ?",
+        "Quel niveau de preuve est nécessaire pour la décision ?"
+      ],
+      "watchouts": [
+        "Utiliser l'entretien par défaut.",
+        "Choisir une méthode uniquement parce qu'elle est familière."
+      ],
+      "next": [
+        "participants",
+        "guide"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "participants",
+      "number": "03",
+      "title": "Recrute les bonnes personnes",
+      "short": "La qualité du recrutement conditionne fortement ce que tu pourras apprendre.",
+      "why": "Pour éviter de généraliser à partir de participants qui ne vivent pas réellement la situation étudiée.",
+      "actions": [
+        "Définis les caractéristiques indispensables des participants.",
+        "Sépare les critères nécessaires des critères simplement souhaitables.",
+        "Évite de recruter uniquement les utilisateurs les plus disponibles ou les plus engagés."
+      ],
+      "questions": [
+        "Qui vit réellement le problème étudié ?",
+        "Quels profils doivent être représentés ?",
+        "Qui risquerait de biaiser fortement les apprentissages ?"
+      ],
+      "watchouts": [
+        "Sur-segmenter au point de rendre le recrutement impossible.",
+        "Confondre utilisateur accessible et utilisateur pertinent."
+      ],
+      "next": [
+        "guide"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "guide",
+      "number": "04",
+      "title": "Prépare un guide qui laisse de la place",
+      "short": "Structure l'entretien sans écrire un questionnaire rigide.",
+      "why": "Pour couvrir les sujets importants tout en laissant émerger ce que tu n'avais pas anticipé.",
+      "actions": [
+        "Organise le guide autour de thèmes plutôt que d'une longue liste de questions.",
+        "Privilégie les questions ouvertes sur des expériences réelles.",
+        "Prépare des relances neutres.",
+        "Commence par le contexte avant d'aborder directement le sujet central."
+      ],
+      "questions": [
+        "Cette question pousse-t-elle vers une réponse ?",
+        "Puis-je demander un exemple concret plutôt qu'une opinion générale ?",
+        "Quelles relances m'aideront à comprendre le pourquoi ?"
+      ],
+      "watchouts": [
+        "Empiler des questions fermées.",
+        "Décrire longuement la solution avant de poser une question."
+      ],
+      "next": [
+        "conduct"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "conduct",
+      "number": "05",
+      "title": "Conduis l'entretien sans chercher à avoir raison",
+      "short": "Ton rôle est d'apprendre, pas de défendre le produit ou ton hypothèse.",
+      "why": "Pour donner au participant l'espace nécessaire pour raconter son expérience même lorsqu'elle contredit ce que l'équipe pensait.",
+      "actions": [
+        "Laisse des silences au lieu de remplir immédiatement les blancs.",
+        "Demande des exemples concrets et récents.",
+        "Relance sur les faits, comportements et motivations.",
+        "Garde les explications et justifications du produit pour après l'entretien."
+      ],
+      "questions": [
+        "Est-ce que j'écoute ou est-ce que je prépare déjà ma prochaine question ?",
+        "Ai-je demandé ce qui s'est réellement passé ?",
+        "Suis-je en train de corriger le participant ?"
+      ],
+      "watchouts": [
+        "Chercher des compliments ou de la validation.",
+        "Transformer l'entretien en démonstration produit."
+      ],
+      "next": [
+        "notes",
+        "synthesis"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "notes",
+      "number": "06",
+      "title": "Capture les faits avant tes conclusions",
+      "short": "Sépare ce qui a été dit ou observé de ce que tu en déduis.",
+      "why": "Pour préserver la trace des données brutes et pouvoir challenger ton interprétation plus tard.",
+      "actions": [
+        "Note les verbatims ou comportements significatifs.",
+        "Distingue faits, interprétations et questions ouvertes.",
+        "Débriefe rapidement après chaque session pendant que le contexte est encore frais."
+      ],
+      "questions": [
+        "Qu'ai-je réellement observé ?",
+        "Qu'est-ce que j'en déduis ?",
+        "Qu'est-ce que je dois vérifier avec d'autres participants ?"
+      ],
+      "watchouts": [
+        "Ne garder que les moments qui confirment ton hypothèse.",
+        "Faire la synthèse uniquement de mémoire plusieurs jours plus tard."
+      ],
+      "next": [
+        "synthesis"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "synthesis",
+      "number": "07",
+      "title": "Transforme la recherche en apprentissages utilisables",
+      "short": "Fais ressortir les patterns, les différences et les implications sans effacer l'incertitude.",
+      "why": "Pour que la recherche influence réellement une décision plutôt que finir dans une restitution oubliée.",
+      "actions": [
+        "Regroupe les observations par thèmes ou comportements.",
+        "Cherche les récurrences mais aussi les divergences importantes.",
+        "Relie chaque apprentissage à la question de recherche initiale.",
+        "Explicite les implications possibles et les limites."
+      ],
+      "questions": [
+        "Qu'avons-nous réellement appris ?",
+        "Qu'est-ce qui change dans notre compréhension ?",
+        "Qu'est-ce qui mérite encore d'être vérifié ?"
+      ],
+      "watchouts": [
+        "Transformer quelques entretiens en vérité statistique.",
+        "Présenter uniquement une liste de verbatims sans interprétation."
+      ],
+      "next": [],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    }
+  ],
+  "starter": {
+    "title": "Tu prépares une recherche rapidement ?",
+    "text": "Commence par l'objectif de recherche. Une fois celui-ci clair, le recrutement, la méthode et le guide deviennent beaucoup plus simples à arbitrer."
+  }
+}

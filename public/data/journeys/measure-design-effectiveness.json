@@ -1,0 +1,220 @@
+{
+  "id": "measure-design-effectiveness",
+  "title": "Je dois savoir si mon design fonctionne",
+  "subtitle": "Définis ce que l'expérience doit permettre, observe ce qui se passe réellement et utilise les signaux pour décider quoi améliorer.",
+  "accent": "mint",
+  "startHere": [
+    "intent",
+    "criteria",
+    "signals",
+    "qualitative",
+    "compare"
+  ],
+  "cards": [
+    {
+      "id": "intent",
+      "number": "01",
+      "title": "Reviens à l'intention du design",
+      "short": "Avant de mesurer, rappelle ce que cette expérience devait améliorer.",
+      "why": "Pour ne pas choisir des métriques faciles à obtenir mais déconnectées du problème initial.",
+      "actions": [
+        "Reformule le problème utilisateur traité.",
+        "Identifie le comportement ou l'expérience que le design devait rendre meilleur.",
+        "Relie cette intention aux objectifs produit quand c'est pertinent."
+      ],
+      "questions": [
+        "Qu'est-ce qui devait devenir plus simple, plus clair ou plus efficace ?",
+        "Quel changement utilisateur espérions-nous observer ?",
+        "Pourquoi cette amélioration compte-t-elle pour le produit ?"
+      ],
+      "watchouts": [
+        "Mesurer uniquement ce qui est déjà instrumenté.",
+        "Confondre livraison du design et amélioration de l'expérience."
+      ],
+      "next": [
+        "criteria",
+        "signals"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "criteria",
+      "number": "02",
+      "title": "Définis des critères de réussite observables",
+      "short": "Traduis l'intention en signes concrets que l'expérience fonctionne mieux.",
+      "why": "Pour avoir un cadre d'évaluation avant que les résultats n'influencent rétroactivement la définition du succès.",
+      "actions": [
+        "Définis quelques critères liés à l'efficacité, la compréhension, l'erreur ou l'effort.",
+        "Ajoute des critères qualitatifs quand le ressenti ou la confiance comptent.",
+        "Précise les populations ou contextes concernés."
+      ],
+      "questions": [
+        "Que devrait-on observer si le design fonctionne ?",
+        "Quels échecs ou frictions devraient diminuer ?",
+        "Pour quels utilisateurs ce critère est-il pertinent ?"
+      ],
+      "watchouts": [
+        "Multiplier les critères jusqu'à perdre le signal principal.",
+        "Utiliser uniquement des métriques de business pour juger une expérience."
+      ],
+      "next": [
+        "signals"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "signals",
+      "number": "03",
+      "title": "Choisis les bons signaux quantitatifs",
+      "short": "Cherche les données qui éclairent l'usage plutôt qu'un score universel de qualité.",
+      "why": "Pour observer les effets comportementaux du design tout en gardant en tête qu'une métrique n'explique pas seule pourquoi ils apparaissent.",
+      "actions": [
+        "Identifie les événements ou étapes du parcours qui correspondent aux critères.",
+        "Regarde les taux d'achèvement, erreurs, abandons ou temps quand ils sont pertinents.",
+        "Segmente lorsque des populations différentes peuvent vivre l'expérience différemment.",
+        "Vérifie la qualité de l'instrumentation avant d'interpréter."
+      ],
+      "questions": [
+        "Quel comportement cette métrique représente-t-elle réellement ?",
+        "Que ne me dit-elle pas ?",
+        "Les données couvrent-elles correctement le parcours étudié ?"
+      ],
+      "watchouts": [
+        "Prendre une corrélation comme preuve de causalité.",
+        "Choisir une métrique parce qu'elle est facilement disponible."
+      ],
+      "next": [
+        "qualitative",
+        "compare"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "qualitative",
+      "number": "04",
+      "title": "Complète les chiffres par du qualitatif",
+      "short": "Utilise le qualitatif pour comprendre les mécanismes derrière les résultats.",
+      "why": "Parce qu'une hausse ou une baisse de métrique indique qu'il se passe quelque chose sans toujours expliquer ce que vivent les utilisateurs.",
+      "actions": [
+        "Observe des utilisateurs sur l'expérience réelle.",
+        "Analyse les retours support, verbatims et irritants récurrents.",
+        "Mène des entretiens ou tests ciblés sur les zones incomprises.",
+        "Cherche aussi ce qui fonctionne mieux qu'avant."
+      ],
+      "questions": [
+        "Pourquoi ce comportement apparaît-il ?",
+        "Qu'est-ce qui reste difficile malgré de bons chiffres ?",
+        "Qu'est-ce que les utilisateurs réussissent maintenant mieux qu'avant ?"
+      ],
+      "watchouts": [
+        "Utiliser quelques verbatims pour contredire toute la donnée quantitative.",
+        "Ne rechercher que les irritants."
+      ],
+      "next": [
+        "compare",
+        "accessibility"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "compare",
+      "number": "05",
+      "title": "Compare avec un point de référence",
+      "short": "Un résultat prend plus de sens lorsqu'il peut être comparé à une situation antérieure ou attendue.",
+      "why": "Pour éviter d'interpréter un chiffre isolé sans savoir s'il représente une amélioration.",
+      "actions": [
+        "Utilise une baseline avant changement quand elle existe.",
+        "Compare des cohortes ou périodes comparables.",
+        "Documente les changements externes qui peuvent influencer les résultats.",
+        "Évite les comparaisons artificielles lorsque les contextes sont trop différents."
+      ],
+      "questions": [
+        "Par rapport à quoi jugeons-nous ce résultat ?",
+        "Les populations et contextes sont-ils comparables ?",
+        "Qu'est-ce qui a changé en parallèle du design ?"
+      ],
+      "watchouts": [
+        "Attribuer automatiquement toute évolution au design.",
+        "Forcer une baseline peu fiable pour donner une impression de précision."
+      ],
+      "next": [
+        "accessibility",
+        "decide"
+      ],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "number": "06",
+      "title": "Vérifie que l'expérience fonctionne pour davantage de personnes",
+      "short": "La réussite d'un design inclut aussi sa capacité à rester utilisable dans des situations et capacités diverses.",
+      "why": "Pour ne pas considérer une expérience comme réussie uniquement parce qu'elle fonctionne pour le cas nominal.",
+      "actions": [
+        "Vérifie les principaux critères d'accessibilité pertinents.",
+        "Teste les parcours critiques au clavier et avec les technologies d'assistance lorsque c'est nécessaire.",
+        "Regarde contrastes, structure, libellés, focus, erreurs et alternatives.",
+        "Intègre les problèmes d'accessibilité dans les décisions d'amélioration."
+      ],
+      "questions": [
+        "Qui risque d'être exclu de cette expérience ?",
+        "Les parcours critiques restent-ils compréhensibles sans le cas nominal ?",
+        "Quels problèmes doivent être corrigés avant de considérer le design comme satisfaisant ?"
+      ],
+      "watchouts": [
+        "Réduire l'accessibilité à une checklist de conformité.",
+        "La traiter uniquement en fin de conception."
+      ],
+      "next": [
+        "decide"
+      ],
+      "roles": [
+        "product-designer"
+      ]
+    },
+    {
+      "id": "decide",
+      "number": "07",
+      "title": "Transforme les résultats en décision",
+      "short": "Décide ce qu'il faut garder, améliorer, approfondir ou surveiller.",
+      "why": "Pour que la mesure serve l'évolution du produit plutôt qu'une simple démonstration de performance.",
+      "actions": [
+        "Relie les résultats aux critères définis au départ.",
+        "Identifie les améliorations les plus significatives et les problèmes persistants.",
+        "Choisis les prochaines modifications ou recherches nécessaires.",
+        "Documente ce que tu ne peux pas encore conclure."
+      ],
+      "questions": [
+        "Qu'est-ce que les résultats nous permettent réellement de décider ?",
+        "Quel problème mérite maintenant le plus d'attention ?",
+        "Qu'est-ce qui reste trop incertain pour agir ?"
+      ],
+      "watchouts": [
+        "Chercher une conclusion binaire : le design marche ou ne marche pas.",
+        "Transformer les métriques en justification a posteriori."
+      ],
+      "next": [],
+      "roles": [
+        "product-designer",
+        "product-manager"
+      ]
+    }
+  ],
+  "starter": {
+    "title": "Tu veux mesurer ton design mais tu ne sais pas quoi regarder ?",
+    "text": "Repars de ce que l'expérience devait améliorer. Les bons signaux seront plus faciles à choisir ensuite."
+  }
+}

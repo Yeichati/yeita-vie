@@ -1,0 +1,40 @@
+{
+  "id": "test-prototype-tomorrow",
+  "title": "Je dois tester un prototype demain",
+  "subtitle": "Va à l'essentiel : ce que tu veux apprendre, ce qu'il faut réellement prototyper, comment observer et comment décider après le test.",
+  "accent": "yellow",
+  "cards": [
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "learning-goal"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "prototype"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "tasks"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "protocol"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "observe"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "signals"
+    },
+    {
+      "journey": "test-solution-with-users.json",
+      "cardId": "decide"
+    }
+  ],
+  "roles": [
+    "product-designer",
+    "product-manager"
+  ]
+}

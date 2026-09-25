@@ -11,6 +11,11 @@
     "communicate-product.json",
     "measure-my-impact.json",
     "mission-stalling.json",
-    "prepare-handover.json"
+    "prepare-handover.json",
+    "understand-usage-before-design.json",
+    "prepare-user-research.json",
+    "test-solution-with-users.json",
+    "design-in-existing-system.json",
+    "measure-design-effectiveness.json"
   ]
 }
